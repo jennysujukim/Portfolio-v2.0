@@ -1,0 +1,100 @@
+// ----- Colours ----- //
+$lightbeige: #fbfbfb;
+$black: #10100E;
+$grey: #acacac;
+$he: #efd8ff;
+
+// ----- Breakpoint Map ----- // 
+$breakpoints : (
+    "mobile": 320px,
+	"tablet": 576px,
+	"laptop": 768px,
+	"desktop": 1200px,
+    "desktop-lg": 1920px
+);
+
+// ----- Border ----- //
+$blackLine: 1px solid $black;
+$lightbeigeLine: 1px solid $lightbeige;
+$greyLine: 1px solid $grey;
+
+// ----- Border Radius ----- //
+$br-smallChip: 20px;
+$br-container--mobile: 50px;
+$br-container--desktop: 80px;
+$br-img: 7px;
+
+// ----- Box Shadow ----- //
+$bs-img: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+
+// ----- Font Display ----- //
+$CascadiaMono: 'CascadiaMono', sans-serif;
+
+$NeueMontreal400: 'Neue Montreal 400', sans-serif;
+$NeueMontreal530: 'Neue Montreal 530', sans-serif;
+$NeueMontreal800: 'Neue Montreal 800', sans-serif;
+
+$BigDailyShort400: 'Big Daily Short 400', serif;
+$BigDailyShort500: 'Big Daily Short 500', serif;
+$BigDailyShort700: 'Big Daily Short 700', serif;
+
+// ----- Font Size ----- // 
+$fs-h2h3--mobile: 2.5rem;
+$fs-h2h3--tablet: 3rem;
+$fs-h2h3--laptop: 4rem;
+$fs-h2h3--desktop: 5rem;
+$fs-h4--mobile: 1.5rem;
+$fs-h4--laptop: 2rem;
+$fs-h4--desktop: 2.5rem;
+$fs-p--mobile: 1rem;
+$fs-p--laptop: 1.2rem;
+$fs-smallText--mobile: 0.8rem;
+$fs-smallText--laptop: 1rem;
+
+
+$fs-heroTitle--mobile: 9vw;
+$fs-heroTitle--tablet: 3rem;
+$fs-heroTitle--laptop: 4rem;
+$fs-heroTitle--desktop: 5rem;
+
+$fs-home-heroSubTitle--mobile: 1rem;
+$fs-home-heroSubTitle--tablet: 1.2rem;
+$fs-home-heroSubTitle--desktop: 1.5rem;
+
+$fs-aboutMeTitle--mobile: 8vw;
+
+$fs-p-readability--laptop: 1.5rem; 
+
+
+
+
+$lh-heading: 1;
+$lh-p-readability--laptop: 1.7;
+
+// spacing
+
+
+$p-smallChip--mobile: 0.1rem 0.5rem;
+$p-aboutMeContainer--mobile: 5rem 0;
+$p-aboutMeContainer--desktop: 7rem 0;
+
+$mt-firstSection-mobile: calc(60px + 2rem);
+
+
+// ----- Padding ----- //
+$p-home-hero--mobile: 0 3rem;
+$p-home-hero--tablet: 0 5rem;
+$p-paragraphCont--mobile: 2rem 0;
+$p-paragraphCont--tablet: 3rem 0;
+$pb-paragraph: 1rem;
+$pb-heading--mobile: 3rem;
+$pb-heading--laptop: 5rem;
+$pt-headingSubText--mobile: 2rem;
+
+
+// ----- Margin ----- //
+$mb-section--mobile: 4rem;
+$mb-section--laptop: 7rem;
+$mb-innerSection--mobile: 3rem;
+$mb-innerSection--laptop: 5rem;

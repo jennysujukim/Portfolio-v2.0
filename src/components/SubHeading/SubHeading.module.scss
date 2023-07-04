@@ -1,0 +1,10 @@
+@use '../../sass/abstracts/' as *;
+
+.subHeading {
+    padding-top: $pt-headingSubText--mobile;
+}
+
+.border {
+    border-bottom: $greyLine;
+    padding-top: $pt-headingSubText--mobile;
+}

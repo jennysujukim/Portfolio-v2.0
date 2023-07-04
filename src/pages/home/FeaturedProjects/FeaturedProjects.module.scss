@@ -1,0 +1,109 @@
+@use '../../../sass/abstracts/' as *;
+
+.container { position: relative; }
+
+// ---- Heading ---- //
+.heading { 
+    padding-bottom: $pb-heading--mobile;
+    @include tablet { @include grid(repeat(2, 1fr), 1rem); }
+
+    @include laptop { padding-bottom: $pb-heading--laptop; };
+
+    .subTxt {
+        text-align: center;
+        text-transform: uppercase;
+        padding-top: $pt-headingSubText--mobile;
+
+        @include tablet {
+            text-align: end;
+            @include flex(flex-end, flex-end);
+            padding: 0 0 0.5rem 0;
+        }
+
+        @include laptop {
+            @include flex(flex-end, flex-start);
+            padding: 0.5rem 0 0 0;
+        }
+    }
+}
+
+// ---- Projects List ---- //
+.cardContainer {
+    @include grid(none, none, repeat(4, 1fr), 3rem);
+    padding-bottom: $mb-innerSection--mobile;
+    @include laptop { 
+        row-gap: 5rem;
+        padding-bottom: $mb-innerSection--laptop;
+    };
+}
+
+.card {
+    grid-row: auto / span 1;
+
+    &__reverse {
+        .cardImg { 
+            @include tablet { order: 2 }; };
+    }
+ 
+
+    a {
+        @include flex(center, center, column);
+        @include tablet { @include grid(repeat(2, 1fr), 1.2rem); }
+        @include laptop { column-gap: 2rem; };
+
+        .cardImg{
+            @include flex(center, center);
+            border: $greyLine;
+            border-radius: $br-img;
+            overflow: hidden;
+            position: relative;
+
+            img {
+                filter: grayscale(1);
+                transition: all 300ms cubic-bezier(.44,0,.66,.99);
+            }
+        }
+
+        .cardDetails {
+            height: 100%;
+            width: 100%;
+            padding-top: 1rem;
+            position: relative;
+
+            @include tablet {
+                padding-top: 0;
+                @include flex(flex-end, flex-start, column);
+            }
+
+            .id {
+                writing-mode: vertical-lr;
+                @include positionAbsolute(auto, 0, auto, auto);
+                @include tablet { top: 0; };
+            }
+
+            .arrowContainer {
+                width: 100%;
+                @include flex(space-between, flex-start);
+
+                svg {
+                    opacity: 0;
+                    height: 45px;
+                    width: 45px;
+                    transition: all 300ms ease-in-out;
+                }
+            }
+        }
+    }
+
+    &:hover .cardImg img { 
+        filter: unset;
+        transform: scale(105%);
+    }
+    &:hover .cardDetails .arrowContainer svg { @include laptop { opacity: 1; } }
+}
+
+
+@keyframes moveBottom {
+    from { top: -100% }
+    to { top: 100% }
+}

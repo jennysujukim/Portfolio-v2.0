@@ -1,0 +1,13 @@
+@use '../../sass/abstracts/' as *;
+@use 'sass:math';
+
+.main { position: relative; }
+
+.show {
+    transition: all ease-in-out 300ms;
+    display: block;
+    mix-blend-mode: soft-light;
+}
+
+.hide { display: none; }
+

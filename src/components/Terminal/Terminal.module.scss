@@ -1,0 +1,36 @@
+@use '../../sass/abstracts/' as *;
+
+
+.container {
+    color: $lightbeige; 
+    font-family: $CascadiaMono;
+    font-size: $fs-smallText--mobile;
+    line-height: 1.5;
+    @include laptop { font-size: $fs-smallText--laptop; };
+
+    h4 { padding-bottom: 2rem; };
+}
+
+.intro {
+    margin: 1rem 0;
+    padding: 1rem 0;
+    border-top: 1px dashed $lightbeige;
+    border-bottom: 1px dashed $lightbeige;
+}
+
+.form { 
+    width: 100%;
+    @include flex(flex-start, center);
+    flex-wrap: wrap;
+
+    span { padding-right: 0.5rem; }
+
+    input {
+        font-family: $CascadiaMono;
+        font-size: $fs-smallText--mobile;
+        flex-grow: 2;
+        color: $lightbeige;
+
+        @include laptop { font-size: $fs-smallText--laptop; };
+    }
+}

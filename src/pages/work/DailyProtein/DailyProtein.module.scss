@@ -1,0 +1,21 @@
+@use '../../../sass/abstracts/' as *;
+
+.container {
+    margin-top: $mt-firstSection-mobile;
+    @include laptop { 
+        margin-top: calc(60px + 3rem);
+        @include grid(auto 1fr, 2rem);
+    };
+}
+
+.content {
+    border: $greyLine;
+    border-radius: $br-container--mobile;
+    position: relative;
+    overflow: hidden;
+
+    section { 
+        height: 100vh;
+        line-height: 1.7;
+    }
+}

@@ -1,0 +1,99 @@
+@use '../abstracts/index' as *;
+
+// ----- CascadiaMono (Terminal) ----- //
+
+@font-face {
+    font-family: 'CascadiaMono';
+    font-display: swap;
+    src: url('../../assets/fonts/CascadiaMono.woff2');
+}
+
+// ----- Neue Montreal ----- //
+
+@font-face {
+    font-family: 'Neue Montreal 400';
+    font-display: swap;
+    src: url('../../assets/fonts/PPNeueMontreal-Book.woff2');
+}
+
+@font-face {
+    font-family: 'Neue Montreal 530';
+    font-display: swap;
+    src: url('../../assets/fonts/PPNeueMontreal-Medium.woff2');
+}
+
+@font-face {
+    font-family: 'Neue Montreal 800';
+    font-display: swap;
+    src: url('../../assets/fonts/PPNeueMontreal-Bold.woff2');
+}
+
+// ----- Big Daily Short ----- //
+
+@font-face {
+    font-family: 'Big Daily Short 400';
+    font-display: swap;
+    font-weight: 400;
+    src: url('../../assets/fonts/bigdailyshort-semilightitalic-TRIAL-BF63fec24169957.woff2');
+}
+
+@font-face {
+    font-family: 'Big Daily Short 500';
+    font-display: swap;
+    font-weight: 500;
+    src: url('../../assets/fonts/bigdailyshort-italic-TRIAL-BF63fec2415e4aa.woff2');
+}
+
+@font-face {
+    font-family: 'Big Daily Short 700';
+    font-display: swap;
+    font-weight: 700;
+    src: url('../../assets/fonts/bigdailyshort-bolditalic-TRIAL-BF63fec24170913.woff2');
+}
+
+
+
+
+// ----- Font Design ----- //
+
+body{
+    font-family: $NeueMontreal400;
+    font-weight: 400;
+    color: $black; 
+    line-height: 1.5;
+}
+
+h1 { 
+    font-family: $NeueMontreal530;
+    font-weight: 530;
+}
+
+h2, h3 {
+    font-family: $NeueMontreal530;
+    font-weight: 530;
+    line-height: 1;
+    text-transform: uppercase;
+    font-size: $fs-h2h3--mobile;
+
+    @include tablet { font-size: $fs-h2h3--tablet; };
+    @include laptop { font-size: $fs-h2h3--laptop; };
+    @include desktop { font-size: $fs-h2h3--desktop; };
+}
+
+h4 {
+    text-transform: uppercase;
+    font-size: $fs-h4--mobile;
+
+    @include laptop { font-size: $fs-h4--laptop };
+    @include desktop { font-size: $fs-h4--desktop };
+}
+
+p {
+    font-size: $fs-p--mobile;
+    @include laptop { font-size: $fs-p--laptop };
+}
+
+a {
+    text-decoration: none;
+    color: $black;
+}

@@ -1,0 +1,87 @@
+@use '../../../sass/abstracts/' as *;
+@use 'sass:math';
+
+.container {
+    @include flex(center, center, column);
+    height: 95vh;
+    overflow: hidden;
+    position: relative;
+    padding: $p-home-hero--mobile;
+    margin-bottom: $mb-section--mobile;
+
+    @include tablet { padding: $p-home-hero--tablet; }
+    @include laptop { margin-bottom: $mb-section--laptop; }
+}
+
+// ----- Hidden H1 ----- //
+.title { opacity: 0; }
+
+
+// ----- Deco Texts ----- //
+.txtTop,
+.txtLeft,
+.txtRight,
+.txtBottom {
+    font-size: $fs-smallText--mobile;
+    @include laptop { font-size: $fs-smallText--laptop; }
+}
+
+.txt{
+    &Top {
+        @include positionAbsolute(auto, auto, 60px, auto);
+        margin: 0 auto;
+        @include laptop { top: 100px; };
+    };
+
+    &Left {
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+        @include positionAbsolute(1rem, auto, auto, auto);
+        margin: auto 0;
+        @include laptop { left: 2rem; };
+    };
+
+    &Right {
+        writing-mode: vertical-rl;
+        @include positionAbsolute(auto, 1rem, auto, auto);
+        margin: auto 0;
+        @include laptop { right: 2rem; };
+    };
+
+    &Bottom {
+        @include positionAbsolute(auto, auto, auto, 1rem);
+        margin: 0 auto;
+        font-family: $BigDailyShort400;
+    };
+}
+
+// ----- Hero Texts ----- //
+.txtContainer {
+    @include flex(center, center, column);
+    
+    p {
+        font-family: $NeueMontreal530;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: $fs-heroTitle--mobile;
+
+        @include tablet { font-size: $fs-heroTitle--tablet; };
+        @include laptop { font-size: $fs-heroTitle--laptop; };
+        @include desktop { font-size: $fs-heroTitle--desktop; };
+    }
+
+    .subTxt {
+        padding-top: 1rem;
+        text-transform: lowercase;
+        font-size: $fs-home-heroSubTitle--mobile;
+
+        @include tablet { font-size: $fs-home-heroSubTitle--tablet; };
+        @include desktop { 
+            padding-top: 1.7rem;
+            font-size: $fs-home-heroSubTitle--desktop; 
+        };
+
+        span { font-family: $BigDailyShort500; }
+    }
+}
+

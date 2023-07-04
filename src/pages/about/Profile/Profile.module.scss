@@ -1,0 +1,122 @@
+@use '../../../sass/abstracts/' as *;
+
+.container {
+    margin-top: $mt-firstSection-mobile;
+    @include laptop { margin-top: calc(60px + 3rem); };
+}
+
+// ---- Title & Social ---- //
+.titleContainer {
+    font-family: $NeueMontreal530;
+    text-transform: uppercase;
+    padding-bottom: $pb-heading--mobile;
+
+    @include laptop { 
+        @include flex(flex-start, flex-start, column);
+        padding-bottom: $pb-heading--laptop;
+    }
+
+    h1, p {
+        line-height: 1.2;
+        font-size: $fs-heroTitle--mobile;
+        text-align: center;
+
+        @include laptop { 
+            text-align: left;
+            font-size: 4rem; 
+        };
+        @include desktop { font-size: 5rem; };
+    }
+}
+
+// ---- Content Parent Container ---- //
+
+.parentContainer {
+    @include laptop { @include grid(repeat(12, 1fr), 1.5rem); }
+    @include desktop { column-gap: 2rem; };
+}
+
+// ---- Profile Img ---- //
+
+.imgContainer {
+    @include flex(center, center);
+    @include laptop { 
+        grid-column: 1 / span 5;
+        align-items: flex-start;
+    };
+
+    img { 
+        border: $greyLine;
+        border-radius: $br-img;
+        max-width: 500px;
+    }
+
+}
+
+// ---- Socials & Text ---- //
+
+.contentContainer {
+    @include flex(flex-start, flex-start, column);
+    @include laptop { grid-column: 6 / span 7; };
+}
+
+.socialContainer {
+    width: 100%;
+    @include flex(center, center, column);
+    padding: 2rem 0;
+
+    @include laptop { 
+        order: 2;
+        align-items: flex-start;
+    };
+
+    span {
+        font-family: $NeueMontreal530;
+        text-transform: uppercase;
+        padding-bottom: 0.5rem;
+    }
+}
+
+.socialList {
+    @include flex(center, center);
+    flex-wrap: wrap;
+
+    @include laptop {
+        margin-bottom: 0;
+        @include flex(flex-start, flex-end);
+    }
+
+    button {
+        @include flex(center, center);
+        margin: 0.25rem 0.5rem;
+        overflow: hidden;
+        font-size: $fs-home-heroSubTitle--mobile;
+        @include desktop { font-size: $fs-home-heroSubTitle--desktop; }
+    
+        .cta {
+            margin-left: 0.3rem;
+            width: 18px;
+            height: 18px;
+            display: none;
+        }
+    
+        &:hover .cta { display: block; }
+    }
+}
+
+// ---- Paragraphs ---- //
+.txtContainer{
+
+    @include laptop {
+        padding-top: 0;
+        font-size: $fs-p-readability--laptop;
+        line-height: $lh-p-readability--laptop;
+    }
+
+    p { padding-bottom: $pb-paragraph; }
+
+    span {
+        font-family: $NeueMontreal800;
+        transition: all 100ms ease-in-out;
+    }
+}

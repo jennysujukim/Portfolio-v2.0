@@ -1,0 +1,49 @@
+@use '../../../sass/abstracts/' as *;
+
+.container {
+    margin-top: $mt-firstSection-mobile;
+    @include laptop { 
+        margin-top: calc(60px + 3rem);
+        @include grid(auto 1fr, 2rem);
+    };
+}
+
+.content {
+    border: $greyLine;
+    border-radius: $br-container--mobile;
+    position: relative;
+    overflow: hidden;
+
+    section { 
+        height: 100vh;
+        line-height: 1.7;
+    }
+}
+
+.overviewText {
+    @include grid(repeat(2, 1fr), 1.5rem);
+    p { 
+        text-align: justify;
+        padding-bottom: $pb-paragraph;
+    }
+}
+
+.overviewImg {
+    // background-color: $grey;
+    width: 100%;
+    height: 50vh;
+    line-height: 1.7;
+    padding: 2rem 0;
+}
+
+.sectionGrid {
+    @include grid(repeat(12, 1fr), 1.5rem);
+    
+    div { grid-column: auto / span 6; }
+}
+
+.glanceImg { 
+    background: $grey;
+    width: 100%;
+    height: 100%;
+ }

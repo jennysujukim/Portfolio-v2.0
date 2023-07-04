@@ -1,0 +1,10 @@
+@use '../../sass/abstracts/' as *;
+
+.heading {
+    text-transform: uppercase;
+    text-align: center;
+
+    @include tablet {
+        text-align: start;
+    }
+} 

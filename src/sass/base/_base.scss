@@ -1,0 +1,191 @@
+@use '../abstracts/' as *;
+
+* { box-sizing: border-box; }
+
+body {
+    background: $lightbeige;
+    color: $black;
+}
+
+img { width: 100% }
+
+svg { background: transparent }
+
+button {
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    color: $black;
+    overflow: hidden;
+}
+
+input {
+    appearance: none;
+    background: none;
+    border: 0;
+    outline: none;
+
+    &:focus { outline: none };
+
+}
+
+.wrapper,
+.wrapper--inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    margin-bottom: $mb-section--mobile;
+
+    @include tablet { padding: 0 3rem; }
+    @include laptop { margin-bottom: $mb-section--laptop; }
+    @include desktop { padding: 0; }
+
+    &--inner {
+        margin-bottom: $mb-innerSection--mobile;
+        @include laptop {
+            margin-bottom: $mb-innerSection--laptop;
+            padding: 0 3rem;
+        };
+    }
+
+}
+
+.highlight,
+.highlight--vertical,
+.highlight--white {
+    text-transform: capitalize;
+    border: $blackLine;
+    border-radius: $br-smallChip;
+    padding: 0.2rem 0.5rem;
+    font-family: $BigDailyShort400;
+
+    &--vertical { padding: 0.5rem 0.2rem; }
+    &--white { border: $lightbeigeLine; }
+}
+
+
+.keywordsContainer{ 
+    padding: 0.8rem 0;
+    @include flex(flex-start, center);
+    flex-wrap: wrap;
+    @include laptop { padding: 1rem 0 };
+}
+
+.keywords,
+.keywords--white {
+    font-size: $fs-smallText--mobile;
+    text-transform: uppercase;
+    border: $blackLine;
+    border-radius: $br-smallChip;
+    padding: $p-smallChip--mobile;
+    margin-right: 0.5rem;
+    margin-bottom: 0.3rem;
+
+    @include laptop { font-size: $fs-smallText--laptop; };
+
+    &--white {
+        color: $lightbeige;
+        border: $lightbeigeLine;
+    }
+}
+
+
+// Gradient Background (Three.js)
+.gradient {
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    filter: blur(45px);
+}
+
+.headerBackground {
+    height: 60px;
+    width: 100%;
+    z-index: 10;
+    @include positionFixed();
+    background: $lightbeige;
+    opacity: 0;
+
+    @include laptop{ display: none; }
+}
+
+.headerBackground.active {
+    opacity: 1;
+}
+
+.sliderIndex.active {
+    font-family: $NeueMontreal530;
+    color: $black;
+}
+
+
+/* ------------------------
+Scrollbar
+------------------------ */
+
+::-webkit-scrollbar { width: 0.7rem; }
+::-webkit-scrollbar-track { background: $lightbeige; }
+::-webkit-scrollbar-thumb { background: $black; }
+
+.glass__white {
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: soft-light;
+    position: absolute;
+    opacity: 0.4;
+    left:0;
+    top: 0;
+    z-index: -1;
+    background: $lightbeige;
+}
+
+.glass__black {
+    border-radius: 50px;
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    background: $black;
+    opacity: 0.4;
+    z-index: -1;
+
+    @include desktop { border-radius: 100px; }
+}
+
+
+/* ------------------------
+Projects Page
+------------------------ */
+
+.project--001 {
+    @include laptop { grid-column: auto / span 7; };
+}
+
+.project--002 {
+    @include laptop { grid-column: auto / span 5; };
+}
+
+.project--003 {
+    @include laptop { grid-column: auto / span 9; };
+}
+
+.project--004 {
+    @include laptop { grid-column: 1 / span 5; };
+}
+
+.project--005 {
+    @include laptop { grid-column: auto / span 7; };
+}
+
+.project--006 {
+    @include laptop { grid-column: 4 / span 9; };
+}

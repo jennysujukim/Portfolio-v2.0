@@ -1,0 +1,101 @@
+@use '../../../sass/abstracts/' as *;
+
+.container {
+    color: $lightbeige;
+    border-radius: $br-container--mobile;
+    @include flex(center, center, column);
+    position: relative;
+    overflow: hidden;
+
+    @include desktop { border-radius: $br-container--desktop; }
+}
+
+//text deco
+.txtTop {
+    font-size: $fs-smallText--mobile;
+    text-transform: uppercase;
+    @include positionAbsolute(auto, auto, 4rem, auto);
+    @include laptop { 
+        font-size: $fs-smallText--laptop;
+        top: 5rem;
+    };
+}
+
+// heading
+.heading {
+    text-align: center;
+    margin-top: 8rem;
+    padding-bottom: $pb-heading--mobile;
+
+    @include laptop {
+        margin-top: 10rem;
+        padding-bottom: $pb-heading--laptop;
+    };
+    
+    h2 { @include tablet { text-align: center; } };
+}
+
+.txtContainer { 
+    text-align: center;
+
+    p { 
+        @include laptop {
+            font-size: $fs-p-readability--laptop;
+            line-height: $lh-p-readability--laptop;
+        };
+    }
+}
+
+
+.terminalTitle {
+    margin-bottom: $pb-heading--mobile;
+    white-space: nowrap;
+    font-size: $fs-aboutMeTitle--mobile;
+    height: $fs-aboutMeTitle--mobile;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: $pb-heading--mobile; 
+    @include tablet { 
+        font-size: $fs-heroTitle--tablet;
+        height: $fs-heroTitle--tablet;
+    };
+    @include laptop { 
+        font-size: $fs-heroTitle--laptop; 
+        padding-bottom: $pb-heading--laptop;
+    };
+    @include desktop {
+        font-size: $fs-heroTitle--desktop;
+        padding-bottom: 7rem;
+    };
+
+    .anim1,
+    .anim2 {
+        @include positionAbsolute(0, auto, 0, auto);
+        white-space: nowrap;
+        overflow: hidden;
+        animation: marqueeAnim 20s linear infinite;
+    }
+    .anim2 {
+        animation-delay: 10s;
+        transform: translateX(100%);
+    }
+
+    span { 
+        font-family: $BigDailyShort400;
+        text-transform: capitalize;
+        padding-right: 0.3rem;
+    }
+}
+
+@keyframes marqueeAnim {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-150%); }
+  }
+
+
+// terminal
+.terminal {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}

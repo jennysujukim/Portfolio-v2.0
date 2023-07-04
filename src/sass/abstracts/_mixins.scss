@@ -1,0 +1,68 @@
+@use './variables' as *;
+
+// global
+@mixin flex($justify, $align, $direction: false){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+
+    @if $direction {
+        flex-direction: $direction;
+    }
+}
+
+@mixin grid($col, $colGap, $row: false, $rowGap: false){
+    display: grid;
+    grid-template-columns: $col;
+    column-gap: $colGap;
+
+    @if $row {
+        grid-template-rows: $row;
+        row-gap: $rowGap;
+    }
+}
+
+@mixin positionFixed($left: 0, $top: 0){
+    position: fixed;
+    left: $left;
+    top: $top;
+}
+
+@mixin positionAbsolute($left, $right, $top, $bottom){
+    position: absolute;
+    left: $left;
+    right: $right;
+    top: $top;
+    bottom: $bottom;
+}
+
+
+// local
+@mixin btnLayout(){
+    margin: 1rem 0;
+    padding: 1rem 1.5rem;
+    border-radius: 30px;
+}
+
+@mixin h3Title($color: $black){
+    color: $color;
+    font-size: 20vw;
+    white-space: nowrap;
+}
+
+@mixin h3TitleBg() {
+    padding: 2rem 0;
+    overflow: hidden;
+}
+
+@mixin homeBannerDiv($borderBottom: $blackLine){
+    height: calc((100vh - 60px) / 5);
+    border-bottom: $borderBottom;
+}
+
+@mixin homeBannerTxt($fontSize, $textTransform: uppercase){
+    white-space: nowrap;
+    user-select: none; 
+    font-size: $fontSize;
+    text-transform: $textTransform;
+}

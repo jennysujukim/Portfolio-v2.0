@@ -1,0 +1,54 @@
+@use '../../../sass/abstracts/' as *;
+
+
+.heading {
+    padding-bottom: $pb-heading--mobile;
+    @include laptop { padding-bottom: $pb-heading--laptop; };
+}
+
+.storiesContainer {
+    @include grid(unset, unset, auto 1fr, 3rem);
+
+    div {
+        h4 { 
+            padding-bottom: 2rem;
+
+            @include laptop { padding-bottom: 1rem; }
+            @include desktop { padding-bottom: 0; }
+        }
+    }
+}
+
+.content{
+
+    @include laptop {
+        @include grid(repeat(12, 1fr), 1rem);
+
+        &:nth-child(2){
+            order: 2;
+        }
+    }
+
+    .img { 
+        @include laptop{ 
+            grid-column: auto / span 6;
+
+            &__reverse {
+                grid-column: auto / span 6;
+                order: 2;
+            }
+        }
+    }
+
+    p { 
+        padding-bottom: $pb-paragraph;
+
+        @include laptop{ 
+            padding-bottom: 0;
+            grid-column: auto / span 6;
+            @include flex(center, center);
+        }
+    }
+
+    span { font-family: $NeueMontreal800; }
+}

@@ -1,0 +1,31 @@
+@use '../../sass/abstracts/' as *;
+
+.slider {
+    position: -webkit-sticky;
+    position: sticky;
+    top: calc(60px + 1rem);
+    display: none;
+
+    @include laptop {
+        display: block;
+        @include grid(unset, unset, auto 1fr, 1rem);
+        height: calc(100vh - ((60px + 1rem) * 2));
+    }
+
+    .sliderIndex {
+        cursor: pointer;
+        @include flex(center, center);
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+        text-align: center;
+        line-height: 1;
+        font-family: $NeueMontreal530;
+        font-size: $fs-smallText--laptop;
+        text-transform: uppercase;
+        color: $grey;
+
+        &:hover {
+            color: $black;
+        }
+    }
+}

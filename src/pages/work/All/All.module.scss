@@ -1,0 +1,82 @@
+@use '../../../sass/abstracts/' as *;
+
+
+.container {
+    margin-top: $mt-firstSection-mobile;
+    @include laptop {  margin-top: calc(60px + 3rem); };
+}
+
+.heading { 
+    padding-bottom: $pb-heading--mobile;
+    @include laptop { padding-bottom: $pb-heading--laptop; };
+}
+
+// ---- Card Lists ---- //
+.listContainer { 
+    overflow: hidden;
+    @include grid(unset, unset, repeat(auto-fill, 1fr), 3rem);  
+    @include laptop { @include grid(repeat(12, 1fr), 2rem, repeat(4, 1fr), 5rem); }
+}
+
+.cardContainer {
+    overflow: hidden;
+    position: relative;
+    border-radius: $br-img;
+    border: $greyLine;
+    padding: 1rem;
+    height: 50vh;
+
+    &:hover .imgContainer img{
+        filter: unset;
+        transform: scale(105%);
+    }
+    &:hover .cta {
+        display: block;
+    }
+
+}
+
+.imgContainer{
+    @include positionAbsolute(50%, auto, 50%, auto);
+    transform: translate(-50%, -50%);
+    width: 100%;
+    z-index: -2;
+
+    img {
+        @include flex(center, center);
+        filter: grayscale(1);
+        transition: all 300ms cubic-bezier(.44,0,.66,.99);
+    }
+}
+
+.cta {
+    @include positionAbsolute(auto, 1rem, 1rem, auto);
+    @include flex(center, center);
+    width: 30px;
+    height: 30px;
+
+    @include laptop {
+        width: 45px;
+        height: 45px;
+        display: none;
+        transition: all 300ms cubic-bezier(.44,0,.66,.99);
+    }
+}
+
+.id {
+    @include positionAbsolute(1rem, auto, 1rem, auto);
+}
+
+.overlay {
+    @include positionAbsolute(0, auto, 0, auto);
+    width: 100%;
+    height: 100%;
+    background: $lightbeige;
+    background: linear-gradient(0deg, rgba(251,251,251,1) 0%, rgba(251,251,251,0) 60%);
+    z-index: -1;
+}
+
+.textContainer {
+    @include flex(flex-end, flex-start, column);
+    height: 100%;
+}
