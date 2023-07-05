@@ -58,9 +58,9 @@
 // ----- Hero Texts ----- //
 .txtContainer {
     @include flex(center, center, column);
+    font-weight: bold;
     
     p {
-        font-family: $NeueMontreal530;
         text-align: center;
         text-transform: uppercase;
         font-size: $fs-heroTitle--mobile;

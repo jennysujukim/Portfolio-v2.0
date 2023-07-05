@@ -16,7 +16,7 @@
 
         span {
             text-transform: uppercase;
-            font-family: $NeueMontreal530;
+            font-weight: bold;
             @include laptop { font-size: 1.2rem; };
         }
     }
