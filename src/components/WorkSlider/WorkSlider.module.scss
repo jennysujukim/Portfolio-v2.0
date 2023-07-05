@@ -8,8 +8,8 @@
 
     @include laptop {
         display: block;
-        @include grid(unset, unset, auto 1fr, 1rem);
         height: calc(100vh - ((60px + 1rem) * 2));
+        @include flex(space-between, center, column)
     }
 
     .sliderIndex {

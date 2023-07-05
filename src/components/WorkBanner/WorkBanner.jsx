@@ -7,6 +7,7 @@ import styles from './WorkBanner.module.scss'
 // components
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward'
 
+
 export default function WorkBanner() {
 
     const { projectData } = useContext(ProjectContext)
@@ -18,27 +19,32 @@ export default function WorkBanner() {
   return (
     <>
         { projectData &&
-            <section className={styles.container}>
-                <div className={styles.dataContainer}>
-                    <h2> {projectData.title}</h2>
-                    <div className={`keywordsContainer ${styles.keywords}`}>
-                        {projectData.keywords.map((keyword, index) => (
-                            <span className="keywords" key={index}>
-                                {keyword}
-                            </span>
-                        ))}
+            <section className={`wrapper ${styles.container}`}>
+                <div className={styles.contentContainer}>
+                    <div className={styles.txtContainer}>
+                        <h2> {projectData.title}</h2>
+                        <div className={`keywordsContainer ${styles.keywords}`}>
+                            {projectData.keywords.map((keyword, index) => (
+                                <span className="keywords" key={index}>
+                                    {keyword}
+                                </span>
+                            ))}
+                        </div>
+                        <p>{projectData.description}</p>
                     </div>
-                    <p>{projectData.description}</p>
+                    <div className={styles.btnContainer}>
+                        <button onClick={() => openExternalLink(`${projectData.live_site}`)}>
+                            Live Site
+                            < ArrowOutwardIcon className={styles.cta}/>
+                        </button>
+                        <button onClick={() => openExternalLink(`${projectData.source_code}`)}>
+                            View Code
+                            < ArrowOutwardIcon className={styles.cta}/>
+                        </button>
+                    </div>
                 </div>
-                <div className={styles.buttonContainer}>
-                    <button onClick={() => openExternalLink(`${projectData.live_site}`)}>
-                        Live Site
-                        < ArrowOutwardIcon className={styles.cta}/>
-                    </button>
-                    <button onClick={() => openExternalLink(`${projectData.source_code}`)}>
-                        View Code
-                        < ArrowOutwardIcon className={styles.cta}/>
-                    </button>
+                <div className={styles.bannerImg}>
+                    <img src={projectData.banner_url} alt={`Banner of ${projectData.title}`} />
                 </div>
             </section>
         }

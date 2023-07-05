@@ -2,12 +2,17 @@
 
 .overview {
 
-    padding: 3rem 0;
+    padding: 2rem 0;
+    @include laptop { padding: 3rem 0; };
 
     li {
-        width: 50%;
-        @include grid(20% 80%, 1rem);
+        @include flex(space-between, center);
         padding: 0.25rem 0;
+
+        @include tablet {
+            @include grid(25% 75%, 1rem);
+        }
+
 
         span {
             text-transform: uppercase;

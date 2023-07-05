@@ -1,24 +1,45 @@
 @use '../../sass/abstracts/' as *;
 
 .container {
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    padding: 0 1.5rem;
-    @include flex(center, center, column);
-    position: relative;
-    background-color: #eaeaea;
+    margin-top: $mt-firstSection-mobile;
+    @include laptop {  margin-top: calc(60px + 3rem); };
 }
 
-.dataContainer {
+.contentContainer {
+    @include flex(flex-end, center, column);
+    margin-bottom: 2rem;
+
+    @include laptop {
+        @include grid(repeat(12, 1fr), 2rem);
+    }
+}
+
+.txtContainer {
     text-align: center;
+    @include laptop {
+         text-align: left; 
+         grid-column: auto / span 9;
+    }
 }
 
-.keywords { @include flex(center, center); }
+.keywords { 
+    @include flex(center, center);
+    @include laptop {
+        justify-content: flex-start;
+    }
+}
 
-.buttonContainer {
+
+.btnContainer {
     @include flex(space-between, center);
     padding-top: 2rem;
+
+    @include laptop {
+        grid-column: 10 / span 3;
+        padding: 0;
+        height: 100%;
+        @include flex(space-between, flex-end);
+    }
 
     button {
         @include flex(center, center);
@@ -41,3 +62,16 @@
         }
     }
 }
+
+.bannerImg {
+    img {
+        width: 100%;
+        height: 100%;
+        border-radius: $br-img;
+    }
+}
+
+
+
+
+

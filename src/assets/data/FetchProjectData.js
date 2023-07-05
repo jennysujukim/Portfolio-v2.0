@@ -1,6 +1,6 @@
 import placeholder from "../images/placeholder/p-projects-3x2.jpg"
-// import placeholder1x1 from '../images/placeholder/hp-projects-1x1.jpg'
 import thumbnail from '../images/placeholder/cafeLayered-thumbnail.jpg'
+import dailyProteinBanner from '../images/work/daily-protein/banner.jpg'
 
 export const FetchProjectData = () => {
     
@@ -8,9 +8,10 @@ export const FetchProjectData = () => {
         {
         id: "001",
         title: "Daily Protein",
-        description: "SPA that users can search and log food to track daily protein intakes. Firebase Auth and Firestore are used to store data privately.",
+        description: "SPA that users can search and log food to track daily protein intakes.",
         image_url: placeholder,
         image_url_projects: thumbnail,
+        banner_url: dailyProteinBanner,
         link: "/work/daily-protein",
         keywords: ["React.js", "Firebase", "Sass"],
         live_site: "https://daily-protein.seojeongkim.com/",
