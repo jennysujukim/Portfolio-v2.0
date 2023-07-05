@@ -12,6 +12,10 @@ import SubHeading from '../../../components/SubHeading'
 import WorkOverview from '../../../components/WorkOverview'
 import CodeSnippet from '../../../components/CodeSnippet'
 
+// images and videos
+import overviewImg from '../../../assets/images/work/daily-protein/overview.jpg'
+import componentVid from '../../../assets/images/work/daily-protein/components-form.mp4'
+
 export default function DailyProtein() {
 
   const { setProjectId } = useContext(ProjectContext)
@@ -144,7 +148,7 @@ export const AuthContextProvider = ({ children }) => {
               </p>
             </div>
             <div className={styles.imgContainer}>
-              {/* <img src="" alt="" /> */}
+              <img src={overviewImg} alt="Shots of Daily Protein App" />
             </div>
           </section>
 
@@ -173,8 +177,10 @@ export const AuthContextProvider = ({ children }) => {
                   Forms are utilized to handle user input values. Instead of managing the component values directly, React State is used to control their value. This approach makes it easier to track, validate, and modify the input as needed, which is also beneficial for future reference purposes when integrating with Firebase.
                 </p>
               </div>
-              <div className={styles.imgContainer}>
-                {/* <img src="" alt="" /> */}
+              <div className={styles.vidContainer}>
+                <video playsInline autoPlay muted loop>
+                  <source src={componentVid} type="video/mp4" />
+                </video>
               </div>
             </div>
           </section>
