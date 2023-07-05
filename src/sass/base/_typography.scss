@@ -1,4 +1,5 @@
 @use '../abstracts/index' as *;
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
 
 // ----- CascadiaMono (Terminal) ----- //
 
@@ -6,26 +7,6 @@
     font-family: 'CascadiaMono';
     font-display: swap;
     src: url('../../assets/fonts/CascadiaMono.woff2');
-}
-
-// ----- Neue Montreal ----- //
-
-@font-face {
-    font-family: 'Neue Montreal 400';
-    font-display: swap;
-    src: url('../../assets/fonts/PPNeueMontreal-Book.woff2');
-}
-
-@font-face {
-    font-family: 'Neue Montreal 530';
-    font-display: swap;
-    src: url('../../assets/fonts/PPNeueMontreal-Medium.woff2');
-}
-
-@font-face {
-    font-family: 'Neue Montreal 800';
-    font-display: swap;
-    src: url('../../assets/fonts/PPNeueMontreal-Bold.woff2');
 }
 
 // ----- Big Daily Short ----- //
@@ -57,20 +38,18 @@
 // ----- Font Design ----- //
 
 body{
-    font-family: $NeueMontreal400;
+    font-family: $lato;
     font-weight: 400;
     color: $black; 
     line-height: 1.5;
 }
 
 h1 { 
-    font-family: $NeueMontreal530;
-    font-weight: 530;
+    font-weight: 700;
 }
 
 h2, h3 {
-    font-family: $NeueMontreal530;
-    font-weight: 530;
+    font-weight: 700;
     line-height: 1;
     text-transform: uppercase;
     font-size: $fs-h2h3--mobile;
