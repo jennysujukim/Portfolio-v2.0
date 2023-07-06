@@ -161,32 +161,3 @@ Scrollbar
 
     @include desktop { border-radius: 100px; }
 }
-
-
-/* ------------------------
-Projects Page
------------------------- */
-
-.project--001 {
-    @include laptop { grid-column: auto / span 7; };
-}
-
-.project--002 {
-    @include laptop { grid-column: auto / span 5; };
-}
-
-.project--003 {
-    @include laptop { grid-column: auto / span 9; };
-}
-
-.project--004 {
-    @include laptop { grid-column: 1 / span 5; };
-}
-
-.project--005 {
-    @include laptop { grid-column: auto / span 7; };
-}
-
-.project--006 {
-    @include laptop { grid-column: 4 / span 9; };
-}

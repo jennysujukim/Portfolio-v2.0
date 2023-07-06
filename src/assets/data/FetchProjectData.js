@@ -1,30 +1,28 @@
 import placeholder from "../images/placeholder/p-projects-3x2.jpg"
-import thumbnail from '../images/placeholder/cafeLayered-thumbnail.jpg'
 import dailyProteinBanner from '../images/work/daily-protein/banner.jpg'
 import dailyProteinThumb from '../images/work/daily-protein/overview.jpg'
-import dailyProteinThumb3x4 from '../images/work/daily-protein/thumb-projects.jpg'
-
+import dailyProteinThumb2x1 from '../images/work/daily-protein/thumb-projects-2x1.jpg'
 export const FetchProjectData = () => {
     
     return [
         {
         id: "001",
         title: "Daily Protein",
-        description: "Single Page Application designed to track daily protein intake. Sign up to calculate your ideal protein intake and log your meals for easy monitoring.",
+        description: "Sign up, calculate, track your daily protein intake.",
         image_url: dailyProteinThumb,
-        image_url_projects: dailyProteinThumb3x4,
+        image_url_projects: dailyProteinThumb2x1,
         banner_url: dailyProteinBanner,
         link: "/work/daily-protein",
         keywords: ["React.js", "Firebase", "Sass"],
         live_site: "https://daily-protein.seojeongkim.com/",
-        source_code: "https://github.com/jennysujukim/"
+        source_code: "https://github.com/jennysujukim/daily-protein-2023"
         },
         {
         id: "002",
         title: "It was awesome!",
-        description: "Coming Soon...",
+        description: "Lorem ipsum dolor sit amet.",
         image_url: dailyProteinThumb,
-        image_url_projects: thumbnail,
+        image_url_projects: dailyProteinThumb2x1,
         link: "/work/it-was-awesome",
         keywords: ["React Native", "Typescript", "Sass"],
         live_site: "https://it-was-awesome.seojeongkim.com/",
@@ -33,9 +31,9 @@ export const FetchProjectData = () => {
         {
         id: "003",
         title: "LinkOn",
-        description: "Coming soon...",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         image_url: placeholder,
-        image_url_projects: thumbnail,
+        image_url_projects: dailyProteinThumb2x1,
         link: "/work/linkon",
         keywords: ["JavaScript", "Node.js", "WebRTC", "WebSocket"],
         live_site: "https://linkon.seojeongkim.com/",
@@ -44,9 +42,9 @@ export const FetchProjectData = () => {
         {
         id: "004",
         title: "Typa Type",
-        description: "Coming soon...",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         image_url: placeholder,
-        image_url_projects: thumbnail,
+        image_url_projects: dailyProteinThumb2x1,
         link: "/work/typa-type",
         keywords: ["JavaScript", "Tailwind CSS"],
         live_site: "https://font-vogue.seojeongkim.com/",
@@ -55,9 +53,9 @@ export const FetchProjectData = () => {
         {
         id: "005",
         title: "My Notes",
-        description: "An app that provides users with a personal dashboard for managing notes. CRUD database operations with PHP and MySQL.",
+        description: "Write and organize your personal notes.",
         image_url: placeholder,
-        image_url_projects: thumbnail,
+        image_url_projects: dailyProteinThumb2x1,
         link: "/work/my-notes",
         keywords: ["PHP", "MySQL", "Bootstrap"],
         live_site: "https://my-notes.seojeongkim.com/",
@@ -66,9 +64,9 @@ export const FetchProjectData = () => {
         {
         id: "006",
         title: "Jade Bookmark Manager",
-        description: "Coming soon...",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         image_url: placeholder,
-        image_url_projects: thumbnail,
+        image_url_projects: dailyProteinThumb2x1,
         link: "/work/jade-bookmark-manager",
         keywords: ["MERN", "Group Project"],
         live_site: "https://jade.seojeongkim.com/",

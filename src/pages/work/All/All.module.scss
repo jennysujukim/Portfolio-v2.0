@@ -11,72 +11,88 @@
     @include laptop { padding-bottom: $pb-heading--laptop; };
 }
 
+.contentContainer {
+    @include laptop {
+        @include grid(auto 1fr, 3rem);
+    }
+}
+
+.slider {
+    position: -webkit-sticky;
+    position: sticky;
+    top: calc(60px + 1rem);
+    display: none;
+
+    @include laptop {
+        display: block;
+        height: calc(100vh - ((60px + 1rem) * 2));
+        @include flex(space-between, center, column)
+    }
+
+    .sliderIndex {
+        cursor: pointer;
+        @include flex(center, center);
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+        text-align: center;
+        line-height: 1;
+        font-size: $fs-smallText--laptop;
+        text-transform: uppercase;
+        color: $grey;
+        font-weight: bold;
+
+        &:hover {
+            color: $black;
+        }
+    }
+}
+
 // ---- Card Lists ---- //
 .listContainer { 
     overflow: hidden;
     @include grid(unset, unset, repeat(auto-fill, 1fr), 3rem);  
-    @include laptop { @include grid(repeat(12, 1fr), 2rem, repeat(4, 1fr), 5rem); }
 }
 
-.cardContainer {
+.card {
     overflow: hidden;
     position: relative;
-    border-radius: $br-img;
-    border: $greyLine;
-    padding: 1rem;
-    height: 50vh;
 
-    &:hover .imgContainer img{
+    &:hover a .cardImg img{
         filter: unset;
         transform: scale(105%);
     }
-    &:hover .cta {
-        display: block;
+
+    a {
+        @include flex(center, center, column);
+
+        .cardImg{
+            @include flex(center, center);
+            border: $greyLine;
+            border-radius: $br-img;
+            overflow: hidden;
+
+            img {
+                filter: grayscale(0.6);
+                transition: all 300ms cubic-bezier(.44,0,.66,.99);
+            }
+        }
+
+        .cardDetails {
+            height: 100%;
+            width: 100%;
+            padding-top: 1rem;
+            position: relative;
+
+            .id {
+                writing-mode: vertical-lr;
+                @include positionAbsolute(auto, 0, 1rem, auto);
+            }
+
+            .txtContainer {
+                width: 100%;
+                @include flex(space-between, flex-start, column);
+            }
+        }
     }
 
-}
-
-.imgContainer{
-    @include positionAbsolute(50%, auto, 50%, auto);
-    transform: translate(-50%, -50%);
-    width: 100%;
-    z-index: -2;
-
-    img {
-        @include flex(center, center);
-        filter: grayscale(1);
-        transition: all 300ms cubic-bezier(.44,0,.66,.99);
-    }
-}
-
-.cta {
-    @include positionAbsolute(auto, 1rem, 1rem, auto);
-    @include flex(center, center);
-    width: 30px;
-    height: 30px;
-
-    @include laptop {
-        width: 45px;
-        height: 45px;
-        display: none;
-        transition: all 300ms cubic-bezier(.44,0,.66,.99);
-    }
-}
-
-.id {
-    @include positionAbsolute(1rem, auto, 1rem, auto);
-}
-
-.overlay {
-    @include positionAbsolute(0, auto, 0, auto);
-    width: 100%;
-    height: 100%;
-    background: $lightbeige;
-    background: linear-gradient(0deg, rgba(251,251,251,1) 0%, rgba(251,251,251,0) 60%);
-    z-index: -1;
-}
-
-.textContainer {
-    @include flex(flex-end, flex-start, column);
-    height: 100%;
 }
