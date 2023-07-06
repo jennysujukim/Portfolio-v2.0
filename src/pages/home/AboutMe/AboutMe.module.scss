@@ -6,7 +6,9 @@
     @include flex(center, center, column);
     position: relative;
     overflow: hidden;
+    margin-bottom: $mb-section--mobile;
 
+    @include laptop { margin-bottom: $mb-section--laptop; }
     @include desktop { border-radius: $br-container--desktop; }
 }
 

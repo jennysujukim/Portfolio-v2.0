@@ -9,10 +9,14 @@
 }
 
 .content {
-    border: $greyLine;
-    border-radius: $br-container--mobile;
+
     position: relative;
     overflow: hidden;
+
+    @include tablet {
+        border: $greyLine;
+        border-radius: $br-container--mobile;
+    }
 
     section { 
 
@@ -22,6 +26,11 @@
 }
 
 .sectionOne {
+    padding: 0;
+
+    @include tablet {
+        padding: 0 2rem;
+    }
 
     .txtContainer {
         padding-bottom: 3rem;
@@ -47,6 +56,11 @@
 }
 
 .sectionTwo {
+    padding: 0;
+
+    @include tablet {
+        padding: 0 2rem;
+    }
 
     .contentContainerOne {
         padding: 2rem 0;
@@ -66,9 +80,9 @@
         }
 
         .imgContainer {
-            background: $grey;
-            width: 100%;
-            height: 50vh;
+            overflow: hidden;
+            @include flex(center, center);
+            border-radius: $br-img;
             
             @include desktop {
                 grid-column: auto / span 6;
@@ -110,6 +124,11 @@
 }
 
 .sectionThree {
+    padding: 0;
+
+    @include tablet {
+        padding: 0 2rem;
+    }
 
     .contentContainer {
         padding-top: 2rem;
@@ -129,11 +148,20 @@
             @include desktop {
                 grid-column: auto / span 6;
             }
+
+            pre {
+                border-radius: $br-img;
+            }
         }
     }
 }
 
 .sectionFour {
+    padding: 0;
+
+    @include tablet {
+        padding: 0 2rem;
+    }
 
     .contentContainer {
         padding-top: 2rem;
@@ -151,9 +179,12 @@
         }
 
         .codeContainer {
-
+            border-radius: $br-img;
             @include desktop {
                 grid-column: auto / span 6;
+            }
+            pre {
+                border-radius: $br-img;
             }
         }
     }
@@ -162,6 +193,11 @@
 
 
 .sectionFive {
+    padding: 0;
+
+    @include tablet {
+        padding: 0 2rem;
+    }
 
     .contentContainerOne {
         padding-top: 2rem;
@@ -177,13 +213,17 @@
             p { padding-bottom: $pb-paragraph; }
         }
 
-        .imgContainer {
-            background: $grey;
+        .vidContainer {
             width: 100%;
-            height: 50vh;
+            overflow: hidden;
 
             @include desktop {
                 grid-column: auto / span 6;
+            }
+
+            video {
+                width: 100%;
+                border-radius: $br-img;
             }
         }
     }
@@ -207,12 +247,21 @@
             @include desktop {
                 grid-column: auto / span 6;
             }
+            pre {
+                border-radius: $br-img;
+            }
         }
         
     }
 }
 
 .sectionSix {
+    padding: 0;
+
+    @include tablet {
+        padding: 0 2rem;
+    }
+    
     .contentContainer {
         padding-top: 2rem;
         @include desktop {

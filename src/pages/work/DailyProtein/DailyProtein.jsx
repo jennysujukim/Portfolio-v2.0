@@ -11,10 +11,13 @@ import WorkSlider from '../../../components/WorkSlider'
 import SubHeading from '../../../components/SubHeading'
 import WorkOverview from '../../../components/WorkOverview'
 import CodeSnippet from '../../../components/CodeSnippet'
+import WorkNavigation from '../../../components/WorkNavigation'
 
 // images and videos
 import overviewImg from '../../../assets/images/work/daily-protein/overview.jpg'
 import componentVid from '../../../assets/images/work/daily-protein/components-form.mp4'
+import componentImg from '../../../assets/images/work/daily-protein/components.jpg'
+import authVid from '../../../assets/images/work/daily-protein/auth.mp4'
 
 export default function DailyProtein() {
 
@@ -122,7 +125,7 @@ export const AuthContextProvider = ({ children }) => {
 
   return (
     <>
-      <WorkBanner />
+      <WorkBanner /> 
       <div className={`wrapper ${styles.container}`}>
         <WorkSliderContextProvider>
           <WorkSlider sections={DailyProteinSections} />
@@ -167,7 +170,7 @@ export const AuthContextProvider = ({ children }) => {
                 </p>
               </div>
               <div className={styles.imgContainer}>
-                {/* <img src="" alt="" /> */}
+                <img src={componentImg} alt="Components of Daily Protein App" />
               </div>
             </div>
             <div className={styles.contentContainerTwo}>
@@ -249,8 +252,10 @@ export const AuthContextProvider = ({ children }) => {
                   To handle multiple states of the user's authentication status, the useReducer hook is utilized to manage state transitions based on dispatched actions.
                 </p>
               </div>
-              <div className={styles.imgContainer}>
-                {/* <img src="" alt="" /> */}
+              <div className={styles.vidContainer}>
+                <video playsInline autoPlay muted loop>
+                  <source src={authVid} type="video/mp4" />
+                </video>
               </div>
             </div>
             <div className={styles.contentContainerTwo}>
@@ -284,10 +289,9 @@ export const AuthContextProvider = ({ children }) => {
               </p>
             </div>
           </section>
-
         </div>
-
       </div>
+      <WorkNavigation />
     </>
   )
 }

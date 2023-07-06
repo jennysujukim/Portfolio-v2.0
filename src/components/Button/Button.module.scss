@@ -1,9 +1,14 @@
 @use '../../sass/abstracts/' as *;
 
-.container {
+.container,
+.containerRight {
     @include flex(center, center);
     overflow: hidden;
     position: relative;
+
+    &Right {
+        @include tablet { @include flex(flex-end, center); };
+    }
 
     ::after {
         content: '';
@@ -18,7 +23,6 @@
 
     .button {
         font-family: $BigDailyShort700;
-        // background: $black;
         border: $blackLine;
         @include btnLayout(); 
         position: relative;
