@@ -6,6 +6,7 @@ import { ProjectContext } from "../../../context/ProjectContext"
 
 // components
 import WorkBanner from "../../../components/WorkBanner"
+import WorkNavigation from '../../../components/WorkNavigation'
 
 export default function ItWasAwesome() {
   const { setProjectId } = useContext(ProjectContext)
@@ -17,6 +18,7 @@ export default function ItWasAwesome() {
   return (
     <>
       <WorkBanner />
+      <WorkNavigation />
     </>
   )
 }

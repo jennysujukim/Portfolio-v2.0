@@ -12,11 +12,16 @@ export const ProjectContextProvider = ({ children }) => {
 
     const projectData = allData.find((e) => {
         return e.id === projectId
-        // return e.id === "004"
     })
 
+    const projectDataIndex = allData.findIndex((e) => {
+        return e.id === projectId
+    })
+
+    const nextProjectData = allData[projectDataIndex + 1] || null;
+
     return (
-        <ProjectContext.Provider value={ { projectData, setProjectId } } >
+        <ProjectContext.Provider value={ { projectData, setProjectId, nextProjectData } } >
             { children }
         </ProjectContext.Provider>
     )

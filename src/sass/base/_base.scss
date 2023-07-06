@@ -12,10 +12,12 @@ img { width: 100% }
 svg { background: transparent }
 
 button {
+    font-family: $lato;
     cursor: pointer;
     background: transparent;
     border: 0;
     color: $black;
+    padding: unset;
 }
 
 a {
@@ -44,7 +46,6 @@ input {
 
     @include tablet { padding: 0 2rem; }
     @include laptop { margin-bottom: $mb-section--laptop; }
-    @include desktop { padding: 0; }
 
     &--inner {
         margin-bottom: $mb-innerSection--mobile;

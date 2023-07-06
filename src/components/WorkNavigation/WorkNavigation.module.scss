@@ -1,0 +1,46 @@
+@use '../../sass/abstracts/' as *;
+
+.container {
+    height: 20vh;
+    text-transform: uppercase;
+    @include breakpoint($bp: 500px) {
+        @include grid(repeat(2, 1fr), unset);
+    }
+}
+
+.goBackContainer,
+.nextContainer {
+    width: 100%;
+    height: 80%;
+}
+
+.goBack {
+    display: none;
+    
+    @include breakpoint($bp: 500px){
+        @include flex(flex-start, center);
+    }
+    svg {
+        transform: scaleX(-1);
+        margin: 0 0.5rem;
+    }
+}
+
+.nextProject {
+    @include flex(flex-end, center);
+    svg { margin: 0 0.5rem; }
+}
+
+.projectDetails {
+    padding-top: 1rem;
+    @include flex(flex-end, center);
+
+    h4 {
+        text-align: right;
+    }
+
+    span {
+        writing-mode: vertical-rl;
+        padding-left: 1rem;
+    }
+}
