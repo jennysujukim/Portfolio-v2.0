@@ -10,11 +10,10 @@ export default function ThreeGradient() {
 
     useEffect(() => {
 
-        // const objects = []
         let mouseX = 0
         let mouseY = 0
-        let windowHalfX = window.innerWidth / 2;
-        let windowHalfY = window.innerHeight / 2;
+        // let windowHalfX = window.innerWidth / 2;
+        // let windowHalfY = window.innerHeight / 2;
 
         let sizes = {
             width: window.innerWidth,
@@ -32,69 +31,56 @@ export default function ThreeGradient() {
         scene.background = new THREE.Color(0xFBFBFB)
 
         // Camera
-        const camera = new THREE.PerspectiveCamera(60, sizes.width / sizes.height, 0.1, 1000)
+        const camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 100 )
         camera.position.z = 6
         camera.focalLength = 3
 
-
         // Lights
-        const light = new THREE.DirectionalLight(0xFBFBFB, 1);
+        const light = new THREE.HemisphereLight( 0xfbfbfb, 0x989898, 0.7 );
         light.position.set(10, 5, 10);
         scene.add(light);
         
+        // Objects
+        const loader = new GLTFLoader()
 
-        const starObj = new GLTFLoader();
+        const objects = []
+        const objectPaths = [
+          './assets/J.gltf',
+          './assets/E.gltf',
+          './assets/N.gltf',
+          './assets/K.gltf',
+          './assets/I.gltf',
+          './assets/M.gltf'
+        ]
+        const objectPositions = [
+          new THREE.Vector3(-2, -2, 2),
+          new THREE.Vector3(-1, -2.5, 2.3),
+          new THREE.Vector3(-0.5, -1.8, 2),
+          new THREE.Vector3(0.5, -2, 2.3),
+          new THREE.Vector3(1, -2, 2),
+          new THREE.Vector3(2, -2, 2)
+        ]
 
-        const numInstances = 10; // Number of instances to create
-        const instances = []; // Array to store instances
-        
-        // Load the model and create instances
-        starObj.load(
-          './assets/smile.gltf',
-          function (gltf) {
-            const model = gltf.scene;
-        
-            for (let i = 0; i < numInstances; i++) {
-              const instance = model.clone();
-              instance.scale.set(10, 10, 10);
-              scene.add(instance);
-              instances.push(instance);
+        objectPaths.forEach((path, index) => {
+          loader.load(
+            path,
+            function (gltf) {
+              objects[index] = gltf.scene
+              const position = objectPositions[index]
+
+              objects[index].position.copy(position)
+
+              objects[index].scale.set(30, 30, 30)
+
+              scene.add(objects[index])
+            },
+            undefined,
+            function (error) {
+              console.error('Error loading model:', error)
             }
-          },
-          function (xhr) {
-            console.log((xhr.loaded / xhr.total) * 100 + '% loaded');
-          },
-          function (error) {
-            console.log(error);
-          }
-        );
+          )
+        })
 
-
-        // Object
-        // const geometry = new THREE.SphereGeometry(1, 35, 35)
-        // const loader = new THREE.TextureLoader()
-        // const texture = loader.load('/assets/hologram.jpg')
-        // const material = new THREE.MeshPhysicalMaterial({
-        //     metalness: 0,  
-        //     roughness: 0,
-        //     transmission: 1,
-        //     thickness: 0.5,
-        //     map: texture
-        //   });
-
-        // for (let i = 0; i < 10; i ++){
-
-        //     const mesh = new THREE.Mesh(geometry, material)
-
-        //     mesh.position.x = Math.random() * 10 - 5
-        //     mesh.position.y = Math.random() * 10 - 5
-        //     mesh.position.z = Math.random() * 10 - 5
-        //     mesh.scale.x = mesh.scale.y = mesh.scale.z = Math.random() * 3 + 1
-
-        //     scene.add(mesh)
-
-        //     objects.push(mesh)
-        // }
         
         // Resizing
         const handleResize = () => {
@@ -112,42 +98,39 @@ export default function ThreeGradient() {
 
 
         // MouseMove Values
-        const onDocumentMouseMove = (event) => {
-            mouseX = ( event.clientX - windowHalfX ) / 100
-            mouseY = ( event.clientY - windowHalfY ) / 100
-        }        
+        // const onDocumentMouseMove = (event) => {
+        //     mouseX = ( event.clientX - windowHalfX ) / 100
+        //     mouseY = ( event.clientY - windowHalfY ) / 100
+        // }        
 
-        document.addEventListener( 'mousemove', onDocumentMouseMove )
+        // document.addEventListener( 'mousemove', onDocumentMouseMove )
+
+
+        const handleScroll = () => {
+          objects.forEach((object, index) => {
+            const position = objectPositions[index]
+            const rotation = (window.scrollY / window.innerHeight) * Math.PI * 2
+            object.position.y = position.y + window.scrollY * 0.005
+            object.rotation.y = rotation
+            object.rotation.x = rotation
+          })
+        }
+
+        window.addEventListener('scroll', handleScroll)
 
         // Render
         const render = () => {
 
-            const timer = 0.0001 * Date.now();
-
-            camera.position.x += ( mouseX - camera.position.x ) * .01;
-            camera.position.y += ( - mouseY - camera.position.y ) * .01;
+            camera.position.x += ( mouseX - camera.position.x ) * .0005;
+            camera.position.y += ( - mouseY - camera.position.y ) * .0005;
 
             camera.lookAt( scene.position );
 
-            // for ( let i = 0, il = objects.length; i < il; i ++ ) {
-            for ( let i = 0, il = instances.length; i < il; i ++ ) {
-                // const object = objects[ i ];
-                const instance = instances[i];
-
-                // instance.rotation.y += 0.01; // Example rotation
-
-
-                // object.position.x = 5 * Math.cos( timer + i * 1.4 );
-                // object.position.y = 5 * Math.sin( timer + i * 1.4 );
-                // object.position.z = 5 * Math.cos( timer + i * 2 );
-                instance.position.x = 5 * Math.cos( timer + i * 1.4 );
-                instance.position.y = 5 * Math.sin( timer + i * 1.4 );
-                instance.position.z = 5 * Math.cos( timer + i * 2 );
-
-            }
-
             renderer.render( scene, camera );
         }
+
+
+
 
 
         // Animation loop
@@ -160,7 +143,7 @@ export default function ThreeGradient() {
 
         // Clean up
         const cleanup = () => {
-            window.removeEventListener('resize', handleResize)
+            // window.removeEventListener('resize', handleResize)
 
             if (canvas.current && canvas.current.contains(renderer.domElement)) {
                 canvas.current.removeChild(renderer.domElement)
