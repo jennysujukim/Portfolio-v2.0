@@ -104,3 +104,47 @@ export default function Archives() {
     
   )
 }
+
+
+
+// const comp = useRef()
+// const slider = useRef()
+// const heading = useRef()
+
+// useEffect(() => {
+//   let ctx = gsap.context(() => {
+//     let sections = gsap.utils.toArray(".projectSection");
+//     const triggerOffset = -slider.current.offsetTop;
+
+//     gsap.to(heading, {
+//       position: "fixed",
+//       zIndex: 20,
+//       scrollTrigger: {
+//         trigger: heading.current,
+//         pin: true,
+//         pinSpacing: false,
+//         scrub: 1,
+//         start: "top +=108px",
+//         end: () => "+=" + slider.current.offsetWidth,
+//         markers: true
+//       }
+//     })
+
+//     gsap.to(sections, {
+//       xPercent: -100 * (sections.length - 1),
+//       ease: "none",
+//       scrollTrigger: {
+//         trigger: slider.current,
+//         pin: true,
+//         scrub: true,
+//         start: `+=${triggerOffset}px top`,
+//         end: () => "+=" + slider.current.offsetWidth,
+//         markers: true
+//       }
+//     })
+
+//   }, comp);
+
+//   return () => ctx.revert();
+// }, []);
+
