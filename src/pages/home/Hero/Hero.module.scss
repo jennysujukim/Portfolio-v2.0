@@ -2,72 +2,51 @@
 @use 'sass:math';
 
 .container {
-    @include flex(center, center, column);
+    @include flex(flex-end, center, column);
     height: 95vh;
     overflow: hidden;
     position: relative;
-    padding: $p-home-hero--mobile;
-    margin-bottom: $mb-section--mobile;
+    padding: 0 1rem;
+    margin-bottom: 5rem;
 
-    @include tablet { padding: $p-home-hero--tablet; }
-    @include laptop { margin-bottom: $mb-section--laptop; }
+    @include tablet { 
+        padding: 0 2rem;
+        margin-bottom: 7rem;
+    }
+    @include laptop { 
+        padding: 0 3rem;
+        margin-bottom: 9rem;
+    }
+
+    @include desktop {
+        margin-bottom: 12rem;
+    }
 }
 
 // ----- Hidden H1 ----- //
 .title { opacity: 0; }
 
 
-// ----- Deco Texts ----- //
-.txtTop,
-.txtLeft,
-.txtRight,
-.txtBottom {
-    font-size: $fs-smallText--mobile;
-    @include laptop { font-size: $fs-smallText--laptop; }
-}
-
-.txt{
-    &Top {
-        @include positionAbsolute(auto, auto, 60px, auto);
-        margin: 0 auto;
-        @include laptop { top: 100px; };
-    };
-
-    &Left {
-        writing-mode: vertical-rl;
-        transform: rotate(180deg);
-        @include positionAbsolute(1rem, auto, auto, auto);
-        margin: auto 0;
-        @include laptop { left: 2rem; };
-    };
-
-    &Right {
-        writing-mode: vertical-rl;
-        @include positionAbsolute(auto, 1rem, auto, auto);
-        margin: auto 0;
-        @include laptop { right: 2rem; };
-    };
-
-    &Bottom {
-        @include positionAbsolute(auto, auto, auto, 1rem);
-        margin: 0 auto;
-        font-family: $BigDailyShort400;
-    };
-}
-
 // ----- Hero Texts ----- //
 .txtContainer {
-    @include flex(center, center, column);
+    @include flex(center, flex-start, column);
+    padding-bottom: 3rem;
     font-weight: bold;
+    width: 100%;
+
+    .txtTop {
+        padding-bottom: 1rem;
+        @include tablet { padding-bottom: 0 };
+    }
     
     p {
-        text-align: center;
         text-transform: uppercase;
-        font-size: $fs-heroTitle--mobile;
+        font-size: min(9vw, 5rem);
 
-        @include tablet { font-size: $fs-heroTitle--tablet; };
-        @include laptop { font-size: $fs-heroTitle--laptop; };
-        @include desktop { font-size: $fs-heroTitle--desktop; };
+        @include desktop { 
+            line-height: 1.2;
+            font-size: 7rem;
+        };
     }
 
     .subTxt {
@@ -84,4 +63,3 @@
         span { font-family: $BigDailyShort500; }
     }
 }
-
