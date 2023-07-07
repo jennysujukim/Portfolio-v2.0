@@ -29,6 +29,6 @@ export default function AboutMe() {
         <div className={`wrapper--inner ${styles.terminal}`}>
             <Terminal />
         </div>
-    </section>
+    </section> 
     )
 }

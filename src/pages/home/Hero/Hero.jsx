@@ -9,7 +9,7 @@ export default function Hero() {
       <h1 className={styles.title}>Jenny Seojeong Kim</h1>
       <div className={styles.txtContainer}>
         <div className={`heroText ${styles.txtTop}`}>
-          Hi! I'm <span className={`highlight ${styles.circle}`}>Jen</span>
+          Hi! I'm <span className={`highlight--white ${styles.circle}`}>Jen</span>
         </div>
         <div>
           <p className="heroText">Creative</p>
