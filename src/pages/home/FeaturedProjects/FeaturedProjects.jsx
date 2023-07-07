@@ -8,6 +8,7 @@ import styles from './FeaturedProjects.module.scss'
 import Button from '../../../components/Button'
 import Heading from '../../../components/Heading'
 
+
 export default function FeaturedProjects() {
 
     // fetch data

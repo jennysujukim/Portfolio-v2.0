@@ -13,7 +13,6 @@ export default function Home() {
   <>
     <ThreeGradient />
     <main className={styles.main}>
-      {/* <ThreeGradient /> */}
       <div className="glass__white"></div>
       <Hero />
       <FeaturedProjects />

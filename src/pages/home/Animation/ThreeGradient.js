@@ -12,9 +12,6 @@ export default function ThreeGradient() {
 
         let mouseX = 0
         let mouseY = 0
-        // let windowHalfX = window.innerWidth / 2;
-        // let windowHalfY = window.innerHeight / 2;
-
         let sizes = {
             width: window.innerWidth,
             height: window.innerHeight
@@ -36,7 +33,7 @@ export default function ThreeGradient() {
         camera.focalLength = 3
 
         // Lights
-        const light = new THREE.HemisphereLight( 0xfbfbfb, 0x989898, 0.7 );
+        const light = new THREE.DirectionalLight( 0xfbfbfb, 1 );
         light.position.set(10, 5, 10);
         scene.add(light);
         
@@ -50,15 +47,16 @@ export default function ThreeGradient() {
           './assets/N.gltf',
           './assets/K.gltf',
           './assets/I.gltf',
-          './assets/M.gltf'
+          './assets/M.gltf',
         ]
         const objectPositions = [
-          new THREE.Vector3(-2, -2, 2),
-          new THREE.Vector3(-1, -2.5, 2.3),
-          new THREE.Vector3(-0.5, -1.8, 2),
-          new THREE.Vector3(0.5, -2, 2.3),
-          new THREE.Vector3(1, -2, 2),
-          new THREE.Vector3(2, -2, 2)
+          new THREE.Vector3(-2, -1.9, 2.5),
+          new THREE.Vector3(-1.3, -2.1, 2.3),
+          new THREE.Vector3(-0.5, -1.9, 2),
+          new THREE.Vector3(0.2, -2, 2.3),
+          new THREE.Vector3(1, -2, 2.1),
+          new THREE.Vector3(2, -1.9, 2.3),
+          new THREE.Vector3(2, 1, 1)
         ]
 
         objectPaths.forEach((path, index) => {
@@ -79,8 +77,7 @@ export default function ThreeGradient() {
               console.error('Error loading model:', error)
             }
           )
-        })
-
+        })        
         
         // Resizing
         const handleResize = () => {
@@ -109,10 +106,29 @@ export default function ThreeGradient() {
         const handleScroll = () => {
           objects.forEach((object, index) => {
             const position = objectPositions[index]
-            const rotation = (window.scrollY / window.innerHeight) * Math.PI * 2
-            object.position.y = position.y + window.scrollY * 0.005
-            object.rotation.y = rotation
-            object.rotation.x = rotation
+
+            const objectRotationsY = [
+              (window.scrollY / window.innerHeight) * Math.PI * 2,
+              (window.scrollY / window.innerHeight) * Math.PI * 3,
+              (window.scrollY / window.innerHeight) * Math.PI * 4,
+              (window.scrollY / window.innerHeight) * Math.PI * 5,
+              (window.scrollY / window.innerHeight) * Math.PI * 6,
+              (window.scrollY / window.innerHeight) * Math.PI * 7
+            ]
+
+            const objectRotationsX= [
+              (window.scrollY / window.innerHeight) * Math.PI * 7,
+              (window.scrollY / window.innerHeight) * Math.PI * 6,
+              (window.scrollY / window.innerHeight) * Math.PI * 5,
+              (window.scrollY / window.innerHeight) * Math.PI * 4,
+              (window.scrollY / window.innerHeight) * Math.PI * 3,
+              (window.scrollY / window.innerHeight) * Math.PI * 2
+            ]
+
+            // const rotation = (window.scrollY / window.innerHeight) * Math.PI * 2
+            object.position.y = position.y + window.scrollY * 0.0055
+            object.rotation.y = objectRotationsY[index]
+            object.rotation.x = objectRotationsX[index]
           })
         }
 
