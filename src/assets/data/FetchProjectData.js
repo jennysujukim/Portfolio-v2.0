@@ -2,6 +2,9 @@ import placeholder from "../images/placeholder/p-projects-3x2.jpg"
 import dailyProteinBanner from '../images/work/daily-protein/banner.jpg'
 import dailyProteinThumb from '../images/work/daily-protein/overview.jpg'
 import dailyProteinThumb2x1 from '../images/work/daily-protein/thumb-projects-2x1.jpg'
+import TypaTypeBanner from '../images/work/typa-type/banner.jpg'
+import TypaTypeThumb2x1 from '../images/work/typa-type/thumb-projects-2x1.jpg'
+
 export const FetchProjectData = () => {
     
     return [
@@ -42,13 +45,14 @@ export const FetchProjectData = () => {
         {
         id: "004",
         title: "Typa Type",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        image_url: placeholder,
-        image_url_projects: dailyProteinThumb2x1,
+        description: "Discover a curated collection of unique typography.",
+        image_url: TypaTypeBanner,
+        image_url_projects: TypaTypeThumb2x1,
+        banner_url: TypaTypeBanner,
         link: "/work/typa-type",
-        keywords: ["JavaScript", "Tailwind CSS"],
-        live_site: "https://font-vogue.seojeongkim.com/",
-        source_code: "https://github.com/jennysujukim/"
+        keywords: ["HTML", "CSS", "JavaScript"],
+        live_site: "https://typa-type.seojeongkim.com",
+        source_code: "https://github.com/jennysujukim/typa-type-2023"
         },
         {
         id: "005",

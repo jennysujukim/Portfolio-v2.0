@@ -11,6 +11,7 @@ import DailyProtein from './DailyProtein'
 import ItWasAwesome from './ItWasAwesome'
 import Jade from './Jade'
 import LinkOn from './LinkOn'
+import TypaType from './TypaType/TypaType'
 
 
 export default function Work() {
@@ -25,6 +26,7 @@ export default function Work() {
         {path === "/work/daily-protein" ? <DailyProtein /> : null }
         {path === "/work/it-was-awesome" ? <ItWasAwesome /> : null }    
         {path === "/work/linkon" ? <LinkOn /> : null } 
+        {path === "/work/typa-type" ? <TypaType /> : null } 
         {path === "/work/my-notes" ? <MyNotes /> : null }
         {path === "/work/jade-bookmark-manager" ? <Jade /> : null } 
       </main>
