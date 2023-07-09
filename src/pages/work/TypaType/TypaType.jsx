@@ -7,6 +7,8 @@ import styles from './TypaType.module.scss'
 
 // components
 import overviewImg from '../../../assets/images/work/typa-type/overview.jpg'
+import fundamentalVid from '../../../assets/images/work/typa-type/fundamentals.mp4'
+import functionalitiesVid from '../../../assets/images/work/typa-type/functionalities.mp4'
 import WorkBanner from '../../../components/WorkBanner'
 import WorkSlider from '../../../components/WorkSlider'
 import SubHeading from '../../../components/SubHeading'
@@ -129,7 +131,9 @@ heightControl.addEventListener('input', (e) => {
                             </p>
                         </div>
                         <div className={styles.imgContainer}>
-                            <img src="" alt="" />
+                            <video playsInline autoPlay muted loop>
+                                <source src={fundamentalVid} type="video/mp4" />
+                            </video>
                         </div>
                     </div>
                     <div className={styles.contentContainerTwo}>
@@ -140,7 +144,9 @@ heightControl.addEventListener('input', (e) => {
                             </p>
                         </div>
                         <div className={styles.imgContainer}>
-                            <img src="" alt="" />
+                            <video playsInline autoPlay muted loop>
+                                <source src={functionalitiesVid} type="video/mp4" />
+                            </video>
                         </div>
                     </div>
                 </section>
@@ -181,6 +187,14 @@ heightControl.addEventListener('input', (e) => {
                 id="section--4"
                 className={`wrapper--inner ${styles.sectionFive}`}>
                     <SubHeading text="Takeaways"/>
+                    <div className={styles.contentContainer}>
+                        <p>
+                            With vanilla JS, the website leverages core JavaScript practices and capabilities without the need for additional libraries. This allows for greater control and understanding of the underlying code, as well as the ability to optimize performance and tailor the functionality to specific requirements.
+                        </p>
+                        <p>
+                            Overall, building the website without frameworks or plugins offers the advantages of simplicity, flexibility, control, and performance optimization. It allows for a more streamlined development process and enables the utilization of essential JavaScript practices to achieve the desired functionality.  
+                        </p>
+                    </div>
                 </section>
             </div>
         </div>
