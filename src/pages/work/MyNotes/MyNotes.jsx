@@ -11,7 +11,7 @@ import WorkBanner from '../../../components/WorkBanner'
 import SubHeading from '../../../components/SubHeading'
 import WorkOverview from '../../../components/WorkOverview'
 import WorkSlider from '../../../components/WorkSlider'
-
+import WorkNavigation from '../../../components/WorkNavigation'
 
 export default function MyNotes() {
 
@@ -19,7 +19,7 @@ export default function MyNotes() {
   const { setProjectId } = useContext(ProjectContext)
 
   useEffect(() => {
-    setProjectId("005")
+    setProjectId("003")
   }, [setProjectId])
 
   // ---- Set Sections Title for Slider ---- //
@@ -81,6 +81,7 @@ export default function MyNotes() {
           </section>
         </div>
       </div>
+      <WorkNavigation />
     </>
   )
 }
