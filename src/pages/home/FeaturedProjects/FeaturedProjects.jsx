@@ -7,6 +7,7 @@ import styles from './FeaturedProjects.module.scss'
 // components
 import Button from '../../../components/Button'
 import Heading from '../../../components/Heading'
+import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 
 
 export default function FeaturedProjects() {
@@ -40,7 +41,14 @@ export default function FeaturedProjects() {
                         <div className={styles.cardDetails}>                            
                             <span className={styles.id}>{project.id}</span>
                             <div className={styles.txtContainer}>
-                                <h4>{project.title}</h4>
+                                <div className={styles.titleContainer}>
+                                    <h4>{project.title}</h4>
+                                    <div className={styles.titleClone}>
+                                        <span>{project.title}</span>
+                                        <ArrowOutwardIcon />
+                                    </div>
+
+                                </div>
                                 <div className="keywordsContainer">
                                     {project.keywords.map((keyword, index) => (
                                     <span className="keywords" key={index}>

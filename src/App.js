@@ -7,7 +7,6 @@ import './App.scss';
 // components
 import Header from './components/Header'
 import Footer from './components/Footer'
-// import ThreeGradient from './pages/home/Animation/ThreeGradient'
 
 // pages
 import Home from './pages/home'
@@ -19,7 +18,6 @@ function App() {
 
   return (
     <div className="App">
-      {/* <ThreeGradient /> */}
       <Header />
       <Routes>
         <Route path="/" element={<Home />}/>

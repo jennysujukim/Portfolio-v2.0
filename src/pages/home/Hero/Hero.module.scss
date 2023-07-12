@@ -3,7 +3,8 @@
 
 .container {
     @include flex(flex-end, center, column);
-    height: 95vh;
+    background: $lightbeige;
+    height: 100vh;
     overflow: hidden;
     position: relative;
     padding: 0 1rem;
@@ -18,9 +19,7 @@
         margin-bottom: 9rem;
     }
 
-    @include desktop {
-        margin-bottom: 12rem;
-    }
+    @include desktop { margin-bottom: 12rem; }
 }
 
 // ----- Hidden H1 ----- //
@@ -30,12 +29,17 @@
 // ----- Hero Texts ----- //
 .txtContainer {
     @include flex(center, flex-start, column);
-    padding-bottom: 3rem;
+    padding-bottom: 7rem;
     font-weight: bold;
     width: 100%;
     mix-blend-mode: difference;
     color: $lightbeige;
 
+    div {
+        overflow: hidden;
+    }
+
+    
     @include laptop {
         padding-bottom: 5rem;
     }
@@ -46,26 +50,16 @@
             padding-bottom: 0;
             font-size: 1.2rem;
         };
-        @include laptop {
-            font-size: 1.5rem;
-        }
-        @include desktop {
-            font-size: 2rem;
-        }
+        @include laptop { font-size: 1.5rem; };
+        @include desktop { font-size: 1.7rem; };
+
+        .circle { padding: 0.1rem 0.5rem; }
     }
     
     p {
         text-transform: uppercase;
         line-height: 1.2;
-        font-size: min(9vw, 7rem);
-
-        @include desktop { 
-            font-size: min(7rem, 10rem);
-        };
-
-        @include breakpoint($bp: 1920px) {
-            font-size: 10rem;
-        }
+        font-size: min(9vw, 6.5rem);
     }
 
     .subTxt {
@@ -79,6 +73,6 @@
             font-size: 2rem; 
         };
 
-        span { font-family: $BigDailyShort500; }
+        span {  font-family: $BigDailyShort500; }
     }
 }
