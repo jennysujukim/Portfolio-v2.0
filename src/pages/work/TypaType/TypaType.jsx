@@ -27,52 +27,34 @@ export default function TypaType() {
 
     const TypaTypeSections = [ "Overview", "At A Glance", "Append Node Objects", "Event Handlers", "Takeaways" ]
 
-    const codeAppend = ` 
-    const addToFontList = () => {
+    const codeAppend = 
+`const addToFontList = () => {
 
-        const fontDetails = (data) => {
-            const fontCard = document.createElement('li');
-            fontCard.classList.add("fontlist-card");
-        
-            const fontSample = document.createElement('div');
-            fontSample.classList.add('card-aa', \`font--\${data.id}\`);
-            fontSample.innerText = "Aa"; 
-        
-            const fontTitle = document.createElement('p');
-            fontTitle.classList.add('card-title', \`font--\${data.id}\`);
-            fontTitle.innerText = data.title;
-            
-            const fontType = document.createElement('p');
-            fontType.innerText = data.type;
+    const fontDetails = (data) => {
+        const fontCard = document.createElement('li');
+        fontCard.classList.add("fontlist-card");
     
-            const fontStyleSheet = document.createElement('style');
-            fontStyleSheet.innerText = \`
-            @import url(\${data.font_url});
-            .font--\${data.id} { font-family: \${data.font_family}; };
-            \`;
-    
-            fontCard.appendChild(fontSample);
-            fontCard.appendChild(fontTitle);
-            fontCard.appendChild(fontType);
-    
-            slideContainer.appendChild(fontCard);
-            slideContent = document.querySelector('.fontlist-card');
-    
-            document.head.appendChild(fontStyleSheet);
-        }
-    
-        fontData.forEach(data => {
-            fontDetails(data)
-        });
-    
+        const fontSample = document.createElement('div');
+        fontSample.classList.add('card-aa', \`font--\${data.id}\`);
+        fontSample.innerText = "Aa"; 
+
+        // ---- append more children ---- //
+
+        fontCard.appendChild(fontSample);
+        slideContainer.appendChild(fontCard);
     }
-    
-    addToFontList();
 
+    fontData.forEach(data => {
+        fontDetails(data)
+    });
+
+}
+
+addToFontList();
 `
 
-    const codeEventHandler = `
-sizeControl.addEventListener('input', (e) => {
+    const codeEventHandler = 
+`sizeControl.addEventListener('input', (e) => {
     let inputValue = e.target.value;
     sampleText.style.fontSize = inputValue + 'px';
     sizeValue.textContent = inputValue + 'px';
@@ -90,7 +72,6 @@ heightControl.addEventListener('input', (e) => {
     sampleText.style.lineHeight = formatValue;
     heightValue.textContent = formatValue;
 });
-
 `
 
   return (
@@ -130,7 +111,7 @@ heightControl.addEventListener('input', (e) => {
                                 This website is built with pure CSS and vanilla JS without any frameworks or plugins. By choosing to keep it basic, I can have flexibility to utilize essential JavaScript practices and achieve the desired functionality without relying on external dependencies. This approach allows for a lightweight and efficient website, providing the freedom to create unique designs and easily modify the appearance as needed.
                             </p>
                         </div>
-                        <div className={styles.imgContainer}>
+                        <div className={styles.vidContainer}>
                             <video playsInline autoPlay muted loop>
                                 <source src={fundamentalVid} type="video/mp4" />
                             </video>
@@ -143,7 +124,7 @@ heightControl.addEventListener('input', (e) => {
                                 To create interactivity, input ranges are primarily used to receive user input. Users can easily drag ranges to dynamically change the style of sample text.
                             </p>
                         </div>
-                        <div className={styles.imgContainer}>
+                        <div className={styles.vidContainer}>
                             <video playsInline autoPlay muted loop>
                                 <source src={functionalitiesVid} type="video/mp4" />
                             </video>
