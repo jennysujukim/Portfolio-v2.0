@@ -188,7 +188,7 @@ export const AuthContextProvider = ({ children }) => {
             </div>
           </section>
 
-          <section
+          <section 
             id="section--2"
             className={`wrapper--inner ${styles.sectionThree}`} >
             <SubHeading text="Fetch API"/>

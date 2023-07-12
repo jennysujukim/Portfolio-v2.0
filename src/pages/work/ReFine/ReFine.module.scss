@@ -8,7 +8,7 @@
     };
 }
 
-.content {
+.content { 
 
     position: relative;
     overflow: hidden; 
@@ -19,8 +19,147 @@
     }
 
     section { 
-
         p { line-height: 1.7; } 
+    }
+}
 
+.sectionOne {
+    padding: 0;
+
+    @include tablet { padding: 0 2rem; }
+
+    .txtContainer {
+        padding-bottom: 3rem;
+        @include laptop { @include grid(repeat(12, 1fr), 2rem); }
+
+        p {
+            padding-bottom: $pb-paragraph;
+            @include laptop { 
+                grid-column: auto / span 6;
+                padding-bottom: 0;
+            }
+        }
+    }
+
+    .vidContainer {
+        width: 100%;
+        overflow: hidden;
+        video {
+            width: 100%;
+            border-radius: $br-img;
+        }
+    }
+}
+
+.sectionTwo {
+    padding: 0;
+    @include tablet { padding: 0 2rem; }
+
+    .contentContainer {
+        padding-top: 2rem;
+        @include desktop { @include grid(repeat(12, 1fr), 2rem); }
+
+        .txtContainer {
+            @include desktop {
+                grid-column: auto / span 6;
+                order: 2;
+            }
+
+            p { padding-bottom: $pb-paragraph; }
+        }
+
+        .codeContainer {
+            @include desktop { grid-column: auto / span 6; }
+
+            pre { border-radius: $br-img; }
+        }
+    }
+}
+
+.sectionThree {
+    padding: 0;
+    @include tablet { padding: 0 2rem; }
+
+    .contentContainer {
+        padding-top: 2rem;
+        @include desktop { @include grid(repeat(12, 1fr), 2rem); }
+
+        .txtContainer {
+            @include desktop { 
+                grid-column: auto / span 6;
+                @include flex(flex-end, flex-end, column);
+            }
+
+            p { padding-bottom: $pb-paragraph; }
+        }
+
+        .codeContainer {
+            @include desktop { grid-column: auto / span 6; }
+
+            pre { border-radius: $br-img; }
+        }
+    }
+}
+
+.sectionFour {
+    padding: 0;
+    @include tablet { padding: 0 2rem; }
+
+    .contentContainerOne {
+        padding-top: 2rem;
+        @include desktop { @include grid(repeat(12, 1fr), 2rem); }
+
+        .txtContainer {
+            @include desktop {
+                grid-column: auto / span 6;
+                order: 2;
+                @include flex(flex-end, flex-end, column);
+            }
+
+            p { padding-bottom: $pb-paragraph; }
+        }
+
+        .codeContainer {
+            @include desktop { grid-column: auto / span 6; }
+
+            pre { border-radius: $br-img; }
+        }
+    }
+
+    .contentContainerTwo {
+        padding-top: 2rem;
+        @include desktop {
+            @include grid(repeat(12, 1fr), 2rem);
+        }
+
+        .imgContainer {
+            overflow: hidden;
+            @include flex(center, center);
+            border-radius: $br-img;
+
+            @include desktop {
+                grid-column: auto / span 12;
+            }
+        }
+    }
+}
+
+.sectionFive {
+    padding: 0;
+    @include tablet { padding: 0 2rem; }
+
+    .contentContainer {
+        padding-top: 2rem;
+        @include desktop {
+            @include grid(repeat(12, 1fr), 2rem);
+        }
+
+        p {
+            padding-bottom: $pb-paragraph;
+
+            @include desktop {
+                grid-column: auto / span 6;
+            }
+        }
     }
 }
