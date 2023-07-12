@@ -74,6 +74,7 @@
         font-weight: 700;
         text-transform: uppercase;
         padding-bottom: 0.5rem;
+        @include laptop { padding-bottom: 1rem; };
     }
 }
 
@@ -84,23 +85,6 @@
     @include laptop {
         margin-bottom: 0;
         @include flex(flex-start, flex-end);
-    }
-
-    button {
-        @include flex(center, center);
-        margin: 0.25rem 0.5rem;
-        overflow: hidden;
-        font-size: $fs-home-heroSubTitle--mobile;
-        @include desktop { font-size: $fs-home-heroSubTitle--desktop; }
-    
-        .cta {
-            margin-left: 0.3rem;
-            width: 18px;
-            height: 18px;
-            display: none;
-        }
-    
-        &:hover .cta { display: block; }
     }
 }
 

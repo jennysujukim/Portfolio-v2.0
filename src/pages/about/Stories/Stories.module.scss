@@ -7,7 +7,7 @@
 }
 
 .storiesContainer {
-    @include grid(unset, unset, auto 1fr, 3rem);
+    @include grid(unset, unset, auto 1fr, 1rem);
 
     div {
         h4 { 
@@ -22,33 +22,44 @@
 .content{
 
     @include laptop {
-        @include grid(repeat(12, 1fr), 1rem);
+        @include grid(repeat(12, 1fr), 2rem);
 
         &:nth-child(2){
-            order: 2;
+            text-align: right;
         }
     }
 
     .img { 
         @include laptop{ 
-            grid-column: auto / span 6;
+            grid-column: auto / span 4;
 
             &__reverse {
-                grid-column: auto / span 6;
+                grid-column: auto / span 4;
                 order: 2;
             }
         }
     }
 
-    p { 
-        padding-bottom: $pb-paragraph;
+    .txt {
 
-        @include laptop{ 
-            padding-bottom: 0;
-            grid-column: auto / span 6;
-            @include flex(center, center);
+        h4 {  padding: 2rem 0 1rem 0; };
+
+        @include laptop {
+            grid-column: auto / span 8;
+            @include flex(flex-end, flex-start, column);
+            padding-bottom: 3rem;
+
+            h4 { width: 100%; }
+        }
+
+        p { 
+            padding-bottom: $pb-paragraph;
+    
+            @include laptop{ 
+                padding-bottom: 0;
+                grid-column: auto / span 6;
+                @include flex(center, center);
+            }
         }
     }
-
-    span { font-weight: 700; }
 }

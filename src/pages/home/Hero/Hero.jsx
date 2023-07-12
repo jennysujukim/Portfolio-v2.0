@@ -8,7 +8,7 @@ import styles from './Hero.module.scss'
 import ThreeHero from '../Animation/ThreeHero'
 
 export default function Hero() {
-
+ 
   const comp = useRef()
   const txtsRef = useRef([])
 
