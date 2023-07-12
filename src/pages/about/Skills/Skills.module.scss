@@ -19,7 +19,14 @@
             border-right: none;
         }
 
-        h4 { padding-bottom: 0.5rem; }
+        h4 {
+             padding-bottom: 0.5rem;
+             line-height: 1;
+            @include tablet { 
+                text-align: center;
+                padding-bottom: 1rem;
+            };
+        }
     }
 }
 
@@ -28,7 +35,10 @@
     @include flex(flex-start, center);
     flex-wrap: wrap;
 
-    @include tablet { padding-bottom: 0; }
+    @include tablet { 
+        padding-bottom: 0;
+        @include flex(center, center);
+    }
     
     li {
         @include flex(flex-start, center);

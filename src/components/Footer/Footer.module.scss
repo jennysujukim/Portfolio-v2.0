@@ -6,14 +6,18 @@
         padding: 0 2rem; 
         padding-top: $mb-section--laptop;
     };
+
+    @include laptop { padding: 0 3rem; }
 }
 
 .container {
     padding: 2rem 0;
     @include tablet {
         @include grid(repeat(2, 1fr), 1rem);
-        padding-bottom: 1rem;
+        padding-bottom: 2rem;
     }
+
+    @include laptop { padding-bottom: 2.5rem; }
 }
 
 .title {

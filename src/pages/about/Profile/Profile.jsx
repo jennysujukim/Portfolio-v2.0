@@ -3,13 +3,9 @@ import styles from './Profile.module.scss'
 
 // components
 import profileImg from '../../../assets/images/profile.jpg'
-import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward'
+import CtaButton from '../../../components/CtaButton'
 
 export default function Profile() {
-
-  const openExternalLink = (url) => {
-    window.open(url, '_blank', 'noopener noreferrer')
-  }
 
   return ( 
     <section className={`wrapper ${styles.container}`}>
@@ -25,18 +21,18 @@ export default function Profile() {
           <div className={styles.socialContainer}>
             <span>✨ Find Me On ✨</span>
             <div className={styles.socialList}>
-              <button className="highlight" onClick={() => openExternalLink("https://www.linkedin.com/in/jenny-seojeong-kim/")}>
-                LinkedIn
-                < ArrowOutwardIcon className={styles.cta}/>
-              </button>
-              <button className="highlight" onClick={() => openExternalLink("https://github.com/jennysujukim")}>
-                Github
-                < ArrowOutwardIcon className={styles.cta}/>
-              </button>
-              <button className="highlight" onClick={() => openExternalLink("https://www.instagram.com/codingwith_jen/")}>
-                Instagram
-                < ArrowOutwardIcon className={styles.cta}/>
-              </button>
+              <CtaButton 
+                text="LinkedIn"
+                link="https://www.linkedin.com/in/jenny-seojeong-kim/"/>
+              <CtaButton 
+                text="Github"
+                link="https://github.com/jennysujukim"/> 
+              <CtaButton 
+                text="Email"
+                link="https://github.com/jennysujukim"/>
+              <CtaButton
+                text="Resume"
+                link="https://github.com/jennysujukim"/>
             </div>
           </div>
           <div className={styles.txtContainer}>

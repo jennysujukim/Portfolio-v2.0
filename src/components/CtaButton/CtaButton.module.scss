@@ -1,0 +1,18 @@
+@use '../../sass/abstracts/' as *;
+
+.container {
+    @include flex(center, center);
+    margin: 0.25rem 0.5rem;
+    overflow: hidden;
+    font-size: $fs-home-heroSubTitle--mobile;
+    @include desktop { font-size: $fs-home-heroSubTitle--desktop; }
+
+    .cta {
+        margin-left: 0.3rem;
+        width: 18px;
+        height: 18px;
+        display: none;
+    }
+
+    &:hover .cta { display: block; }
+}

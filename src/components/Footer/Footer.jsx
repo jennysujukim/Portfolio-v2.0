@@ -4,6 +4,7 @@ import styles from './Footer.module.scss'
 // components
 import Button from '../Button'
 import ExternalLink from '../ExternalLink'
+import MailToButton from '../MailToButton/MailToButton'
 
 export default function Footer() {
 
@@ -16,7 +17,7 @@ export default function Footer() {
             <p className={styles.label}>Find Me On</p>
             <ul className={styles.linkList}>
               <li>
-                <ExternalLink 
+                <ExternalLink  
                   text="LinkedIn"
                   link="https://www.linkedin.com/in/jenny-seojeong-kim/" />
               </li>
@@ -36,9 +37,11 @@ export default function Footer() {
             <p className={styles.label}>Contact</p>
             <ul className={styles.linkList}>
               <li>
-                <ExternalLink 
+                <MailToButton 
                   text="Email"
-                  link="https://github.com/jennysujukim" />
+                  mailto="mailto:jennysujukim@gmail.com"
+                  footer
+                />
               </li>
               <li>
                 <ExternalLink 
