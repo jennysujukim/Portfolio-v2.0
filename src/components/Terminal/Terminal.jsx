@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useNavigate } from 'react-router-dom' 
+import { useNavigate, useLocation } from 'react-router-dom' 
 
 // styles
 import styles from './Terminal.module.scss'
@@ -10,6 +10,8 @@ export default function Terminal() {
 
     const [ command, setCommand ] = useState('')
     const [ prevCommands, setPrevCommands ] = useState([])
+
+    const { pathname } = useLocation()
 
     const handleSubmit = async (e) => {
         e.preventDefault()
@@ -27,19 +29,17 @@ export default function Terminal() {
                 result = 'home/  about/  projects/'
                 break
             case 'cd about':
-                result = 'cd is typed'
                 navigate("/about")
                 break
             case 'cd home':
-                result = 'cd is typed'
-                navigate("/home")
+                if(pathname === '/'){
+                    result = `'home' is a current directory.`
+                } else {
+                    navigate("/")
+                }
                 break
             case 'cd projects':
-                result = 'cd is typed'
                 navigate("/work/all")
-                break
-            case 'exit':
-                result = 'exit is typed'
                 break
             case 'clear':
                 setPrevCommands([])
@@ -71,7 +71,6 @@ export default function Terminal() {
             <div>ls</div>
             <div>cd</div>
             <div>clear</div>
-            <div>exit</div>
         </div>
 
         <div className={styles.commandbox}>

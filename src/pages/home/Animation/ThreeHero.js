@@ -4,7 +4,7 @@ import { useEffect, useRef } from 'react'
 import * as THREE from 'three'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 
-export default function ThreeGradient() {
+export default function ThreeHero() {
 
     const canvas = useRef(null)
 
@@ -16,6 +16,8 @@ export default function ThreeGradient() {
             width: window.innerWidth,
             height: window.innerHeight
         }
+        // let windowHalfX = window.innerWidth / 2;
+        // let windowHalfY = window.innerHeight / 2;
 
         // Renderer 
         const renderer = new THREE.WebGLRenderer({ antialias: true })
@@ -49,15 +51,17 @@ export default function ThreeGradient() {
           './assets/I.gltf',
           './assets/M.gltf',
         ]
+        
         const objectPositions = [
-          new THREE.Vector3(-2, -1.9, 2.5),
+          new THREE.Vector3(-2, -1.8, 2.5),
           new THREE.Vector3(-1.3, -2.1, 2.3),
-          new THREE.Vector3(-0.5, -1.9, 2),
+          new THREE.Vector3(-0.5, -2, 2),
           new THREE.Vector3(0.2, -2, 2.3),
           new THREE.Vector3(1, -2, 2.1),
           new THREE.Vector3(2, -1.9, 2.3),
           new THREE.Vector3(2, 1, 1)
         ]
+
 
         objectPaths.forEach((path, index) => {
           loader.load(
@@ -174,6 +178,6 @@ export default function ThreeGradient() {
 
 
   return (
-    <div ref={canvas} className="gradient" />
+    <div ref={canvas} className="heroObjects" />
   )
 }

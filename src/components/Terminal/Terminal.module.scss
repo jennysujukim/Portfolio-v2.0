@@ -4,11 +4,11 @@
 .container {
     color: $lightbeige; 
     font-family: $CascadiaMono;
-    font-size: $fs-smallText--mobile;
     line-height: 1.5;
-    @include laptop { font-size: $fs-smallText--laptop; };
 
     h4 { padding-bottom: 2rem; };
+
+    @include laptop { font-size: 1.3rem; }
 }
 
 .intro {
@@ -27,10 +27,8 @@
 
     input {
         font-family: $CascadiaMono;
-        font-size: $fs-smallText--mobile;
         flex-grow: 2;
         color: $lightbeige;
-
-        @include laptop { font-size: $fs-smallText--laptop; };
+        @include laptop { font-size: 1.3rem; }
     }
 }
