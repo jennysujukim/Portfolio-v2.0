@@ -18,7 +18,7 @@
     text-align: center;
     @include laptop {
          text-align: left; 
-         grid-column: auto / span 9;
+         grid-column: auto / span 8;
     }
 }
 
@@ -35,10 +35,10 @@
     padding-top: 2rem;
 
     @include laptop {
-        grid-column: 10 / span 3;
+        grid-column: 9 / span 4;
         padding: 0;
         height: 100%;
-        @include flex(space-between, flex-end);
+        @include flex(flex-end, flex-end);
     }
 
     button {

@@ -5,16 +5,12 @@ import { ProjectContext } from '../../context/ProjectContext'
 import styles from './WorkBanner.module.scss'
 
 // components
-import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward'
+import ExternalLink from '../ExternalLink'
 
 
 export default function WorkBanner() {
 
     const { projectData } = useContext(ProjectContext)
-
-    const openExternalLink = (url) => {
-        window.open(url, '_blank', 'noopener noreferrer')
-    }
 
   return (
     <>
@@ -33,14 +29,14 @@ export default function WorkBanner() {
                         <p>{projectData.description}</p>
                     </div>
                     <div className={styles.btnContainer}>
-                        <button onClick={() => openExternalLink(`${projectData.live_site}`)}>
-                            Live Site
-                            < ArrowOutwardIcon className={styles.cta}/>
-                        </button>
-                        <button onClick={() => openExternalLink(`${projectData.source_code}`)}>
-                            View Code
-                            < ArrowOutwardIcon className={styles.cta}/>
-                        </button>
+                        <ExternalLink 
+                            text="Live site"
+                            link="https://daily-protein.seojeongkim.com/"
+                        />
+                        <ExternalLink 
+                            text="View code"
+                            link="https://github.com/jennysujukim/daily-protein-2023"
+                        />
                     </div>
                 </div>
                 <div className={styles.bannerImg}>
