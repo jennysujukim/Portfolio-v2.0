@@ -4,9 +4,19 @@ import styles from './Footer.module.scss'
 // components
 import Button from '../Button'
 import ExternalLink from '../ExternalLink'
-import MailToButton from '../MailToButton/MailToButton'
 
 export default function Footer() {
+
+  const socialList = [
+    { title: "LinkedIn", url: "https://www.linkedin.com/in/jenny-seojeong-kim/" },
+    { title: "Github", url: "https://github.com/jennysujukim" },
+    { title: "Instagram", url: "https://www.instagram.com/codingwith_jen/" }
+  ]
+
+  const contactList = [
+    { title: "Email", url: "mailto:hello@seojeongkim.com" },
+    { title: "Resume", url: "https://seojeongkim.com" }
+  ]
 
   return (
     <footer className={styles.wrapper}>
@@ -16,38 +26,27 @@ export default function Footer() {
           <div className={styles.socialContainer}>
             <p className={styles.label}>Find Me On</p>
             <ul className={styles.linkList}>
-              <li>
-                <ExternalLink  
-                  text="LinkedIn"
-                  link="https://www.linkedin.com/in/jenny-seojeong-kim/" />
-              </li>
-              <li>
-                <ExternalLink
-                  text="Github"
-                  link="https://github.com/jennysujukim" />
-              </li>
-              <li>
-                <ExternalLink 
-                  text="Instagram" 
-                  link="https://www.instagram.com/codingwith_jen/" />
-              </li>
+              { socialList.map((social, index) => (
+                <li key={index}>
+                  <ExternalLink 
+                    text={social.title}
+                    link={social.url}
+                  />
+                </li>
+              ))}
             </ul>
           </div>
           <div className={styles.contactContainer}>
             <p className={styles.label}>Contact</p>
             <ul className={styles.linkList}>
-              <li>
-                <MailToButton 
-                  text="Email"
-                  mailto="mailto:jennysujukim@gmail.com"
-                  footer
-                />
-              </li>
-              <li>
-                <ExternalLink 
-                  text="Resume" 
-                  link="https://github.com/jennysujukim" />
-              </li>
+                { contactList.map((contact, index) => (
+                  <li key={index}>
+                    <ExternalLink 
+                      text={contact.title}
+                      link={contact.url}
+                    />
+                  </li>
+                )) }
             </ul>
           </div>
         </div>

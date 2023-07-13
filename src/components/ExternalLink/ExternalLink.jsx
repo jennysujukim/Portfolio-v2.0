@@ -1,24 +1,20 @@
+import { Link } from 'react-router-dom'
+
 // styles
 import styles from './ExternalLink.module.scss'
 
-// components
+// components 
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward'
 
-export default function ExternalLink({ text, link, border }) {
-
-    const openExternalLink = (url) => {
-        window.open(url, '_blank', 'noopener noreferrer')
-    }
+export default function ExternalLink({ text, link }) {
 
     return ( 
-
-        <button 
-            onClick={() => openExternalLink(`${link}`)}
-            className ={styles.container}>
-                {text}
+        <Link
+            to={link}
+            target="_blank"
+            className={styles.container}>
+            {text}
             < ArrowOutwardIcon className={styles.cta}/>
-        </button>
-
-
+        </Link>
     )
 }
