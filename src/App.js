@@ -20,42 +20,37 @@ import NotFound from './pages/notfound'
 
 function App() {
 
-  const [ loading, setLoading ] = useState(false)
+  const [ loading, setLoading ] = useState(true)
 
   useEffect(() => {
+    const handleLoad = () => {
+      setLoading(false);
+    };
 
-    const pageLoading = () => {
-      setLoading(true)
-    }
-    
-    if(document.readyState === 'complete'){
-      pageLoading()
+    if (document.readyState === 'complete') {
+      handleLoad();
     } else {
-      window.addEventListener('load', pageLoading)
+      document.addEventListener('DOMContentLoaded', handleLoad);
     }
 
-    return () => window.removeEventListener('load', pageLoading)
-
+    return () => {
+      document.removeEventListener('DOMContentLoaded', handleLoad);
+    };
   }, []);
 
   return (
     <div className="App">
-      {loading ? (
-        <PageLoader />
-      ) : (
-        <>
-          <Header />
-          <Routes>
-            <Route path="/" element={<Home />}/>
-            <Route path="/about" element={<About />}/>
-            <Route path="/work/:id" element={<Work />}/>
-            <Route path="/terminal" element={<Terminal />}/>
-            <Route path="*" element={<NotFound />}/>
-          </Routes>
-          <ScrollToTop />
-          <Footer />
-        </>
-      )}
+      {loading && ( <PageLoader />)}
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />}/>
+        <Route path="/about" element={<About />}/>
+        <Route path="/work/:id" element={<Work />}/>
+        <Route path="/terminal" element={<Terminal />}/>
+        <Route path="*" element={<NotFound />}/>
+      </Routes>
+      <ScrollToTop />
+      <Footer />
     </div>
   );
 }
