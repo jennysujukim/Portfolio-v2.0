@@ -34,6 +34,7 @@ export default function Header() {
         <Link 
           className={styles.logo}
           to="/"
+          alt="Logo of Jen Kim"
           onClick={() => handleLink('/')}>
           <svg 
             xmlns="http://www.w3.org/2000/svg"

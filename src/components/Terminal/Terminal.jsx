@@ -53,7 +53,7 @@ export default function Terminal() {
             setPrevCommands((prevCommands) => [...prevCommands, result])
         }
         setCommand('')
-
+ 
         }catch(err){
             console.log(err)
         }
@@ -62,7 +62,7 @@ export default function Terminal() {
 
   return (
     <div className={styles.container}>
-        <h4>Terminal</h4>
+        <div className={styles.title}>Terminal</div>
 
         <div>Welcome to JenKim's terminal! Command below to navigate:</div>
         <div className={styles.intro}>

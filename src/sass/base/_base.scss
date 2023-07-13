@@ -141,7 +141,7 @@ Scrollbar
     width: 100vw;
     height: 100%;
     background: $black;
-    opacity: 0.4;
+    opacity: 0.5;
     z-index: -1;
 
     @include desktop { border-radius: 100px; }
