@@ -2,7 +2,6 @@
 import styles from './Footer.module.scss'
 
 // components
-import Button from '../Button'
 import ExternalLink from '../ExternalLink'
 
 export default function Footer() {
@@ -17,6 +16,15 @@ export default function Footer() {
     { title: "Email", url: "mailto:hello@seojeongkim.com" },
     { title: "Resume", url: "https://seojeongkim.com" }
   ]
+
+
+  const handleBackToTop = () => {
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+
+
+  }
+  
 
   return (
     <footer className={styles.wrapper}>
@@ -57,11 +65,12 @@ export default function Footer() {
             <p>All Rights Reserved</p>
             <p>JENKIM</p>
           </div>
-          <div className={styles.scrollContainer}>
-            <Button 
-              flexEnd
-              text="Back to top"
-              className={styles.cta}/>
+          <div 
+            className={styles.scrollBtnContainer}
+            onClick={handleBackToTop}>
+            <div className={styles.scrollBtn}>
+              Back to top
+            </div>
           </div>
         </div>
       </div>

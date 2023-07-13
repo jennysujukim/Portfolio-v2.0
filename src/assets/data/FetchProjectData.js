@@ -1,4 +1,3 @@
-import placeholder from "../images/placeholder/p-projects-3x2.jpg"
 import dailyProteinBanner from '../images/work/daily-protein/banner.jpg'
 import dailyProteinThumb from '../images/work/daily-protein/overview.jpg'
 import dailyProteinThumb2x1 from '../images/work/daily-protein/thumb-projects-2x1.jpg'
@@ -38,7 +37,7 @@ export const FetchProjectData = () => {
         id: "003",
         title: "My Notes",
         description: "Write and organize your personal notes.",
-        image_url: placeholder,
+        image_url: RefineBanner,
         image_url_projects: dailyProteinThumb2x1,
         link: "/work/my-notes",
         keywords: ["PHP", "MySQL", "Bootstrap"],
