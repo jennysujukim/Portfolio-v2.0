@@ -3,9 +3,16 @@ import styles from './Profile.module.scss'
 
 // components
 import profileImg from '../../../assets/images/profile.jpg'
-import CtaButton from '../../../components/CtaButton'
+import CtaButton from '../../../components/CtaButton/CtaButton'
 
 export default function Profile() {
+
+  const socialList = [
+    { title: "LinkedIn", url: "https://www.linkedin.com/in/jenny-seojeong-kim/" },
+    { title: "Github", url: "https://github.com/jennysujukim" },
+    { title: "Email", url: "mailto:hello@seojeongkim.com" },
+    { title: "Resume", url: "https://seojeongkim.com" }
+  ]
 
   return ( 
     <section className={`wrapper ${styles.container}`}>
@@ -15,24 +22,21 @@ export default function Profile() {
       </div>
       <div className={styles.parentContainer}>
         <div className={styles.imgContainer}>
-          <img src={profileImg} alt="Profile of Jen" />
+          <img 
+            src={profileImg} 
+            alt="Profile of Jen" />
         </div>
         <div className={styles.contentContainer}>
           <div className={styles.socialContainer}>
             <span>✨ Find Me On ✨</span>
             <div className={styles.socialList}>
-              <CtaButton 
-                text="LinkedIn"
-                link="https://www.linkedin.com/in/jenny-seojeong-kim/"/>
-              <CtaButton 
-                text="Github"
-                link="https://github.com/jennysujukim"/> 
-              <CtaButton 
-                text="Email"
-                link="https://github.com/jennysujukim"/>
-              <CtaButton
-                text="Resume"
-                link="https://github.com/jennysujukim"/>
+              { socialList.map((social, index) => (
+              <div key={index}>
+                <CtaButton 
+                  text={social.title}
+                  link={social.url} />
+              </div>
+              )) }
             </div>
           </div>
           <div className={styles.txtContainer}>

@@ -2,7 +2,7 @@
 
 .container {
     
-    @include flex(center, flex-start);
+    @include flex(flex-start, center);
     overflow: hidden;
     text-transform: uppercase;
     font-weight: bold;
