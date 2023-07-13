@@ -16,7 +16,7 @@ export default function All() {
 
   const projects = FetchProjectData()
 
-  const sections = [ "001", "002", "003", "004", "005", "006" ]
+  const sections = [ "001", "002", "003", "004" ]
 
   const handleScroll = (index) => {
     const element = document.getElementById(`section--${index}`)

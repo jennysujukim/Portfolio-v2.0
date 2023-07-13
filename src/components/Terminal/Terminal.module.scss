@@ -6,7 +6,14 @@
     font-family: $CascadiaMono;
     line-height: 1.5;
 
-    h4 { padding-bottom: 2rem; };
+    .title { 
+        padding-bottom: 2rem;
+        text-transform: uppercase;
+        font-size: $fs-h4--mobile;
+    
+        @include laptop { font-size: $fs-h4--laptop };
+        @include desktop { font-size: $fs-h4--desktop };
+    };
 
     @include laptop { font-size: 1.3rem; }
 }
@@ -30,5 +37,9 @@
         flex-grow: 2;
         color: $lightbeige;
         @include laptop { font-size: 1.3rem; }
+
+        &::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
     }
 }
