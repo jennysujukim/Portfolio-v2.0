@@ -24,11 +24,17 @@ function App() {
 
   useEffect(() => {
 
-    setLoading(true)
+    const pageLoading = () => {
+      setLoading(true)
+    }
     
-    setTimeout(() => {
-      setLoading(false);
-    }, 2000);
+    if(document.readyState === 'complete'){
+      pageLoading()
+    } else {
+      window.addEventListener('load', pageLoading)
+    }
+
+    return () => window.removeEventListener('load', pageLoading)
 
   }, []);
 
