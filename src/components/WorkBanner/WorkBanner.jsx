@@ -44,7 +44,7 @@ export default function WorkBanner() {
                     </div>
                 </div>
                 <div className={styles.bannerImg}>
-                    <img src={projectData.banner_url} alt={`Banner of ${projectData.title}`} />
+                    <img src={projectData.banner_url} alt={`Banner of ${projectData.title}`} width="100%" height="100%"/>
                 </div>
             </section>
         }

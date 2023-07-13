@@ -33,8 +33,8 @@ export default function Header() {
       <div className={styles.container}>
         <Link 
           className={styles.logo}
-          to="/"
-          alt="Logo of Jen Kim"
+          to="/home"
+          alt="Homepage of Jen Kim's portfolio"
           onClick={() => handleLink('/')}>
           <svg 
             xmlns="http://www.w3.org/2000/svg"
