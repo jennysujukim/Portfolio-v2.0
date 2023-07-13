@@ -1,13 +1,9 @@
-import { gsap } from 'gsap/all'
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
-
 // styles
 import styles from './AboutMe.module.scss'
 
 // components
 import Terminal from '../../../components/Terminal'
 
-gsap.registerPlugin(ScrollTrigger)
 
 export default function AboutMe() {
 

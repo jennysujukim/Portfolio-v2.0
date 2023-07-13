@@ -20,7 +20,7 @@ export default function Hero() {
       },
       {
         y: '0%',
-        stagger: 0.3,
+        stagger: 0.3
       })
   }, []);
 
