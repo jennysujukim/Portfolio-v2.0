@@ -37,7 +37,7 @@ export default function ProjectsList({ isHome }) {
                         <span className={styles.id}>{project.id}</span>
                         <div className={styles.txtContainer}>
                             <div className={styles.titleContainer}>
-                                <h4>{project.title}</h4>
+                                <p className="h4">{project.title}</p>
                                 <div className={styles.titleClone}>
                                     <span>{project.title}</span>
                                     <ArrowOutward />
@@ -79,7 +79,7 @@ export default function ProjectsList({ isHome }) {
                         <span className={styles.id}>{project.id}</span>
                         <div className={styles.txtContainer}>
                             <div className={styles.titleContainer}>
-                                <h4>{project.title}</h4>
+                                <p className="h4">{project.title}</p>
                                 <div className={styles.titleClone}>
                                     <span>{project.title}</span>
                                     <ArrowOutward />

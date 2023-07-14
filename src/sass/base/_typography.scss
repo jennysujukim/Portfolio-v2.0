@@ -59,7 +59,7 @@ h2, h3 {
     @include desktop { font-size: $fs-h2h3--desktop; };
 }
 
-h4 {
+h4, .h4 {
     text-transform: uppercase;
     font-size: $fs-h4--mobile;
 
