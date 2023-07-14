@@ -16,6 +16,8 @@ import PageLoader from './components/PageLoader'
 import Home from './pages/home'
 import NotFound from './pages/notfound'
 import Terminal from './pages/terminal'
+// import Work from './pages/work'
+// import About from './pages/about';
 const LazyWork = lazy(() => import('./pages/work'))
 const LazyAbout = lazy(() => import('./pages/about'))
 
@@ -27,29 +29,31 @@ function App() {
 <div className="App">
   <Header />
   <AnimatePresence>
-  <Routes>
-    <Route 
-      path="/" 
-      element={ <Home /> }/>
-    <Route 
-      path="/about" 
-      element={
-      <Suspense fallback={<PageLoader />}>
-        <LazyAbout />
-      </Suspense> }/>
-    <Route 
-      path="/work/:id" 
-      element={
-        <Suspense fallback={<PageLoader />}>
-          <LazyWork />
-        </Suspense> }/>
-    <Route 
-      path="/terminal" 
-      element={ <Terminal /> }/>
-    <Route 
-      path="*" 
-      element={ <NotFound /> }/>
-  </Routes>
+    <Routes>
+      <Route 
+        path="/" 
+        element={ <Home /> }/>
+      <Route 
+        path="/about" 
+        element={ 
+          <Suspense fallback={<PageLoader />}>
+            <LazyAbout />
+          </Suspense>
+          }/>
+      <Route 
+        path="/work/:id" 
+        element={ 
+          <Suspense fallback={<PageLoader />}>
+            <LazyWork />
+          </Suspense>
+          }/>
+      <Route 
+        path="/terminal" 
+        element={ <Terminal /> }/>
+      <Route 
+        path="*" 
+        element={ <NotFound /> }/>
+    </Routes>
   </AnimatePresence>
   <ScrollToTop />
   <Footer />

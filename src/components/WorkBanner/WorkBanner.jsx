@@ -6,8 +6,6 @@ import styles from './WorkBanner.module.scss'
 
 // components
 import ExternalLink from '../ExternalLink'
-import LazyImage from '../LazyImage'
-
 
 export default function WorkBanner() {
  
@@ -43,14 +41,11 @@ export default function WorkBanner() {
                     </div>
                 </div>
                 <div className={styles.bannerImg}>
-                    {/* <img src={projectData.banner_url} alt={`Banner of ${projectData.title}`} width="100%" height="100%"/> */}
-                    <LazyImage 
-                        src={projectData.banner_url}
-                        alt={`Banner of ${projectData.title}`}
-                        placeholderSrc={projectData.banner_url_placeholder}
-                        placeholderClassName="lazyImgPlaceholder"
-                        className="lazyImage"
-                    />
+                    <img 
+                    src={projectData.banner_url} 
+                    alt={`Banner of ${projectData.title}`} 
+                    width="100%" 
+                    height="100%"/>
                 </div>
             </section>
         }

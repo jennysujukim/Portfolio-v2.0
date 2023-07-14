@@ -20,7 +20,7 @@ export default function WorkNavigation() {
                 to="/work/all"
                 className={styles.goBackContainer}>
                     <div className={styles.goBack}>
-                        <ArrowOutward />
+                        <ArrowOutward w="25px" h="25px"/>
                         <p>Go Back To List</p>
                     </div>
                 </Link>
@@ -29,7 +29,7 @@ export default function WorkNavigation() {
                 className={styles.nextContainer}>
                     <div className={styles.nextProject}>
                         <p>Next Project</p>
-                        <ArrowOutward />
+                        <ArrowOutward w="25px" h="25px"/>
                     </div>
                     <div className={styles.projectDetails}>
                         <h4>{nextProjectData.title}</h4>

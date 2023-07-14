@@ -16,8 +16,8 @@ export default function ExternalLink({ text, link, project }) {
             {text}
             <div className={ project ? styles.cta_projects : styles.cta }>
                 < ArrowOutward 
-                    w="18px"
-                    h="18px"/>
+                    w="25px"
+                    h="25px"/>
             </div>
         </Link>
     )
