@@ -6,7 +6,6 @@ import Button from '../../../components/Button'
 import Heading from '../../../components/Heading'
 import ProjectsList from '../../../components/ProjectsList'
 
-
 export default function FeaturedProjects() {
 
 

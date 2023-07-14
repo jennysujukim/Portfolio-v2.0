@@ -5,11 +5,12 @@ import { ProjectContextProvider } from '../../context/ProjectContext'
 import All from './All'
 import MyNotes from './MyNotes'
 import DailyProtein from './DailyProtein'
+import TypaType from './TypaType'
+import ReFine from './ReFine'
+import PortfolioBuild from './PortfolioBuild'
 // import ItWasAwesome from './ItWasAwesome'
 // import Jade from './Jade'
 // import LinkOn from './LinkOn'
-import TypaType from './TypaType'
-import ReFine from './ReFine'
 
 
 export default function Work() {
@@ -25,6 +26,7 @@ export default function Work() {
         {path === "/work/typa-type" ? <TypaType /> : null } 
         {path === "/work/my-notes" ? <MyNotes /> : null }
         {path === "/work/re-fine" ? <ReFine /> : null }
+        {path === "/work/portfolio-build" ? <PortfolioBuild /> : null }
         {/* {path === "/work/it-was-awesome" ? <ItWasAwesome /> : null }     */}
         {/* {path === "/work/linkon" ? <LinkOn /> : null }  */}
         {/* {path === "/work/jade-bookmark-manager" ? <Jade /> : null }  */}

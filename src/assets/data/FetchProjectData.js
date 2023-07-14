@@ -5,6 +5,7 @@ import TypaTypeBanner from '../images/work/typa-type/banner.jpg'
 import TypaTypeThumb2x1 from '../images/work/typa-type/thumb-projects-2x1.jpg'
 import RefineBanner from '../images/work/re-fine/banner.jpg'
 import Refinethumb2x1 from '../images/work/re-fine/thumb-projects-2x1.jpg'
+import dailyProteinThumbPlaceholder from '../images/work/daily-protein/overview-placeholder.jpg'
 
 export const FetchProjectData = () => {
     
@@ -14,6 +15,7 @@ export const FetchProjectData = () => {
         title: "Daily Protein",
         description: "Sign up, calculate, track your daily protein intake.",
         image_url: dailyProteinThumb,
+        image_url_placeholder: dailyProteinThumbPlaceholder,
         image_url_projects: dailyProteinThumb2x1,
         banner_url: dailyProteinBanner,
         link: "/work/daily-protein",
@@ -26,6 +28,7 @@ export const FetchProjectData = () => {
         title: "RE:FINE",
         description: "Correct grammar and refine your sentences using Open AI.",
         image_url: RefineBanner,
+        image_url_placeholder: dailyProteinThumbPlaceholder,
         image_url_projects: Refinethumb2x1,
         banner_url: RefineBanner,
         link: "/work/re-fine",
@@ -38,6 +41,7 @@ export const FetchProjectData = () => {
         title: "Typa Type",
         description: "Discover a curated collection of unique typography.",
         image_url: TypaTypeBanner,
+        image_url_placeholder: dailyProteinThumbPlaceholder,
         image_url_projects: TypaTypeThumb2x1,
         banner_url: TypaTypeBanner,
         link: "/work/typa-type",
@@ -50,8 +54,9 @@ export const FetchProjectData = () => {
         title: "Portfolio Build",
         description: "Write and organize your personal notes.",
         image_url: TypaTypeBanner,
+        image_url_placeholder: dailyProteinThumbPlaceholder,
         image_url_projects: dailyProteinThumb2x1,
-        link: "/work/my-notes",
+        link: "/work/portfolio-build",
         keywords: ["PHP", "JavaScript", "React.js", "SASS"],
         live_site: "https://portfolio-v1.seojeongkim.com/",
         source_code: "https://github.com/jennysujukim/"
@@ -61,6 +66,7 @@ export const FetchProjectData = () => {
         title: "My Notes",
         description: "Write and organize your personal notes.",
         image_url: RefineBanner,
+        image_url_placeholder: dailyProteinThumbPlaceholder,
         image_url_projects: dailyProteinThumb2x1,
         link: "/work/my-notes",
         keywords: ["PHP", "MySQL", "Bootstrap"],

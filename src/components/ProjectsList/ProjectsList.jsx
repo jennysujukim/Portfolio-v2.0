@@ -1,5 +1,6 @@
 import { FetchProjectData } from '../../assets/data/FetchProjectData'
 import { Link } from 'react-router-dom'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 // styles
 import styles from './ProjectsList.module.scss'
@@ -25,9 +26,16 @@ export default function ProjectsList({ isHome }) {
                 to={project.link}
                 preventScrollReset={true} >
                     <div className={styles.cardImg}>
-                        <img 
+                        {/* <img 
                         src={project.image_url}
-                        alt={project.title} />
+                        alt={project.title} /> */}
+                        <LazyLoadImage 
+                            alt={project.title}
+                            height="100%"
+                            src={project.image_url}
+                            placeholdersrc={project.image_url_placeholder}
+                            width="100%"
+                        />
                     </div>
                     <div className={styles.cardDetails}>                            
                         <span className={styles.id}>{project.id}</span>
