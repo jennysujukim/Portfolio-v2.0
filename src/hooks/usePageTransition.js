@@ -16,7 +16,7 @@ const PageTransition = (OriginalContent) => {
                 className="slide"
                 initial={{ y: "-100%" }}
                 animate={{ y: ["-100%", "0%", "0%", "100%"] }}
-                transition={{ delay: 0.1, duration: 2.5, ease: [ 0.5, 1, 0.36, 1 ] }}
+                transition={{ duration: 2.5, ease: [ 0.5, 1, 0.36, 1 ] }}
             >
                 <img src={submark} alt="submark of Jen Kim" className="transition-submark"/>
             </motion.div>

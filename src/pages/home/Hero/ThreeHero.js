@@ -130,7 +130,7 @@ export default function ThreeHero() {
             ]
 
             // const rotation = (window.scrollY / window.innerHeight) * Math.PI * 2
-            object.position.y = position.y + window.scrollY * 0.0055
+            object.position.y = position.y + window.scrollY * 0.0035
             object.rotation.y = objectRotationsY[index]
             object.rotation.x = objectRotationsX[index]
           })

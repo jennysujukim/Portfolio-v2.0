@@ -1,0 +1,6 @@
+@use '../../sass/abstracts/' as *;
+
+.container {
+    background: $black;
+    @include flex(center, center);
+}

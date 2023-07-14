@@ -2,7 +2,7 @@
 import styles from './Hero.module.scss'
 
 // components
-import ThreeHero from '../Animation/ThreeHero'
+import ThreeHero from './ThreeHero'
 
 export default function Hero() {
  

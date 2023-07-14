@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from 'react';
+import { lazy, Suspense, useState, useEffect } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion'
 
@@ -9,7 +9,7 @@ import './App.scss';
 import Header from './components/Header'
 import Footer from './components/Footer'
 import PageLoader from './components/PageLoader'
-
+import PreLoader from './components/PreLoader';
 
 // pages
 import Home from './pages/home'
@@ -29,58 +29,79 @@ const LazyAbout = lazy(() => import('./pages/about'))
 function App() {
 
   const location = useLocation()
-
+  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {
+    // Simulate an asynchronous process
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2000); // Replace this with your actual data loading process
+  }, []);
 
   return (
+    <div className="App">
+        {isLoading ? <PreLoader /> : (
+          <>
 
-<div className="App">
-  <Header />
-  <AnimatePresence
-        initial={false}
-        mode="wait"
-        onExitComplete={() => window.scrollTo(0, 0)}>
-    <Routes 
-      location={location}
-      key={location.pathname}>
-      <Route 
-        path="/" 
-        element={ <Home /> }/>
-      <Route 
-        path="/about" 
-        element={ 
-          <Suspense fallback={<PageLoader />}>
-            <LazyAbout />
-          </Suspense>
-          }/>
-      <Route 
-        path="/work/" 
-        element={ 
-          <Suspense fallback={<PageLoader />}>
-            <LazyWork />
-          </Suspense>
-          }>
-            <Route index element={<All/>}/>
-            <Route path="all" element={<All />}/>
-            <Route path="daily-protein" element={<DailyProtein />}/>
-            <Route path="typa-type" element={<TypaType />}/>
-            <Route path="my-notes" element={<MyNotes />}/>
-            <Route path="re-fine" element={<ReFine />} />
-            <Route path="portfolio-build" element={<PortfolioBuild />} />
-          </Route>
-      <Route 
-        path="/terminal" 
-        element={ <Terminal /> }/>
-      <Route 
-        path="*" 
-        element={ <NotFound /> }/>
-    </Routes>
-  </AnimatePresence>
-  <Footer />
-</div>
+          <Header />
+          <AnimatePresence
+                initial={false}
+                mode="wait"
+                onExitComplete={() => window.scrollTo(0, 0)}>
+            <Routes 
+              location={location}
+              key={location.pathname}>
+              <Route 
+                path="/" 
+                element={ <Home /> }/>
+              <Route 
+                path="/about" 
+                element={ 
+                  <Suspense fallback={<PageLoader />}>
+                    <LazyAbout />
+                  </Suspense>
+                  }/>
+              <Route 
+                path="/work/" 
+                element={ 
+                  <Suspense fallback={<PageLoader />}>
+                    <LazyWork />
+                  </Suspense>
+                  }>
+                    <Route index element={<All/>}/>
+                    <Route 
+                      path="all" 
+                      element={<All />}/>
+                    <Route 
+                      path="daily-protein" 
+                      element={<DailyProtein />}/>
+                    <Route 
+                      path="typa-type" 
+                      element={<TypaType />}/>
+                    <Route 
+                      path="my-notes" 
+                      element={<MyNotes />}/>
+                    <Route 
+                      path="re-fine" 
+                      element={<ReFine />} />
+                    <Route 
+                      path="portfolio-build" 
+                      element={<PortfolioBuild />} />
+                  </Route>
+              <Route 
+                path="/terminal" 
+                element={ <Terminal /> }/>
+              <Route 
+                path="*" 
+                element={ <NotFound /> }/>
+            </Routes>
+          </AnimatePresence>
+          <Footer />
 
-    )
 
+          </>
+        )}
 
-}
+    </div>
+)}
 
 export default App;
