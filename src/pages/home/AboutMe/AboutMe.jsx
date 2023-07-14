@@ -2,7 +2,7 @@
 import styles from './AboutMe.module.scss'
 
 // components
-import Terminal from '../../../components/Terminal'
+import TerminalItem from '../../../components/TerminalItem'
 
 
 export default function AboutMe() {
@@ -28,7 +28,7 @@ export default function AboutMe() {
         </div>
 
         <div className={`wrapper--inner ${styles.terminal}`}>
-            <Terminal />
+            <TerminalItem />
         </div>
     </section> 
     )

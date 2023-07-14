@@ -2,9 +2,9 @@ import { useState } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom' 
 
 // styles
-import styles from './Terminal.module.scss'
+import styles from './TerminalItem.module.scss'
 
-export default function Terminal() {
+export default function TerminalItem() {
 
     const navigate = useNavigate()
 

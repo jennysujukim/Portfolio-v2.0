@@ -1,4 +1,4 @@
-
+import PageTransition from '../../hooks/usePageTransition'
 
 // styles
 import styles from './Home.module.scss'
@@ -10,12 +10,15 @@ import AboutMe from './AboutMe'
 
 export default function Home() {
 
-  return (
+  const WrappedContent = PageTransition(() => (
     <main className={styles.main}>
       <Hero />
       <FeaturedProjects />
       <AboutMe />
     </main>
+  ))
+
+  return (
+    <WrappedContent />
   )
 }
-

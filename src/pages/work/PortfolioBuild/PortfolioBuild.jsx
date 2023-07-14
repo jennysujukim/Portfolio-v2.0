@@ -1,6 +1,7 @@
 import { useContext, useEffect } from 'react'
 import { ProjectContext } from '../../../context/ProjectContext'
 import { WorkSliderContextProvider } from '../../../context/WorkSliderContext'
+import { motion } from 'framer-motion'
 
 // styles
 import styles from './PortfolioBuild.module.scss'
@@ -23,6 +24,11 @@ export default function PortfolioBuild() {
 
   return (
     <>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ delay: 0.5 }}>
       <WorkBanner />
       <div className={`wrapper ${styles.container}`}>
         <WorkSliderContextProvider>
@@ -41,6 +47,7 @@ export default function PortfolioBuild() {
           </section>
         </div>
       </div>
+      </motion.div>
     </>
   )
 }

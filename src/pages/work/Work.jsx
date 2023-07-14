@@ -8,9 +8,7 @@ import DailyProtein from './DailyProtein'
 import TypaType from './TypaType'
 import ReFine from './ReFine'
 import PortfolioBuild from './PortfolioBuild'
-// import ItWasAwesome from './ItWasAwesome'
-// import Jade from './Jade'
-// import LinkOn from './LinkOn'
+import PageTransition from '../../hooks/usePageTransition'
 
 
 export default function Work() {
@@ -18,19 +16,21 @@ export default function Work() {
   let location = useLocation()
   const path = location.pathname
 
+  const WrappedContent = PageTransition(() => (
+    <main> 
+      {path === "/work/all" ? <All /> : null }
+      {path === "/work/daily-protein" ? <DailyProtein /> : null }
+      {path === "/work/typa-type" ? <TypaType /> : null } 
+      {path === "/work/my-notes" ? <MyNotes /> : null }
+      {path === "/work/re-fine" ? <ReFine /> : null }
+      {path === "/work/portfolio-build" ? <PortfolioBuild /> : null }
+    </main>
+  ))
+
   return (
     <ProjectContextProvider>
-      <main> 
-        {path === "/work/all" ? <All /> : null }
-        {path === "/work/daily-protein" ? <DailyProtein /> : null }
-        {path === "/work/typa-type" ? <TypaType /> : null } 
-        {path === "/work/my-notes" ? <MyNotes /> : null }
-        {path === "/work/re-fine" ? <ReFine /> : null }
-        {path === "/work/portfolio-build" ? <PortfolioBuild /> : null }
-        {/* {path === "/work/it-was-awesome" ? <ItWasAwesome /> : null }     */}
-        {/* {path === "/work/linkon" ? <LinkOn /> : null }  */}
-        {/* {path === "/work/jade-bookmark-manager" ? <Jade /> : null }  */}
-      </main>
+          <WrappedContent />
     </ProjectContextProvider>
   )
 }
+
