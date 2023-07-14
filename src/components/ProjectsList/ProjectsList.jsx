@@ -1,13 +1,12 @@
 import { FetchProjectData } from '../../assets/data/FetchProjectData'
 import { Link } from 'react-router-dom'
-import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 // styles
 import styles from './ProjectsList.module.scss'
 
 // components
 import ArrowOutward from '../../components/ArrowOutward'
-
+import LazyImage from '../LazyImage'
 
 export default function ProjectsList({ isHome }) {
 
@@ -26,16 +25,10 @@ export default function ProjectsList({ isHome }) {
                 to={project.link}
                 preventScrollReset={true} >
                     <div className={styles.cardImg}>
-                        {/* <img 
-                        src={project.image_url}
-                        alt={project.title} /> */}
-                        <LazyLoadImage 
-                            alt={project.title}
-                            height="100%"
+                        <LazyImage 
                             src={project.image_url}
-                            placeholdersrc={project.image_url_placeholder}
-                            width="100%"
-                            effect='blur'
+                            alt={project.title}
+                            placeholderSrc={project.image_url_placeholder}
                         />
                     </div>
                     <div className={styles.cardDetails}>                            
@@ -72,17 +65,10 @@ export default function ProjectsList({ isHome }) {
                 to={project.link}
                 preventScrollReset={true} >
                     <div className={styles.cardImg}>
-                        {/* <img 
-                        src={project.image_url_projects}
-                        alt={project.title} /> */}
-                        <LazyLoadImage 
-                            alt={project.title}
-                            height="100%"
+                        <LazyImage 
                             src={project.image_url_projects}
-                            placeholdersrc={project.image_url_projects_placeholder}
-                            width="100%"
-                            effect='blur'
-                        
+                            alt={project.title}
+                            placeholderSrc={project.image_url_projects_placeholder}
                         />
                     </div>
                     <div className={styles.cardDetails}>                            

@@ -1,4 +1,5 @@
 import dailyProteinBanner from '../images/work/daily-protein/banner.jpg'
+import dailyProteinBannerPlaceholder from '../images/work/daily-protein/banner.jpg'
 import dailyProteinThumb from '../images/work/daily-protein/overview.jpg'
 import dailyProteinThumb2x1 from '../images/work/daily-protein/thumb-projects-2x1.jpg'
 import dailyProteinThumb2x1Placeholder from '../images/work/daily-protein/thumb-projects-2x1-placeholder.jpg'
@@ -20,6 +21,7 @@ export const FetchProjectData = () => {
         image_url_projects: dailyProteinThumb2x1,
         image_url_projects_placeholder: dailyProteinThumb2x1Placeholder,
         banner_url: dailyProteinBanner,
+        banner_url_placeholder: dailyProteinBannerPlaceholder,
         link: "/work/daily-protein",
         keywords: ["React.js", "Firebase", "Sass"],
         live_site: "https://daily-protein.seojeongkim.com/",
@@ -34,6 +36,7 @@ export const FetchProjectData = () => {
         image_url_projects: Refinethumb2x1,
         image_url_projects_placeholder: dailyProteinThumb2x1Placeholder,
         banner_url: RefineBanner,
+        banner_url_placeholder: dailyProteinBannerPlaceholder,
         link: "/work/re-fine",
         keywords: ["JavaScript", "Node.js", "Express.js", "OpenAI"],
         live_site: "https://re-fine.seojeongkim.com",
@@ -48,6 +51,7 @@ export const FetchProjectData = () => {
         image_url_projects: TypaTypeThumb2x1,
         image_url_projects_placeholder: dailyProteinThumb2x1Placeholder,
         banner_url: TypaTypeBanner,
+        banner_url_placeholder: dailyProteinBannerPlaceholder,
         link: "/work/typa-type",
         keywords: ["HTML", "CSS", "JavaScript"],
         live_site: "https://typa-type.seojeongkim.com",
