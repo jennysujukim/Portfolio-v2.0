@@ -1,6 +1,7 @@
 import dailyProteinBanner from '../images/work/daily-protein/banner.jpg'
 import dailyProteinThumb from '../images/work/daily-protein/overview.jpg'
 import dailyProteinThumb2x1 from '../images/work/daily-protein/thumb-projects-2x1.jpg'
+import dailyProteinThumb2x1Placeholder from '../images/work/daily-protein/thumb-projects-2x1-placeholder.jpg'
 import TypaTypeBanner from '../images/work/typa-type/banner.jpg'
 import TypaTypeThumb2x1 from '../images/work/typa-type/thumb-projects-2x1.jpg'
 import RefineBanner from '../images/work/re-fine/banner.jpg'
@@ -17,6 +18,7 @@ export const FetchProjectData = () => {
         image_url: dailyProteinThumb,
         image_url_placeholder: dailyProteinThumbPlaceholder,
         image_url_projects: dailyProteinThumb2x1,
+        image_url_projects_placeholder: dailyProteinThumb2x1Placeholder,
         banner_url: dailyProteinBanner,
         link: "/work/daily-protein",
         keywords: ["React.js", "Firebase", "Sass"],
@@ -30,6 +32,7 @@ export const FetchProjectData = () => {
         image_url: RefineBanner,
         image_url_placeholder: dailyProteinThumbPlaceholder,
         image_url_projects: Refinethumb2x1,
+        image_url_projects_placeholder: dailyProteinThumb2x1Placeholder,
         banner_url: RefineBanner,
         link: "/work/re-fine",
         keywords: ["JavaScript", "Node.js", "Express.js", "OpenAI"],
@@ -43,6 +46,7 @@ export const FetchProjectData = () => {
         image_url: TypaTypeBanner,
         image_url_placeholder: dailyProteinThumbPlaceholder,
         image_url_projects: TypaTypeThumb2x1,
+        image_url_projects_placeholder: dailyProteinThumb2x1Placeholder,
         banner_url: TypaTypeBanner,
         link: "/work/typa-type",
         keywords: ["HTML", "CSS", "JavaScript"],
@@ -56,6 +60,7 @@ export const FetchProjectData = () => {
         image_url: TypaTypeBanner,
         image_url_placeholder: dailyProteinThumbPlaceholder,
         image_url_projects: dailyProteinThumb2x1,
+        image_url_projects_placeholder: dailyProteinThumb2x1Placeholder,
         link: "/work/portfolio-build",
         keywords: ["PHP", "JavaScript", "React.js", "SASS"],
         live_site: "https://portfolio-v1.seojeongkim.com/",
@@ -68,6 +73,7 @@ export const FetchProjectData = () => {
         image_url: RefineBanner,
         image_url_placeholder: dailyProteinThumbPlaceholder,
         image_url_projects: dailyProteinThumb2x1,
+        image_url_projects_placeholder: dailyProteinThumb2x1Placeholder,
         link: "/work/my-notes",
         keywords: ["PHP", "MySQL", "Bootstrap"],
         live_site: "https://my-notes.seojeongkim.com/",

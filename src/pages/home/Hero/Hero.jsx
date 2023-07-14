@@ -31,17 +31,17 @@ export default function Hero() {
       <ThreeHero />
       <h1 className={styles.title}>Jenny Seojeong Kim</h1>
       <div className={styles.txtContainer}>
-        <div className={styles.txtTop} ref={el => {txtsRef.current[0] = el;}}>
+        <div className={styles.txtTop}>
           Hi! I'm <span className={`highlight--white ${styles.circle}`}>Jen</span>
         </div>
         <div>
-          <p ref={el => {txtsRef.current[1] = el;}}>Creative</p>
+          <p ref={el => {txtsRef.current[0] = el;}}>Creative</p>
         </div>
         <div>
-          <p ref={el => {txtsRef.current[2] = el;}}>Frontend Developer</p>
+          <p ref={el => {txtsRef.current[1] = el;}}>Frontend Developer</p>
         </div>
         <div>
-          <p ref={el => {txtsRef.current[3] = el;}}>UIUX Designer</p>
+          <p ref={el => {txtsRef.current[2] = el;}}>UIUX Designer</p>
         </div>
         <div>
           <p className={styles.subTxt} ref={el => {txtsRef.current[4] = el;}}>Crafting <span>digital</span> experiences with <span>thoughtful</span> design</p>

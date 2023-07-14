@@ -35,6 +35,7 @@ export default function ProjectsList({ isHome }) {
                             src={project.image_url}
                             placeholdersrc={project.image_url_placeholder}
                             width="100%"
+                            effect='blur'
                         />
                     </div>
                     <div className={styles.cardDetails}>                            
@@ -71,9 +72,18 @@ export default function ProjectsList({ isHome }) {
                 to={project.link}
                 preventScrollReset={true} >
                     <div className={styles.cardImg}>
-                        <img 
+                        {/* <img 
                         src={project.image_url_projects}
-                        alt={project.title} />
+                        alt={project.title} /> */}
+                        <LazyLoadImage 
+                            alt={project.title}
+                            height="100%"
+                            src={project.image_url_projects}
+                            placeholdersrc={project.image_url_projects_placeholder}
+                            width="100%"
+                            effect='blur'
+                        
+                        />
                     </div>
                     <div className={styles.cardDetails}>                            
                         <span className={styles.id}>{project.id}</span>
