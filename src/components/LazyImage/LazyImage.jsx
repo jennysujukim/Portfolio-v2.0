@@ -1,6 +1,6 @@
 import { useRef, useState, useEffect } from "react";
 
-export default function LazyImage({ placeholderSrc, placeholderClassName, src, alt, className }) {
+export default function LazyImage({ placeholderSrc, placeholderClassName, src, alt, className, style }) {
 
     const [isLoading, setIsLoading] = useState(true);
     const [view, setView] = useState("");
@@ -28,15 +28,15 @@ export default function LazyImage({ placeholderSrc, placeholderClassName, src, a
       {isLoading && (
         <img
           src={placeholderSrc}
-          alt=""
           className={placeholderClassName}
           ref={placeholderRef}
+          alt=""
         />
       )}
       <img
         src={view}
         className={className}
-        // style={isLoading ? {display: "none"} : style}
+        style={isLoading ? {display: "none"} : style}
         alt={alt}
         onLoad={() => setIsLoading(false)}
       />
