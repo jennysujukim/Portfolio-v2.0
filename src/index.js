@@ -7,13 +7,11 @@ import './index.scss';
 
 // components
 import App from './App';
-import { ScrollToTop } from './hooks/useScrollToTop';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
     <React.StrictMode>
-        <ScrollToTop />
           <App />
     </React.StrictMode>
   </BrowserRouter>

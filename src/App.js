@@ -1,6 +1,5 @@
 import React, { lazy, Suspense } from 'react';
-import { Route, Routes } from 'react-router-dom';
-import { ScrollToTop } from './hooks/useScrollToTop';
+import { Route, Routes, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion'
 
 // styles
@@ -16,20 +15,33 @@ import PageLoader from './components/PageLoader'
 import Home from './pages/home'
 import NotFound from './pages/notfound'
 import Terminal from './pages/terminal'
-// import Work from './pages/work'
-// import About from './pages/about';
+import All from './pages/work/All'
+import MyNotes from './pages/work/MyNotes'
+import DailyProtein from './pages/work/DailyProtein'
+import TypaType from './pages/work/TypaType'
+import ReFine from './pages/work/ReFine'
+import PortfolioBuild from './pages/work/PortfolioBuild'
 const LazyWork = lazy(() => import('./pages/work'))
 const LazyAbout = lazy(() => import('./pages/about'))
 
 
+
 function App() {
+
+  const location = useLocation()
+
 
   return (
 
 <div className="App">
   <Header />
-  <AnimatePresence>
-    <Routes>
+  <AnimatePresence
+        initial={false}
+        mode="wait"
+        onExitComplete={() => window.scrollTo(0, 0)}>
+    <Routes 
+      location={location}
+      key={location.pathname}>
       <Route 
         path="/" 
         element={ <Home /> }/>
@@ -41,12 +53,20 @@ function App() {
           </Suspense>
           }/>
       <Route 
-        path="/work/:id" 
+        path="/work/" 
         element={ 
           <Suspense fallback={<PageLoader />}>
             <LazyWork />
           </Suspense>
-          }/>
+          }>
+            <Route index element={<All/>}/>
+            <Route path="all" element={<All />}/>
+            <Route path="daily-protein" element={<DailyProtein />}/>
+            <Route path="typa-type" element={<TypaType />}/>
+            <Route path="my-notes" element={<MyNotes />}/>
+            <Route path="re-fine" element={<ReFine />} />
+            <Route path="portfolio-build" element={<PortfolioBuild />} />
+          </Route>
       <Route 
         path="/terminal" 
         element={ <Terminal /> }/>
@@ -55,7 +75,6 @@ function App() {
         element={ <NotFound /> }/>
     </Routes>
   </AnimatePresence>
-  <ScrollToTop />
   <Footer />
 </div>
 
