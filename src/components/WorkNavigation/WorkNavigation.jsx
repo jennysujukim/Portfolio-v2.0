@@ -6,7 +6,7 @@ import { ProjectContext } from '../../context/ProjectContext'
 import styles from './WorkNavigation.module.scss'
 
 // components
-import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
+import ArrowOutward from '../ArrowOutward'
 
 export default function WorkNavigation() {
 
@@ -20,7 +20,7 @@ export default function WorkNavigation() {
                 to="/work/all"
                 className={styles.goBackContainer}>
                     <div className={styles.goBack}>
-                        <ArrowOutwardIcon />
+                        <ArrowOutward />
                         <p>Go Back To List</p>
                     </div>
                 </Link>
@@ -29,7 +29,7 @@ export default function WorkNavigation() {
                 className={styles.nextContainer}>
                     <div className={styles.nextProject}>
                         <p>Next Project</p>
-                        <ArrowOutwardIcon />
+                        <ArrowOutward />
                     </div>
                     <div className={styles.projectDetails}>
                         <h4>{nextProjectData.title}</h4>

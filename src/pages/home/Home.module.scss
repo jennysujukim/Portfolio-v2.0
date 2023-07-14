@@ -1,7 +1,10 @@
 @use '../../sass/abstracts/' as *;
 @use 'sass:math';
 
-.main { position: relative; }
+.main { 
+    position: relative;
+    overflow: hidden;
+}
 
 .show {
     transition: all ease-in-out 300ms;

@@ -1,27 +1,46 @@
 @use '../../sass/abstracts/' as *;
 
-.container {
-    
+.container, .container_projects {
     @include flex(flex-start, center);
     overflow: hidden;
     text-transform: uppercase;
     font-weight: bold;
     font-size: 1rem;
-
-    @include laptop { font-size: 1.2rem; };
-
-    .cta {
-        margin-left: 0.3rem;
-        opacity: 0;
-        width: 18px;
-        height: 18px;
-        transform: translate(-100%, 100%);
-        transition: all 300ms ease-in-out;
+  
+    @include laptop {
+      font-size: 1.2rem;
     }
-
+  
+    .cta, .cta_projects {
+      margin-left: 0.3rem;
+      opacity: 0;
+      width: 18px;
+      height: 18px;
+      transition: all 300ms ease-in-out;
+      transform: translate(-100%, 100%);
+    }
+  
     &:hover .cta {
-        opacity: 1;
-        transform: translate(0, 0);
+      opacity: 1;
+      transform: translate(0, 0);
     }
-}
+  
+    &.container_projects {
+      padding-left: 1rem;
 
+      .cta_projects {
+        opacity: 1;
+        transform: none;
+      }
+  
+      .cta_projects svg {
+        width: 1.2rem;
+        height: 1.2rem;
+  
+        @include laptop {
+          width: 1.5rem;
+          height: 1.5rem;
+        }
+      }
+    }
+  }

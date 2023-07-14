@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import styles from './CtaButton.module.scss'
 
 // components
-import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward'
+import ArrowOutward from '../ArrowOutward'
 
 export default function CtaButton({ text, link }) {
 
@@ -14,7 +14,9 @@ export default function CtaButton({ text, link }) {
             target="_blank"
             className={`highlight ${styles.container}`}>
             {text}
-            < ArrowOutwardIcon className={styles.cta}/>
+            <div className={styles.cta}>
+                <ArrowOutward />
+            </div>
         </Link>
     )
 }

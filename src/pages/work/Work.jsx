@@ -1,9 +1,6 @@
 import { useLocation } from 'react-router-dom'
 import { ProjectContextProvider } from '../../context/ProjectContext'
 
-// styles
-// import styles from './Work.module.scss'
-
 // components
 import All from './All'
 import MyNotes from './MyNotes'

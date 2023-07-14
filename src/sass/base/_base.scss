@@ -2,6 +2,11 @@
 
 * { box-sizing: border-box; }
 
+@for $i from 1 through 12 {
+    .grid-col-#{$i} {
+        grid-column: auto / span $i;
+    }
+}
 
 body {
     background: $lightbeige;
@@ -135,4 +140,14 @@ Scrollbar
     z-index: -1;
 
     @include desktop { border-radius: 100px; }
+}
+
+
+.transitionAnim {
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    position: absolute;
+    left: 0;
+    top: 0;
 }

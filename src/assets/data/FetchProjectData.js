@@ -35,17 +35,6 @@ export const FetchProjectData = () => {
         },
         {
         id: "003",
-        title: "My Notes",
-        description: "Write and organize your personal notes.",
-        image_url: RefineBanner,
-        image_url_projects: dailyProteinThumb2x1,
-        link: "/work/my-notes",
-        keywords: ["PHP", "MySQL", "Bootstrap"],
-        live_site: "https://my-notes.seojeongkim.com/",
-        source_code: "https://github.com/jennysujukim/my-notes-2023"
-        },
-        {
-        id: "004",
         title: "Typa Type",
         description: "Discover a curated collection of unique typography.",
         image_url: TypaTypeBanner,
@@ -56,17 +45,28 @@ export const FetchProjectData = () => {
         live_site: "https://typa-type.seojeongkim.com",
         source_code: "https://github.com/jennysujukim/typa-type-2023"
         },
-        // {
-        // id: "005",
-        // title: "My Notes",
-        // description: "Write and organize your personal notes.",
-        // image_url: placeholder,
-        // image_url_projects: dailyProteinThumb2x1,
-        // link: "/work/my-notes",
-        // keywords: ["PHP", "MySQL", "Bootstrap"],
-        // live_site: "https://my-notes.seojeongkim.com/",
-        // source_code: "https://github.com/jennysujukim/my-notes-2023"
-        // },
+        {
+        id: "004",
+        title: "Portfolio Build",
+        description: "Write and organize your personal notes.",
+        image_url: TypaTypeBanner,
+        image_url_projects: dailyProteinThumb2x1,
+        link: "/work/my-notes",
+        keywords: ["PHP", "JavaScript", "React.js", "SASS"],
+        live_site: "https://portfolio-v1.seojeongkim.com/",
+        source_code: "https://github.com/jennysujukim/"
+        },
+        {
+        id: "005",
+        title: "My Notes",
+        description: "Write and organize your personal notes.",
+        image_url: RefineBanner,
+        image_url_projects: dailyProteinThumb2x1,
+        link: "/work/my-notes",
+        keywords: ["PHP", "MySQL", "Bootstrap"],
+        live_site: "https://my-notes.seojeongkim.com/",
+        source_code: "https://github.com/jennysujukim/my-notes-2023"
+        },
         // {
         // id: "006",
         // title: "Jade Bookmark Manager",

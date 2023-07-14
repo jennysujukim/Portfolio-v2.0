@@ -132,8 +132,6 @@ export const AuthContextProvider = ({ children }) => {
         </WorkSliderContextProvider>
 
         <div className={styles.content}>
-          <div className="glass__white"></div>
-
           <section
             id="section--0"
             className={`wrapper--inner ${styles.sectionOne}`} >

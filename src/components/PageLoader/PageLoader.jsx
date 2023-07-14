@@ -6,7 +6,6 @@ export default function PageLoader() {
 
   return (
     <div className={styles.container}>
-        PageLoad
     </div>
   )
 }

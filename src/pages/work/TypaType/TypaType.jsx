@@ -22,7 +22,7 @@ export default function TypaType() {
     const { setProjectId } = useContext(ProjectContext)
 
     useEffect(() => {
-        setProjectId("004")
+        setProjectId("003")
       }, [setProjectId])
 
     const TypaTypeSections = [ "Overview", "At A Glance", "Append Node Objects", "Event Handlers", "Takeaways" ]

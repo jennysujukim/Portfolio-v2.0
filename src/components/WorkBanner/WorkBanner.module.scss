@@ -9,9 +9,7 @@
     @include flex(flex-end, center, column);
     margin-bottom: 2rem;
 
-    @include laptop {
-        @include grid(repeat(12, 1fr), 2rem);
-    }
+    @include laptop { @include grid(repeat(12, 1fr), 2rem); }
 }
 
 .txtContainer {
@@ -21,12 +19,10 @@
          grid-column: auto / span 8;
     }
 }
-
+ 
 .keywords { 
     @include flex(center, center);
-    @include laptop {
-        justify-content: flex-start;
-    }
+    @include laptop { justify-content: flex-start; }
 }
 
 
@@ -40,34 +36,8 @@
         height: 100%;
         @include flex(flex-end, flex-end);
     }
-
-    button {
-        @include flex(center, center);
-        overflow: hidden;
-        font-size: $fs-home-heroSubTitle--mobile;
-        text-transform: uppercase;
-
-        .cta {
-            margin-left: 0.3rem;
-            opacity: 0;
-            width: 18px;
-            height: 18px;
-            transform: translate(-100%, 100%);
-            transition: all 300ms ease-in-out;
-        }
-
-        &:hover .cta {
-            opacity: 1;
-            transform: translate(0, 0);
-        }
-    }
 }
 
 .bannerImg {
     img { border-radius: $br-img; }
 }
-
-
-
-
-

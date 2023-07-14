@@ -4,9 +4,9 @@ import { Link, useNavigate } from 'react-router-dom'
 // styles
 import styles from './Header.module.scss'
 
-// icons
-import DragHandleIcon from '@mui/icons-material/DragHandle'
-import CloseIcon from '@mui/icons-material/Close'
+// components
+import MobileClose from '../MobileClose'
+import MobileMenu from '../MobileMenu'
 
 
 export default function Header() {
@@ -54,19 +54,31 @@ export default function Header() {
         <div 
           className={styles.navButton}
           onClick={openMenu}>
-          {mobileMenu ? <CloseIcon /> : <DragHandleIcon /> }
+          {mobileMenu ? <MobileClose /> : <MobileMenu /> }
         </div>
 
         <nav className={styles.navButton__desktop}>
           <ul>
             <li>
-              <Link to="/about" onClick={() => handleLink('/about')}>About</Link>
+              <Link 
+                to="/about" 
+                onClick={() => handleLink('/about')}>
+                About
+              </Link>
             </li>
             <li>
-              <Link to="/work/all" onClick={() => handleLink('/work/all')}>Projects</Link>
+              <Link 
+                to="/work/all"
+                onClick={() => handleLink('/work/all')}>
+                Projects
+              </Link>
             </li>
             <li>
-              <Link to="/terminal" onClick={() => handleLink('/terminal')}>Terminal</Link>
+              <Link 
+                to="/terminal" 
+                onClick={() => handleLink('/terminal')}>
+                Terminal
+              </Link>
             </li>
           </ul>
         </nav>
@@ -75,16 +87,32 @@ export default function Header() {
         <nav className={styles.navContainer__mobile}>
           <ul>
             <li>
-              <Link to="/" onClick={() => handleLink('/')}>Home</Link>
+              <Link 
+                to="/" 
+                onClick={() => handleLink('/')}>
+                  Home
+              </Link>
             </li>
             <li>
-              <Link to="/about" onClick={() => handleLink('/about')}>About</Link>
+              <Link 
+                to="/about"
+                onClick={() => handleLink('/about')}>
+                  About
+              </Link>
             </li>
             <li>
-              <Link to="/work/all" onClick={() => handleLink('/work/all')}>Projects</Link>
+              <Link 
+                to="/work/all" 
+                onClick={() => handleLink('/work/all')}>
+                  Projects
+              </Link>
             </li>
             <li>
-              <Link to="/terminal" onClick={() => handleLink('/terminal')}>Terminal</Link>
+              <Link 
+                to="/terminal" 
+                onClick={() => handleLink('/terminal')}>
+                  Terminal
+              </Link>
             </li>
           </ul>
         </nav>

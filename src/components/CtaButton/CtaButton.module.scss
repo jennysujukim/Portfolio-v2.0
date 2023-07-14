@@ -10,9 +10,12 @@
 
     .cta {
         margin-left: 0.3rem;
-        width: 18px;
-        height: 18px;
         display: none;
+
+        svg {
+            width: 18px;
+            height: 18px;
+        }
     }
 
     &:hover .cta { display: block; }

@@ -9,7 +9,7 @@ import ExternalLink from '../ExternalLink'
 
 
 export default function WorkBanner() {
-
+ 
     const { projectData } = useContext(ProjectContext)
 
   return (
@@ -30,12 +30,14 @@ export default function WorkBanner() {
                     </div>
                     <div className={styles.btnContainer}>
                         <ExternalLink 
+                            project
                             text="Live site"
-                            link="https://daily-protein.seojeongkim.com/"
+                            link={projectData.live_site}
                         />
                         <ExternalLink 
+                            project
                             text="View code"
-                            link="https://github.com/jennysujukim/daily-protein-2023"
+                            link={projectData.source_code}
                         />
                     </div>
                 </div>
