@@ -1,6 +1,6 @@
 import { useRef, useState, useEffect } from "react";
 
-export default function LazyImage({ placeholderSrc, placeholderClassName, placeholderStyle, src, alt, className }) {
+export default function LazyImage({ placeholderSrc, placeholderClassName, src, alt, className }) {
 
     const [isLoading, setIsLoading] = useState(true);
     const [view, setView] = useState("");
@@ -30,7 +30,6 @@ export default function LazyImage({ placeholderSrc, placeholderClassName, placeh
           src={placeholderSrc}
           alt=""
           className={placeholderClassName}
-        //   style={placeholderStyle}
           ref={placeholderRef}
         />
       )}

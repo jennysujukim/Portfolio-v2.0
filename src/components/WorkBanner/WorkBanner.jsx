@@ -48,6 +48,8 @@ export default function WorkBanner() {
                         src={projectData.banner_url}
                         alt={`Banner of ${projectData.title}`}
                         placeholderSrc={projectData.banner_url_placeholder}
+                        placeholderClassName="lazyImgPlaceholder"
+                        className="lazyImage"
                     />
                 </div>
             </section>

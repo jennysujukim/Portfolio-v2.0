@@ -29,6 +29,8 @@ export default function ProjectsList({ isHome }) {
                             src={project.image_url}
                             alt={project.title}
                             placeholderSrc={project.image_url_placeholder}
+                            placeholderClassName="lazyImgPlaceholder"
+                            className="lazyImage"
                         />
                     </div>
                     <div className={styles.cardDetails}>                            
@@ -69,6 +71,8 @@ export default function ProjectsList({ isHome }) {
                             src={project.image_url_projects}
                             alt={project.title}
                             placeholderSrc={project.image_url_projects_placeholder}
+                            placeholderClassName="lazyImgPlaceholder"
+                            className="lazyImage"
                         />
                     </div>
                     <div className={styles.cardDetails}>                            

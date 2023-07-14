@@ -1,13 +1,18 @@
 import dailyProteinBanner from '../images/work/daily-protein/banner.jpg'
 import dailyProteinBannerPlaceholder from '../images/work/daily-protein/banner.jpg'
 import dailyProteinThumb from '../images/work/daily-protein/overview.jpg'
+import dailyProteinThumbPlaceholder from '../images/work/daily-protein/overview-placeholder.jpg'
 import dailyProteinThumb2x1 from '../images/work/daily-protein/thumb-projects-2x1.jpg'
 import dailyProteinThumb2x1Placeholder from '../images/work/daily-protein/thumb-projects-2x1-placeholder.jpg'
 import TypaTypeBanner from '../images/work/typa-type/banner.jpg'
+import TypaTypeBannerPlaceholder from '../images/work/typa-type/banner-placeholder.jpg'
 import TypaTypeThumb2x1 from '../images/work/typa-type/thumb-projects-2x1.jpg'
+import TypaTypeThumb2x1Placeholder from '../images/work/typa-type/thumb-projects-2x1-placeholder.jpg'
 import RefineBanner from '../images/work/re-fine/banner.jpg'
+import RefineBannerPlaceholder from '../images/work/re-fine/banner-placeholder.jpg'
 import Refinethumb2x1 from '../images/work/re-fine/thumb-projects-2x1.jpg'
-import dailyProteinThumbPlaceholder from '../images/work/daily-protein/overview-placeholder.jpg'
+import RefineThumb2x1Placeholder from '../images/work/re-fine/thumb-projects-2x1-placeholder.jpg'
+
 
 export const FetchProjectData = () => {
     
@@ -32,11 +37,11 @@ export const FetchProjectData = () => {
         title: "RE:FINE",
         description: "Correct grammar and refine your sentences using Open AI.",
         image_url: RefineBanner,
-        image_url_placeholder: dailyProteinThumbPlaceholder,
+        image_url_placeholder: RefineBannerPlaceholder,
         image_url_projects: Refinethumb2x1,
-        image_url_projects_placeholder: dailyProteinThumb2x1Placeholder,
+        image_url_projects_placeholder: RefineThumb2x1Placeholder,
         banner_url: RefineBanner,
-        banner_url_placeholder: dailyProteinBannerPlaceholder,
+        banner_url_placeholder: RefineBannerPlaceholder,
         link: "/work/re-fine",
         keywords: ["JavaScript", "Node.js", "Express.js", "OpenAI"],
         live_site: "https://re-fine.seojeongkim.com",
@@ -47,11 +52,11 @@ export const FetchProjectData = () => {
         title: "Typa Type",
         description: "Discover a curated collection of unique typography.",
         image_url: TypaTypeBanner,
-        image_url_placeholder: dailyProteinThumbPlaceholder,
+        image_url_placeholder: TypaTypeBannerPlaceholder,
         image_url_projects: TypaTypeThumb2x1,
-        image_url_projects_placeholder: dailyProteinThumb2x1Placeholder,
+        image_url_projects_placeholder: TypaTypeThumb2x1Placeholder,
         banner_url: TypaTypeBanner,
-        banner_url_placeholder: dailyProteinBannerPlaceholder,
+        banner_url_placeholder: TypaTypeBannerPlaceholder,
         link: "/work/typa-type",
         keywords: ["HTML", "CSS", "JavaScript"],
         live_site: "https://typa-type.seojeongkim.com",
@@ -62,9 +67,11 @@ export const FetchProjectData = () => {
         title: "Portfolio Build",
         description: "Write and organize your personal notes.",
         image_url: TypaTypeBanner,
-        image_url_placeholder: dailyProteinThumbPlaceholder,
-        image_url_projects: dailyProteinThumb2x1,
-        image_url_projects_placeholder: dailyProteinThumb2x1Placeholder,
+        image_url_placeholder: TypaTypeBannerPlaceholder,
+        image_url_projects: TypaTypeThumb2x1,
+        image_url_projects_placeholder: TypaTypeThumb2x1Placeholder,
+        banner_url: TypaTypeBanner,
+        banner_url_placeholder: TypaTypeBannerPlaceholder,
         link: "/work/portfolio-build",
         keywords: ["PHP", "JavaScript", "React.js", "SASS"],
         live_site: "https://portfolio-v1.seojeongkim.com/",
@@ -74,10 +81,12 @@ export const FetchProjectData = () => {
         id: "005",
         title: "My Notes",
         description: "Write and organize your personal notes.",
-        image_url: RefineBanner,
-        image_url_placeholder: dailyProteinThumbPlaceholder,
-        image_url_projects: dailyProteinThumb2x1,
-        image_url_projects_placeholder: dailyProteinThumb2x1Placeholder,
+        image_url: TypaTypeBanner,
+        image_url_placeholder: TypaTypeBannerPlaceholder,
+        image_url_projects: TypaTypeThumb2x1,
+        image_url_projects_placeholder: TypaTypeThumb2x1Placeholder,
+        banner_url: TypaTypeBanner,
+        banner_url_placeholder: TypaTypeBannerPlaceholder,
         link: "/work/my-notes",
         keywords: ["PHP", "MySQL", "Bootstrap"],
         live_site: "https://my-notes.seojeongkim.com/",
