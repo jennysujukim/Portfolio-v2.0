@@ -20,19 +20,20 @@ export default function ThreeHero() {
         // let windowHalfY = window.innerHeight / 2;
 
         // Renderer 
-        const renderer = new THREE.WebGLRenderer({ antialias: true })
+        const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true })
         renderer.setPixelRatio(window.devicePixelRatio)
         renderer.setSize(sizes.width, sizes.height)
         canvas.current.appendChild(renderer.domElement)
+        renderer.domElement.style.background = 'transparent';
 
         // Scene
         const scene = new THREE.Scene()
-        scene.background = new THREE.Color(0xFBFBFB)
+        // scene.background = new THREE.Color(0xFBFBFB)
 
         // Camera
         const camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 100 )
         camera.position.z = 6
-        camera.focalLength = 3
+        // camera.focalLength = 3
 
         // Lights
         const light = new THREE.DirectionalLight( 0xfbfbfb, 1 );
