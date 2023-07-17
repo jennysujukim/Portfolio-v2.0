@@ -30,7 +30,7 @@ export const FetchProjectData = () => {
         link: "/work/daily-protein",
         keywords: ["React.js", "Firebase", "Sass"],
         live_site: "https://daily-protein.seojeongkim.com/",
-        source_code: "https://github.com/jennysujukim/daily-protein-2023"
+        source_code: "https://github.com/jennysujukim/daily-protein"
         },
         {
         id: "002",
