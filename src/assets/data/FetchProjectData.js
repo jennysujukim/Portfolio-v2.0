@@ -4,14 +4,21 @@ import dailyProteinThumb from '../images/work/daily-protein/overview.jpg'
 import dailyProteinThumbPlaceholder from '../images/work/daily-protein/overview-placeholder.jpg'
 import dailyProteinThumb2x1 from '../images/work/daily-protein/thumb-projects-2x1.jpg'
 import dailyProteinThumb2x1Placeholder from '../images/work/daily-protein/thumb-projects-2x1-placeholder.jpg'
-import TypaTypeBanner from '../images/work/typa-type/banner.jpg'
-import TypaTypeBannerPlaceholder from '../images/work/typa-type/banner-placeholder.jpg'
-import TypaTypeThumb2x1 from '../images/work/typa-type/thumb-projects-2x1.jpg'
-import TypaTypeThumb2x1Placeholder from '../images/work/typa-type/thumb-projects-2x1-placeholder.jpg'
+
 import RefineBanner from '../images/work/re-fine/banner.jpg'
 import RefineBannerPlaceholder from '../images/work/re-fine/banner-placeholder.jpg'
 import Refinethumb2x1 from '../images/work/re-fine/thumb-projects-2x1.jpg'
 import RefineThumb2x1Placeholder from '../images/work/re-fine/thumb-projects-2x1-placeholder.jpg'
+
+import TypaTypeBanner from '../images/work/typa-type/banner.jpg'
+import TypaTypeBannerPlaceholder from '../images/work/typa-type/banner-placeholder.jpg'
+import TypaTypeThumb2x1 from '../images/work/typa-type/thumb-projects-2x1.jpg'
+import TypaTypeThumb2x1Placeholder from '../images/work/typa-type/thumb-projects-2x1-placeholder.jpg'
+
+import PortfolioBanner from '../images/work/portfolio-build/banner.jpg'
+import PortfolioBannerPlaceholder from '../images/work/portfolio-build/banner-placeholder.jpg'
+import PortfolioThumb2x1 from '../images/work/portfolio-build/thumb-projects-2x1.jpg'
+import PortfolioThumb2x1Placeholder from '../images/work/portfolio-build/thumb-projects-2x1-placeholder.jpg'
 
 
 export const FetchProjectData = () => {
@@ -58,24 +65,24 @@ export const FetchProjectData = () => {
         banner_url: TypaTypeBanner,
         banner_url_placeholder: TypaTypeBannerPlaceholder,
         link: "/work/typa-type",
-        keywords: ["HTML", "CSS", "JavaScript"],
+        keywords: ["HTML", "Tailwind CSS", "JavaScript"],
         live_site: "https://typa-type.seojeongkim.com",
         source_code: "https://github.com/jennysujukim/typa-type-2023"
         },
         {
         id: "004",
         title: "Portfolio Build",
-        description: "Write and organize your personal notes.",
-        image_url: TypaTypeBanner,
-        image_url_placeholder: TypaTypeBannerPlaceholder,
-        image_url_projects: TypaTypeThumb2x1,
-        image_url_projects_placeholder: TypaTypeThumb2x1Placeholder,
-        banner_url: TypaTypeBanner,
-        banner_url_placeholder: TypaTypeBannerPlaceholder,
+        description: "Roadmap of learning and developing portfolio with ReactJS.",
+        image_url: PortfolioBanner,
+        image_url_placeholder: PortfolioBannerPlaceholder,
+        image_url_projects: PortfolioThumb2x1,
+        image_url_projects_placeholder: PortfolioThumb2x1Placeholder,
+        banner_url: PortfolioBanner,
+        banner_url_placeholder: PortfolioBannerPlaceholder,
         link: "/work/portfolio-build",
         keywords: ["PHP", "JavaScript", "React.js", "SASS"],
         live_site: "https://portfolio-v1.seojeongkim.com/",
-        source_code: "https://github.com/jennysujukim/"
+        source_code: "https://github.com/jennysujukim/portfolio-v1"
         },
         {
         id: "005",

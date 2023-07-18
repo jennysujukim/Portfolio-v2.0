@@ -20,18 +20,18 @@ export default function Hero() {
     gsap.fromTo(container.current, {
       borderRadius: "0",
       width: "100%",
-      height: "100%"
+      height: "100%",
+      background: "#fbfbfb",
     }, {
       borderRadius: "180px",
       height: "calc(100% - 150px)",
       width: "98%",
+      background: "#151515",
       delay: 3.7
     })
 
     gsap.fromTo(txtsRef.current,
-      {
-        y: '100%',
-      },
+      { y: '100%' },
       {
         y: '0%',
         stagger: 0.3,
@@ -42,10 +42,8 @@ export default function Hero() {
   return (
     <>
     <section className={styles.container}>
-      <div className={styles.circlesWrapper} ref={comp}>
-        <div className={styles.circlesContainer}>
-          <div className={styles.leftCircle} ref={container}></div>
-        </div>
+      <div className={styles.circleContainer} ref={comp}>
+          <div className={styles.circle} ref={container}></div>
       </div>
       <ThreeHero />
 
