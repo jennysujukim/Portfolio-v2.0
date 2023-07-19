@@ -9,41 +9,151 @@
 }
 
 .content {
-    border: $greyLine;
-    border-radius: $br-container--mobile;
+
     position: relative;
-    overflow: hidden;
+    overflow: hidden; 
 
-    section { 
-        height: 100vh;
-        line-height: 1.7;
+    @include tablet {
+        border: $greyLine;
+        border-radius: $br-container--mobile;
+    }
+
+    section {  
+        p { line-height: 1.7; } 
     }
 }
 
-.overviewText {
-    @include grid(repeat(2, 1fr), 1.5rem);
-    p { 
-        text-align: justify;
-        padding-bottom: $pb-paragraph;
+.sectionOne {
+    padding: 0;
+
+    @include tablet {
+        padding: 0 2rem;
     }
-}
 
-.overviewImg {
-    // background-color: $grey;
-    width: 100%;
-    height: 50vh;
-    line-height: 1.7;
-    padding: 2rem 0;
-}
-
-.sectionGrid {
-    @include grid(repeat(12, 1fr), 1.5rem);
+    .txtContainer {
+        padding-bottom: 3rem;
     
-    div { grid-column: auto / span 6; }
+        @include laptop {
+            @include grid(repeat(12, 1fr), 2rem);
+        }
+    
+        p {
+            padding-bottom: $pb-paragraph;
+            @include laptop { 
+                grid-column: auto / span 6;
+                padding-bottom: 0;
+            }
+        }
+    }
 }
 
-.glanceImg { 
-    background: $grey;
-    width: 100%;
-    height: 100%;
- }
+.sectionTwo {
+    padding: 0;
+
+    @include tablet {
+        padding: 0 2rem;
+    }
+
+    .contentContainer {
+        padding: 2rem 0;
+        @include desktop {
+            @include grid(repeat(12, 1fr), 2rem);
+        }
+
+        .txtContainer {
+
+            @include desktop {
+                grid-column: auto / span 6;
+            }
+
+            p { padding-bottom: $pb-paragraph; }
+        }
+
+        .imgContainer {
+            overflow: hidden;
+            @include flex(center, center);
+            border-radius: $br-img;
+            
+            @include desktop {
+                grid-column: auto / span 6;
+            }
+        }
+    }   
+}
+
+.sectionThree {
+    padding: 0;
+
+    @include tablet {
+        padding: 0 2rem;
+    }
+
+    .contentContainerOne {
+        padding: 2rem 0;
+        @include desktop {
+            @include grid(repeat(12, 1fr), 2rem);
+        }
+
+        .txtContainer {
+
+            @include desktop {
+                grid-column: auto / span 6;
+                order: 2;
+                @include flex(flex-end, flex-start, column);
+            }
+
+            h4 { padding-bottom: $pb-paragraph; }
+            p { padding-bottom: $pb-paragraph; }
+        }
+
+        .codeContainer {
+            @include desktop {
+                grid-column: auto / span 6;
+            }
+
+            pre {
+                border-radius: $br-img;
+            }
+        }
+    }
+
+    .contentContainerTwo {
+        padding: 2rem 0;
+        @include desktop {
+            @include grid(repeat(12, 1fr), 2rem);
+        }
+
+        .txtContainer {
+
+            @include desktop {
+                grid-column: auto / span 6;
+                @include flex(flex-end, flex-start, column);
+            }
+
+            h4 { padding-bottom: $pb-paragraph; }
+            p { padding-bottom: $pb-paragraph; }
+        }
+
+        .codeContainer {
+            @include desktop {
+                grid-column: auto / span 6;
+            }
+
+            pre {
+                border-radius: $br-img;
+            }
+        }
+    }
+}
+
+.sectionFour {
+    padding: 0;
+
+    @include tablet {
+        padding: 0 2rem;
+    }
+    
+    .contentContainer {
+        padding-top: 2rem;
+    }
+}

@@ -257,7 +257,7 @@ export default function LazyImage({
             <SubHeading text="Next Plan"/>
             <div className={styles.contentContainer}>
               <p>
-                For the next iteration, I am considering applying Next.js, a framework for building server-rendered React applications. It allows the pre-rendering of components on the server before sending them to the client. Additionally, it automatically performs code splitting, leading to faster initial page loads and optimized performance. I have noticed that Next.js is a highly suitable choice for improving the React app so I aim to apply it for the next iteration. Overall, the process of building my portfolio has provided me with valuable practice in applying the tech stacks that I am interested in.
+                For the next iteration, I am considering applying Next.js, a framework for building server-rendered React applications. It allows the pre-rendering of components on the server before sending them to the client. Additionally, it automatically performs code splitting, leading to faster initial page loads and optimized performance. Overall, the process of building my portfolio has provided me with valuable practice in applying the tech stacks that I am interested in.
               </p>
             </div>
           </section>

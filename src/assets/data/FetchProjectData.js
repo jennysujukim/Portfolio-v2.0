@@ -20,6 +20,10 @@ import PortfolioBannerPlaceholder from '../images/work/portfolio-build/banner-pl
 import PortfolioThumb2x1 from '../images/work/portfolio-build/thumb-projects-2x1.jpg'
 import PortfolioThumb2x1Placeholder from '../images/work/portfolio-build/thumb-projects-2x1-placeholder.jpg'
 
+import MyNotesBanner from '../images/work/my-notes/banner.jpg'
+import MyNotesBannerPlaceholder from '../images/work/my-notes/banner-placeholder.jpg'
+import MyNotesThumb2x1 from '../images/work/my-notes/thumb-projects-2x1.jpg'
+import MyNotesThumb2x1Placeholder from '../images/work/my-notes/thumb-projects-2x1-placeholder.jpg'
 
 export const FetchProjectData = () => {
     
@@ -88,12 +92,12 @@ export const FetchProjectData = () => {
         id: "005",
         title: "My Notes",
         description: "Write and organize your personal notes.",
-        image_url: TypaTypeBanner,
-        image_url_placeholder: TypaTypeBannerPlaceholder,
-        image_url_projects: TypaTypeThumb2x1,
-        image_url_projects_placeholder: TypaTypeThumb2x1Placeholder,
-        banner_url: TypaTypeBanner,
-        banner_url_placeholder: TypaTypeBannerPlaceholder,
+        image_url: MyNotesBanner,
+        image_url_placeholder: MyNotesBannerPlaceholder,
+        image_url_projects: MyNotesThumb2x1,
+        image_url_projects_placeholder: MyNotesThumb2x1Placeholder,
+        banner_url: MyNotesBanner,
+        banner_url_placeholder: MyNotesBannerPlaceholder,
         link: "/work/my-notes",
         keywords: ["PHP", "MySQL", "Bootstrap"],
         live_site: "https://my-notes.seojeongkim.com/",
