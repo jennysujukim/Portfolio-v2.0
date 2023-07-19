@@ -1,19 +1,15 @@
 @use '../abstracts/' as *;
 
-* { box-sizing: border-box; }
+// ---- GLOBAL ---- //
 
-@for $i from 1 through 12 {
-    .grid-col-#{$i} {
-        grid-column: auto / span $i;
-    }
-}
+* { box-sizing: border-box; }
 
 body {
     background: $lightbeige;
     color: $black;
 }
 
-img { width: 100% }
+img { width: 100%; };
 
 svg { background: transparent }
 
@@ -26,13 +22,6 @@ button {
     padding: unset;
 }
 
-a {
-    cursor: pointer;
-    text-decoration: none;
-    color: $black;
-    overflow: hidden;
-}
-
 input {
     appearance: none;
     background: none;
@@ -43,6 +32,10 @@ input {
 
 }
 
+
+// ---- CUSTOM ---- //
+
+// WRAPPER //
 .wrapper,
 .wrapper--inner {
     max-width: 1300px;
@@ -63,20 +56,30 @@ input {
 
 }
 
+// ROUND HIGHLIGHT //
 .highlight,
-.highlight--vertical,
 .highlight--white {
+    font-family: $PTSerif;
     text-transform: capitalize;
     border: $blackLine;
     border-radius: $br-smallChip;
-    padding: 0.2rem 0.5rem;
-    font-family: $BigDailyShort400;
+    padding: 0.2rem 0.6rem;
 
-    &--vertical { padding: 0.5rem 0.2rem; }
     &--white { border: $lightbeigeLine; }
 }
 
 
+// IMAGE LAZY LOADING //
+.lazyImgPlaceholder,
+.lazyImage {
+    width: 100%;
+    height: 100%;
+}
+
+.lazyImgPlaceholder { filter: grayscale(0.6); }
+
+
+// PROJECT CARD TECH KEYWORDS //
 .keywordsContainer{ 
     padding: 0.8rem 0;
     @include flex(flex-start, center);
@@ -84,8 +87,7 @@ input {
     @include laptop { padding: 1rem 0 };
 }
 
-.keywords, 
-.keywords--white {
+.keywords {
     font-size: $fs-smallText--mobile;
     text-transform: uppercase;
     border: $blackLine;
@@ -95,15 +97,10 @@ input {
     margin-bottom: 0.3rem;
 
     @include laptop { font-size: $fs-smallText--laptop; };
-
-    &--white {
-        color: $lightbeige;
-        border: $lightbeigeLine;
-    }
 }
 
 
-// HERO Three.js
+// HOME HERO BANNER THREE.JS OBJECTS //
 .heroObjects {
     position: absolute;
     top: 0; 
@@ -113,33 +110,16 @@ input {
 }
 
 .text--highlight {
-    font-family: $BigDailyShort400;
+    font-family: $PTSerif;
 }
 
 
-/* ------------------------
-Scrollbar
------------------------- */
-
+// SCROLL BAR //
 ::-webkit-scrollbar { width: 0.7rem; }
 ::-webkit-scrollbar-track { background: $lightbeige; }
 ::-webkit-scrollbar-thumb { background: $black; }
 
 
-
-.glass__black {
-    border-radius: 50px;
-    position: absolute;
-    top: 0; 
-    left: 0;
-    width: 100vw;
-    height: 100%;
-    background: $black;
-    opacity: 0.7;
-    z-index: -1;
-
-    @include desktop { border-radius: 100px; }
-}
 
 
 .transitionAnim {
@@ -151,16 +131,7 @@ Scrollbar
     top: 0;
 }
 
-.lazyImgPlaceholder {
-    filter: grayscale(0.6);
-    width: 100%;
-    height: 100%;
-}
 
-.lazyImage {
-    width: 100%;
-    height: 100%;
-}
 
 
 .slide {

@@ -15,15 +15,17 @@ export default function ProjectsList({ isHome }) {
 
   return (
     <ul className={isHome ? styles.cardContainer : styles.cardContainer__projects }>
-        { isHome ? (    
+        {isHome ? (    
             homeProjects.map((project, index) => (
             <li 
-            key={index}
-            className={styles.card}
-            id={`section--${index}`}>
-                <Link
-                to={project.link}
-                preventScrollReset={true} >
+                key={index}
+                className={`grid-row-1 ${styles.card}`}
+                id={`section--${index}`}
+            >
+                <Link 
+                    to={project.link}
+                    className={styles.cardLink}
+                >
                     <div className={styles.cardImg}>
                         <LazyImage 
                             src={project.image_url}
@@ -34,10 +36,14 @@ export default function ProjectsList({ isHome }) {
                         />
                     </div>
                     <div className={styles.cardDetails}>                            
-                        <span className={styles.id}>{project.id}</span>
+                        <span className={styles.id}>
+                            {project.id}
+                        </span>
                         <div className={styles.txtContainer}>
                             <div className={styles.titleContainer}>
-                                <p className="h4">{project.title}</p>
+                                <p className="h4">
+                                    {project.title}
+                                </p>
                                 <div className={styles.titleClone}>
                                     <span>{project.title}</span>
                                     <ArrowOutward />
@@ -47,7 +53,8 @@ export default function ProjectsList({ isHome }) {
                                 {project.keywords.map((keyword, index) => (
                                 <span
                                 className="keywords" 
-                                key={index}>
+                                key={index}
+                                >
                                     {keyword}
                                 </span>
                             ))}
@@ -60,12 +67,14 @@ export default function ProjectsList({ isHome }) {
         ) : (
             workProjects.map((project, index) => (
             <li 
-            key={index}
-            className={styles.card}
-            id={`section--${index}`}>
+                key={index}
+                className={styles.card}
+                id={`section--${index}`}
+            >
                 <Link
-                to={project.link}
-                preventScrollReset={true} >
+                    to={project.link}
+                    className={styles.cardLink}
+                >
                     <div className={styles.cardImg}>
                         <LazyImage 
                             src={project.image_url_projects}
@@ -76,10 +85,14 @@ export default function ProjectsList({ isHome }) {
                         />
                     </div>
                     <div className={styles.cardDetails}>                            
-                        <span className={styles.id}>{project.id}</span>
+                        <span className={styles.id}>
+                            {project.id}
+                        </span>
                         <div className={styles.txtContainer}>
                             <div className={styles.titleContainer}>
-                                <p className="h4">{project.title}</p>
+                                <p className="h4">
+                                    {project.title}
+                                </p>
                                 <div className={styles.titleClone}>
                                     <span>{project.title}</span>
                                     <ArrowOutward />
@@ -89,7 +102,8 @@ export default function ProjectsList({ isHome }) {
                                 {project.keywords.map((keyword, index) => (
                                 <span
                                 className="keywords" 
-                                key={index}>
+                                key={index}
+                                >
                                     {keyword}
                                 </span>
                             ))}

@@ -98,6 +98,10 @@
             font-size: 2rem; 
         };
 
-        span {  font-family: $BigDailyShort500; }
+        span {  
+            font-family: $PTSerif;
+            font-style: oblique;
+            font-weight: 700;
+        }
     }
 }

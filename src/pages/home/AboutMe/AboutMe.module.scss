@@ -2,6 +2,7 @@
 
 .container {
     color: $lightbeige;
+    background: $black;
     border-radius: $br-container--mobile;
     @include flex(center, center, column);
     position: relative;
@@ -83,7 +84,7 @@
     }
 
     span { 
-        font-family: $BigDailyShort400;
+        font-family: $PTSerif;
         text-transform: capitalize;
         padding-right: 0.3rem;
     }

@@ -62,8 +62,9 @@ export default function TerminalItem() {
 
   return (
     <div className={styles.container}>
-        <div className={styles.title}>Terminal</div>
-
+        <div className={styles.title}>
+            Terminal
+        </div>
         <div>Welcome to JenKim's terminal! Command below to navigate:</div>
         <div className={styles.intro}>
             <div>AVAILABLE COMMAND:</div>
@@ -72,7 +73,6 @@ export default function TerminalItem() {
             <div>cd</div>
             <div>clear</div>
         </div>
-
         <div className={styles.commandbox}>
             {prevCommands.map((prevCommand, index) => (
                 <div key={index}>
@@ -81,9 +81,11 @@ export default function TerminalItem() {
             ))}
             <form 
                 className={styles.form}
-                onSubmit={handleSubmit}>
+                onSubmit={handleSubmit}
+            >
                 <span>portfolio@jenkim %</span>
                 <input 
+                    className={styles.formInput}
                     type="text"
                     placeholder="/* Type command here */"
                     value={command}

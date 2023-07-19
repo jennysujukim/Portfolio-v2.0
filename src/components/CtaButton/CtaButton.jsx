@@ -12,10 +12,14 @@ export default function CtaButton({ text, link }) {
         <Link
             to={link}
             target="_blank"
-            className={`highlight ${styles.container}`}>
+            className={`highlight ${styles.container}`}
+        >
             {text}
             <div className={styles.cta}>
-                <ArrowOutward />
+                <ArrowOutward 
+                    w="20px"
+                    h="20px"
+                />
             </div>
         </Link>
     )

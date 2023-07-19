@@ -1,39 +1,5 @@
 @use '../abstracts/index' as *;
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
-
-// ----- CascadiaMono (Terminal) ----- //
-
-@font-face {
-    font-family: 'CascadiaMono';
-    font-display: swap;
-    src: url('../../assets/fonts/CascadiaMono.woff2');
-}
-
-// ----- Big Daily Short ----- //
-
-@font-face {
-    font-family: 'Big Daily Short 400';
-    font-display: swap;
-    font-weight: 400;
-    src: url('../../assets/fonts/bigdailyshort-semilightitalic-TRIAL-BF63fec24169957.woff2');
-}
-
-@font-face {
-    font-family: 'Big Daily Short 500';
-    font-display: swap;
-    font-weight: 500;
-    src: url('../../assets/fonts/bigdailyshort-italic-TRIAL-BF63fec2415e4aa.woff2');
-}
-
-@font-face {
-    font-family: 'Big Daily Short 700';
-    font-display: swap;
-    font-weight: 700;
-    src: url('../../assets/fonts/bigdailyshort-bolditalic-TRIAL-BF63fec24170913.woff2');
-}
-
-
-
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=PT+Serif:ital,wght@1,400;1,700&family=Source+Code+Pro:wght@400;500;600;700&display=swap');
 
 // ----- Font Design ----- //
 
@@ -44,11 +10,11 @@ body{
     line-height: 1.5;
 }
 
-h1 { 
+h1, .h1 { 
     font-weight: 700;
 }
 
-h2, h3 {
+h2, .h2, h3, .h3 {
     font-weight: 700;
     line-height: 1;
     text-transform: uppercase;
@@ -73,6 +39,8 @@ p {
 }
 
 a {
+    cursor: pointer;
     text-decoration: none;
     color: $black;
+    overflow: hidden;
 }

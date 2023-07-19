@@ -22,7 +22,7 @@
 
 .title {
     font-size: min($fs-heroTitle--mobile, 7rem);
-    font-family: $BigDailyShort400;
+    font-family: $PTSerif;
     line-height: 1;
 }
 
@@ -37,10 +37,7 @@
 .linkList {
     padding-bottom: 1rem;
     
-    li {
-        padding: 0.25rem 0;
-    }
-
+    li { padding: 0.25rem 0; }
 }
 
 .copyContainer {
@@ -58,6 +55,8 @@
     };
 }
 
+
+// ---- BACK TO TOP BUTTON ---- //
 .scrollBtnContainer {
     cursor: pointer;
     @include flex(center, center);
@@ -76,26 +75,22 @@
         transition: top 800ms cubic-bezier(.44,0,.66,.99);
         mix-blend-mode: difference;
     }
-
-    .scrollBtn {
-        font-family: $BigDailyShort700;
-        border: $blackLine;
-        @include btnLayout(); 
-        position: relative;
-        overflow: hidden;
-        
-        &:hover {
-            background: $black;
-            color: $lightbeige;
-        }
-
-        &:hover::after {
-            top: 200%;
-        }
-
-        &:hover::before {
-            top: 0;
-        }
-    }
 }
 
+.scrollBtn {
+    font-family: $PTSerif;
+    background: $lightbeige;
+    font-weight: 700;
+    border: $blackLine;
+    @include btnLayout(); 
+    position: relative;
+    overflow: hidden;
+    
+    &:hover {
+        background: $black;
+        color: $lightbeige;
+    }
+
+    &:hover::after { top: 200%; }
+    &:hover::before { top: 0; }
+}

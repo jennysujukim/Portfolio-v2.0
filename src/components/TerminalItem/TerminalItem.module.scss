@@ -1,29 +1,30 @@
 @use '../../sass/abstracts/' as *;
 
-
 .container {
     color: $lightbeige; 
-    font-family: $CascadiaMono;
+    font-family: $sourceCode;
+    font-weight: 600;
     line-height: 1.5;
 
-    .title { 
-        padding-bottom: 2rem;
-        text-transform: uppercase;
-        font-size: $fs-h4--mobile;
-    
-        @include laptop { font-size: $fs-h4--laptop };
-        @include desktop { font-size: $fs-h4--desktop };
-    };
-
     @include laptop { font-size: 1.3rem; }
-}
+};
+
+.title { 
+    padding-bottom: 2rem;
+    text-transform: uppercase;
+    font-size: $fs-h4--mobile;
+    font-weight: 700;
+
+    @include laptop { font-size: $fs-h4--laptop };
+    @include desktop { font-size: $fs-h4--desktop };
+};
 
 .intro {
     margin: 1rem 0;
     padding: 1rem 0;
     border-top: 1px dashed $lightbeige;
     border-bottom: 1px dashed $lightbeige;
-}
+};
 
 .form { 
     width: 100%;
@@ -31,15 +32,16 @@
     flex-wrap: wrap;
 
     span { padding-right: 0.5rem; }
+};
 
-    input {
-        font-family: $CascadiaMono;
-        flex-grow: 2;
-        color: $lightbeige;
-        @include laptop { font-size: 1.3rem; }
+.formInput {
+    font-family: $sourceCode;
+    font-weight: 600;
+    flex-grow: 2;
+    color: $lightbeige;
+    @include laptop { font-size: 1.3rem; }
 
-        &::placeholder {
-            color: rgba(255, 255, 255, 0.6);
-        }
+    &::placeholder {
+        color: rgba(255, 255, 255, 0.6);
     }
-}
+};

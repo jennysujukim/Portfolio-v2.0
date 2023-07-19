@@ -1,0 +1,38 @@
+@use './variables' as *;
+
+// ---- GRID ---- //
+
+@mixin grid($col, $colGap, $row: false, $rowGap: false){
+    display: grid;
+    grid-template-columns: $col;
+    column-gap: $colGap;
+
+    @if $row {
+        grid-template-rows: $row;
+        row-gap: $rowGap;
+    }
+}
+
+@for $i from 1 through 12 {
+    .grid-col-#{$i} {
+        grid-column: auto / span $i;
+    }
+} 
+
+@for $i from 1 through 12 {
+    .grid-row-#{$i} {
+        grid-row: auto / span $i;
+    }
+}
+
+// ---- FLEX ---- //
+
+@mixin flex($justify, $align, $direction: false){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+
+    @if $direction {
+        flex-direction: $direction;
+    }
+}

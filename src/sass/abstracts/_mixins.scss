@@ -1,26 +1,6 @@
 @use './variables' as *;
 
-// global
-@mixin flex($justify, $align, $direction: false){
-    display: flex;
-    justify-content: $justify;
-    align-items: $align;
-
-    @if $direction {
-        flex-direction: $direction;
-    }
-}
-
-@mixin grid($col, $colGap, $row: false, $rowGap: false){
-    display: grid;
-    grid-template-columns: $col;
-    column-gap: $colGap;
-
-    @if $row {
-        grid-template-rows: $row;
-        row-gap: $rowGap;
-    }
-}
+// --- GLOBAL --- //
 
 @mixin positionFixed($left: 0, $top: 0){
     position: fixed;
@@ -37,7 +17,8 @@
 }
 
 
-// local
+// --- LOCAL --- //
+
 @mixin btnLayout(){
     margin: 1rem 0;
     padding: 1rem 1.5rem;

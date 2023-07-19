@@ -8,7 +8,10 @@ import 'prismjs/components/prism-sass';
 
 export default function CodeSnippet({ code, language }) {
   return (
-    <SyntaxHighlighter language={language} style={vscDarkPlus}>
+    <SyntaxHighlighter 
+      language={language} 
+      style={vscDarkPlus}
+    >
       {code}
     </SyntaxHighlighter>
   );

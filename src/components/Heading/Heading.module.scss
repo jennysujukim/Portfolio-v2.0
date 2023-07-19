@@ -4,7 +4,5 @@
     text-transform: uppercase;
     text-align: center;
 
-    @include tablet {
-        text-align: start;
-    }
+    @include tablet { text-align: start; }
 } 

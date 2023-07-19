@@ -4,19 +4,14 @@
     @include flex(center, center);
     margin: 0.25rem 0.5rem;
     overflow: hidden;
-    font-family: $BigDailyShort500;
+    font-family: $PTSerif;
     font-size: $fs-home-heroSubTitle--mobile;
     @include desktop { font-size: $fs-home-heroSubTitle--desktop; }
 
-    .cta {
-        margin-left: 0.3rem;
-        display: none;
+    &:hover .cta { @include flex(center, center); }
+}
 
-        svg {
-            width: 18px;
-            height: 18px;
-        }
-    }
-
-    &:hover .cta { display: block; }
+.cta {
+    margin-left: 0.3rem;
+    display: none;
 }

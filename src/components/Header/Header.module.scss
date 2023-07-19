@@ -17,17 +17,13 @@
     height: 60px;
     @include flex(space-between, center);
     position: relative;
-
 }
 
 .logo {
     padding-left: 1.5rem;
-
-    svg {
-        width: 4rem;
-        stroke-width: 2px;
-        fill: $lightbeige;        
-    }
+    color: $lightbeige; 
+    font-weight: 900;
+    font-size: 1.2rem;
 }
 
 .navButton {
@@ -59,7 +55,8 @@
             transition: all 1000ms ease-in-out;
 
             &:hover {
-                font-family: $BigDailyShort700;
+                font-family: $PTSerif;
+                font-weight: 700;
                 text-transform: capitalize;
             }
 
@@ -94,7 +91,7 @@
 
                 &:hover {
                     color: $lightbeige;
-                    font-family: $BigDailyShort500;
+                    font-family: $PTSerif;
                     text-transform: capitalize;
                 }
             }

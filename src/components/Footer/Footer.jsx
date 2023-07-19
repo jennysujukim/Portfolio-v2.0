@@ -17,22 +17,22 @@ export default function Footer() {
     { title: "Resume", url: "https://seojeongkim.com" }
   ]
 
-
+  // Scroll to top event hanlder
   const handleBackToTop = () => {
-
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-
-
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
   
-
   return (
     <footer className={styles.wrapper}>
-      <p className={styles.title} >Let's Connect!</p>
+      <p className={styles.title}>
+        Let's Connect!
+      </p>
       <div className={styles.container}>
         <div className={styles.leftContainer}>
           <div className={styles.socialContainer}>
-            <p className={styles.label}>Find Me On</p>
+            <p className={styles.label}>
+              Find Me On
+            </p>
             <ul className={styles.linkList}>
               { socialList.map((social, index) => (
                 <li key={index}>
@@ -45,7 +45,9 @@ export default function Footer() {
             </ul>
           </div>
           <div className={styles.contactContainer}>
-            <p className={styles.label}>Contact</p>
+            <p className={styles.label}>
+              Contact
+            </p>
             <ul className={styles.linkList}>
                 { contactList.map((contact, index) => (
                   <li key={index}>
@@ -54,11 +56,10 @@ export default function Footer() {
                       link={contact.url}
                     />
                   </li>
-                )) }
+                ))}
             </ul>
           </div>
         </div>
-
         <div className={styles.rightContainer}>
           <div className={styles.copyContainer}>
             <p>&copy; 2023</p>

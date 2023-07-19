@@ -12,12 +12,13 @@ export default function ExternalLink({ text, link, project }) {
         <Link
             to={link}
             target="_blank"
-            className={project ? styles.container_projects : styles.container}>
+            className={project ? styles.container_projects : styles.container}
+        >
             {text}
             <div className={ project ? styles.cta_projects : styles.cta }>
                 < ArrowOutward 
-                    w="25px"
-                    h="25px"/>
+                    w="23px"
+                    h="23px"/>
             </div>
         </Link>
     )

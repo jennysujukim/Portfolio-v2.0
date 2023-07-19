@@ -16,95 +16,78 @@
 }
 
 .card {
-    grid-row: auto / span 1;
-
-    a { 
-        @include flex(center, center, column);
-
-        .cardImg{
-            @include flex(center, center);
-            border: $greyLine;
-            border-radius: $br-img;
-            overflow: hidden;
-            position: relative;
-
-            img {
-                filter: grayscale(0.6);
-                transition: all 300ms cubic-bezier(.44,0,.66,.99);
-            }
-        }
-
-        .cardDetails {
-            height: 100%;
-            width: 100%;
-            padding-top: 1rem;
-            position: relative;
-
-            .id {
-                writing-mode: vertical-lr;
-                @include positionAbsolute(auto, 0, 1rem, auto);
-            }
-
-            .txtContainer {
-                width: 100%;
-                @include flex(space-between, flex-start, column);
-
-                .titleContainer {
-                    position: relative;
-                    width: 100%;
-                    overflow: hidden;
-
-                    p { 
-                        transition: all 300ms ease-in-out;
-                        font-weight: bold;
-                    }
-
-                    .titleClone {
-                        position: absolute;
-                        top: 100%;
-                        text-transform: uppercase;
-                        font-weight: bold;
-                        font-size: $fs-h4--mobile;
-                        transition: top 300ms ease-in-out;
-                        @include flex(flex-start, center);
-                    
-                        @include laptop { font-size: $fs-h4--laptop };
-                        @include desktop { font-size: $fs-h4--desktop };
-
-                        svg {
-                            width: $fs-h4--mobile;
-                            height: $fs-h4--mobile;
-                            padding-left: 0.25rem;
-
-                            @include laptop { 
-                                width: $fs-h4--laptop;
-                                height: $fs-h4--laptop;
-                            };
-                            @include desktop { 
-                                width: $fs-h4--desktop;
-                                height: $fs-h4--desktop;
-                            };
-                        }
-                    }
-                }
-            }
-        }
-    }
-
     &:hover .cardImg img { 
         filter: unset;
         transform: scale(105%);
     }
+    &:hover .titleContainer p { transform: translateY(-100%); }
+    &:hover .titleClone { top: 0; }
+}
 
-    &:hover .cardImg svg {
-        display: block;
+.cardLink { @include flex(center, center, column); }
+
+.cardImg{
+    @include flex(center, center);
+    border: $greyLine;
+    border-radius: $br-img;
+    overflow: hidden;
+    position: relative;
+
+    img { transition: all 300ms cubic-bezier(.44,0,.66,.99); }
+}
+
+.cardDetails {
+    height: 100%;
+    width: 100%;
+    padding-top: 1rem;
+    position: relative;
+}
+
+.id {
+    writing-mode: vertical-lr;
+    @include positionAbsolute(auto, 0, 1rem, auto);
+}
+
+.txtContainer {
+    width: 100%;
+    @include flex(space-between, flex-start, column);
+}
+
+.titleContainer {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+
+    p { 
+        transition: all 300ms ease-in-out;
+        font-weight: bold;
     }
+}
 
-    &:hover .cardDetails .txtContainer .titleContainer p {
-        transform: translateY(-100%);
-    }
+.titleClone {
+    position: absolute;
+    top: 100%;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: $fs-h4--mobile;
+    transition: top 300ms ease-in-out;
+    @include flex(flex-start, center);
 
-    &:hover .cardDetails .txtContainer .titleContainer .titleClone {
-        top: 0;
+    @include laptop { font-size: $fs-h4--laptop };
+    @include desktop { font-size: $fs-h4--desktop };
+
+    svg {
+        width: $fs-h4--mobile;
+        height: $fs-h4--mobile;
+        padding-left: 0.25rem;
+
+        @include laptop { 
+            width: $fs-h4--laptop;
+            height: $fs-h4--laptop;
+        };
+        @include desktop { 
+            width: $fs-h4--desktop;
+            height: $fs-h4--desktop;
+        };
     }
 }
