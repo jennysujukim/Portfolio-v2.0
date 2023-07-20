@@ -1,12 +1,12 @@
 import { Outlet } from 'react-router-dom'
 import { ProjectContextProvider } from '../../context/ProjectContext'
 import { WorkSliderContextProvider } from '../../context/WorkSliderContext'
-import PageTransition from '../../hooks/usePageTransition'
+import FadeTransition from '../../hooks/useFadeTransition'
 
 
 export default function Work() {
 
-  const WrappedContent = PageTransition(() => (
+  const WrappedContent = FadeTransition(() => (
     <Outlet />
   ))
 

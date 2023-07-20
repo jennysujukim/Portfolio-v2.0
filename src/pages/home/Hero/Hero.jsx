@@ -28,7 +28,7 @@ export default function Hero() {
       height: "calc(100% - 150px)",
       width: "98%",
       background: "#151515",
-      delay: 3.7
+      delay: 2.4
     })
 
     gsap.fromTo(txtsRef.current, { 
@@ -36,7 +36,7 @@ export default function Hero() {
     },{
         y: '0%',
         stagger: 0.3,
-        delay: 2.3
+        delay: 1.2
       })
   }, [comp])
 

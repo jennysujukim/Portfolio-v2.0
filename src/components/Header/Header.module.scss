@@ -44,20 +44,19 @@
     @include laptop { display: block };
 
     ul {
-        @include grid(repeat(3, 1fr), 1rem);
+        @include flex(space-between, center);
 
         li {
             cursor: pointer;
             text-transform: uppercase;
             text-align: center;
             font-weight: bold;
-            padding: 0.5rem;
-            transition: all 1000ms ease-in-out;
+            padding: 0.5rem 1.5rem;
+            transition: all 300ms ease-in-out;
 
             &:hover {
-                font-family: $PTSerif;
-                font-weight: 700;
-                text-transform: capitalize;
+                text-decoration: underline;
+                text-decoration-color: $lightbeige;
             }
 
             a { color: $lightbeige; }
@@ -93,6 +92,7 @@
                     color: $lightbeige;
                     font-family: $PTSerif;
                     text-transform: capitalize;
+                    
                 }
             }
         }

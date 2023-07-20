@@ -1,10 +1,10 @@
 // components
 import TerminalItem from '../../components/TerminalItem'
-import PageTransition from '../../hooks/usePageTransition'
+import SlideTransition from '../../hooks/useSlideTransition'
 
 export default function Terminal() {
 
-  const WrappedContent = PageTransition(() => (
+  const WrappedContent = SlideTransition(() => (
     <div>
       <TerminalItem />
     </div>

@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap/all'
-import PageTransition from '../../hooks/usePageTransition'
+import SlideTransition from '../../hooks/useSlideTransition'
 
 // styles
 import styles from './Home.module.scss'
@@ -26,7 +26,7 @@ export default function Home() {
   }, [])
 
   // Wrap content for FM page transition
-  const WrappedContent = PageTransition(() => (
+  const WrappedContent = SlideTransition(() => (
     <main
       className={styles.main}
       ref={comp}
