@@ -5,12 +5,3 @@
     position: relative;
     overflow: hidden;
 }
-
-.show {
-    transition: all ease-in-out 300ms;
-    display: block;
-    mix-blend-mode: soft-light;
-}
-
-.hide { display: none; }
-

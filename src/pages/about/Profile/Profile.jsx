@@ -21,22 +21,24 @@ export default function Profile() {
         <p>I code and design.</p>
       </div>
       <div className={styles.parentContainer}>
-        <div className={styles.imgContainer}>
+        <div className={`grid-col-5 ${styles.imgContainer}`}>
           <img 
             src={profileImg} 
-            alt="Profile of Jen" />
+            alt="Profile of Jen"
+          />
         </div>
-        <div className={styles.contentContainer}>
+        <div className={`grid-col-7 ${styles.contentContainer}`}>
           <div className={styles.socialContainer}>
             <span>✨ Find Me On ✨</span>
             <div className={styles.socialList}>
-              { socialList.map((social, index) => (
+              {socialList.map((social, index) => (
               <div key={index}>
                 <CtaButton 
                   text={social.title}
-                  link={social.url} />
+                  link={social.url}
+                />
               </div>
-              )) }
+              ))}
             </div>
           </div>
           <div className={styles.txtContainer}>
@@ -54,12 +56,7 @@ export default function Profile() {
             </p>
           </div>
         </div>
-        
       </div>
-
-
-    
-      
     </section>
   )
 }

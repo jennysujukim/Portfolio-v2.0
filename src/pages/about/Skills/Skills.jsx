@@ -1,12 +1,12 @@
 // styles
 import styles from './Skills.module.scss'
 
-export default function Skills() {
+export default function Skills() { 
   return (
     <section className="wrapper">
-      <h3 className={styles.heading}>My Skills</h3>
-      <div className={styles.skillsContainer}>
-        <div>
+      <h3 className="pageHeadingContainer">My Skills</h3>
+      <div className={styles.skillsWrapper}>
+        <div className={styles.skillsContainer}>
           <h4>Frontend</h4>
           <ul className={styles.skillsList}>
             <li>
@@ -53,7 +53,7 @@ export default function Skills() {
             </li>
           </ul>
         </div>
-        <div>
+        <div className={styles.skillsContainer}>
           <h4>Database / Serverside</h4>
           <ul className={styles.skillsList}>
             <li>
@@ -88,7 +88,7 @@ export default function Skills() {
             </li>
           </ul>
         </div>
-        <div>
+        <div className={styles.skillsContainer}>
           <h4>Design</h4>
           <ul className={styles.skillsList}>
             <li>

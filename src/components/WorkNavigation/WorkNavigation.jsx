@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
-import { useContext } from 'react'
-import { ProjectContext } from '../../context/ProjectContext'
+import { useProjectContext } from '../../hooks/useProjectContext'
 
 // styles
 import styles from './WorkNavigation.module.scss'
@@ -10,7 +9,7 @@ import ArrowOutward from '../ArrowOutward'
 
 export default function WorkNavigation() {
 
-    const { nextProjectData } = useContext(ProjectContext)
+    const { nextProjectData } = useProjectContext()
 
   return (
     <>

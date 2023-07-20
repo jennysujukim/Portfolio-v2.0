@@ -22,6 +22,8 @@
     @include desktop { margin-bottom: 12rem; }
 }
 
+
+// CONTAINER ANIMATION //
 .circleContainer {
     position: absolute;
     left: 0;
@@ -37,11 +39,12 @@
     border-radius: 200px;
 }
 
-// ----- Hidden H1 ----- //
+
+// HIDDEN H1 //
 .title { opacity: 0; }
 
 
-// ----- Hero Texts ----- //
+// TEXT //
 .txtContainer {
     @include flex(center, center, column);
     padding-bottom: 3rem;
@@ -55,53 +58,54 @@
         @include flex(center, flex-start, column);
         text-align: left;
     }
+}
 
-    div { overflow: hidden; }
+.txtTop {
+    padding-bottom: 1rem;
+    @include tablet { 
+        padding-bottom: 0;
+        font-size: 1.2rem;
+    };
+    @include laptop { 
+        font-size: 1.5rem; 
+        padding-left: 1rem;
+    };
+    @include desktop { font-size: 1.7rem; };
 
-    .txtTop {
-        padding-bottom: 1rem;
-        @include tablet { 
-            padding-bottom: 0;
-            font-size: 1.2rem;
-        };
-        @include laptop { 
-            font-size: 1.5rem; 
-            padding-left: 1rem;
-        };
-        @include desktop { font-size: 1.7rem; };
+    .circle { padding: 0.1rem 0.5rem; }
+}
 
-        .circle { padding: 0.1rem 0.5rem; }
-    }
-    
+.txtMain {
+    overflow: hidden;
+
     p {
         text-transform: uppercase;
         line-height: 1.2;
         font-size: min(9vw, 6.5rem);
-
-        @include desktopLg {
-            font-size: 9rem;
-        }
-
-        @include breakpoint($bp: 2240px) {
-            font-size: 11rem;
-        }
+    
+        @include desktopLg { font-size: 9rem; }
+        @include breakpoint($bp: 2240px) { font-size: 11rem; }
     }
+}
 
-    .subTxt {
+
+.txtSub {
+    overflow: hidden;
+
+    p {
         padding-top: 1rem;
         text-transform: lowercase;
         font-size: $fs-home-heroSubTitle--mobile;
-
         @include tablet { font-size: 1.5rem; };
         @include desktop { 
             padding-top: 1.7rem;
             font-size: 2rem; 
         };
-
-        span {  
-            font-family: $PTSerif;
-            font-style: oblique;
-            font-weight: 700;
-        }
     }
+
+    span {  
+        font-family: $PTSerif;
+        font-style: oblique;
+        font-weight: 700;
+    };
 }

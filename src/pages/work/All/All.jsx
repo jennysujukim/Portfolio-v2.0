@@ -7,8 +7,10 @@ import ProjectsList from '../../../components/ProjectsList'
 
 export default function All() {
 
+  // Labels for slider
   const sections = [ "001", "002", "003", "004", "005", "006" ]
 
+  // Scroll event for slider
   const handleScroll = (index) => {
     const element = document.getElementById(`section--${index}`)
 
@@ -22,24 +24,23 @@ export default function All() {
 
   return (
     <section className={`wrapper ${styles.container}`}>
-      <div className={styles.heading}>
+      <div className="pageHeadingContainer">
         <Heading text="Projects"/>
       </div>
       <div className={styles.contentContainer}>
         <div className={styles.slider}>
-            {sections.map((section, index) => (
-            <div 
+          {sections.map((section, index) => (
+          <div 
             className={styles.sliderIndex}
             key={index}
-            onClick={() => handleScroll(index)}>
+            onClick={() => handleScroll(index)}
+          >
             {section}
-            </div>
-            ))}
+          </div>
+          ))}
         </div>
         <ProjectsList />
       </div>
-      
     </section>      
-
   )
 }

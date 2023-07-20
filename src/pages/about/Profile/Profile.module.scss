@@ -5,7 +5,8 @@
     @include laptop { margin-top: calc(60px + 3rem); };
 }
 
-// ---- Title & Social ---- //
+
+// TITLE & SOCIAL CTA //
 .titleContainer {
     font-weight: 700;
     text-transform: uppercase;
@@ -29,36 +30,28 @@
     }
 }
 
-// ---- Content Parent Container ---- //
 
+// CONTENT WRAPPER //
 .parentContainer {
     @include laptop { @include grid(repeat(12, 1fr), 1.5rem); }
     @include desktop { column-gap: 2rem; };
 }
 
-// ---- Profile Img ---- //
 
+// IMAGE //
 .imgContainer {
     @include flex(center, center);
-    @include laptop { 
-        grid-column: 1 / span 5;
-        align-items: flex-start;
-    };
+    @include laptop { align-items: flex-start; };
 
-    img { 
+    img {
         border: $greyLine;
         border-radius: $br-img;
-        max-width: 500px;
     }
-
 }
 
-// ---- Socials & Text ---- //
 
-.contentContainer {
-    @include flex(flex-start, flex-start, column);
-    @include laptop { grid-column: 6 / span 7; };
-}
+// SOCIAL CTA & TEXT //
+.contentContainer { @include flex(flex-start, flex-start, column); }
 
 .socialContainer {
     width: 100%;
@@ -88,9 +81,7 @@
     }
 }
 
-// ---- Paragraphs ---- //
 .txtContainer{
-
     @include laptop {
         padding-top: 0;
         font-size: $fs-p-readability--laptop;
@@ -98,9 +89,4 @@
     }
 
     p { padding-bottom: $pb-paragraph; }
-
-    span {
-        font-weight: 700;
-        transition: all 100ms ease-in-out;
-    }
 }

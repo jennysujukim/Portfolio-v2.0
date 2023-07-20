@@ -1,65 +1,38 @@
 @use '../../../sass/abstracts/' as *;
 
-
-.heading {
-    padding-bottom: $pb-heading--mobile;
-    @include laptop { padding-bottom: $pb-heading--laptop; };
-}
-
-.storiesContainer {
-    @include grid(unset, unset, auto 1fr, 1rem);
-
-    div {
-        h4 { 
-            padding-bottom: 2rem;
-
-            @include laptop { padding-bottom: 1rem; }
-            @include desktop { padding-bottom: 0; }
-        }
-    }
-}
+.storiesContainer { @include grid(unset, unset, auto 1fr, 1rem); }
 
 .content{
-
     @include laptop {
         @include grid(repeat(12, 1fr), 2rem);
 
-        &:nth-child(2){
-            text-align: right;
-        }
+        &:nth-child(2){ text-align: right; }
+    }
+}
+
+.img__reverse { @include laptop { order: 2; } }
+
+.txt {
+
+    h4 {  
+        padding: 2rem 0;
+        width: 100%;
+        @include laptop { padding-bottom: 1rem; }
+        @include desktop { padding-bottom: 0; }
+    };
+
+    @include laptop {
+        @include flex(flex-end, flex-start, column);
+        padding-bottom: 3rem;
     }
 
-    .img { 
+    p { 
+        padding-bottom: $pb-paragraph;
+
         @include laptop{ 
-            grid-column: auto / span 4;
-
-            &__reverse {
-                grid-column: auto / span 4;
-                order: 2;
-            }
-        }
-    }
-
-    .txt {
-
-        h4 {  padding: 2rem 0 1rem 0; };
-
-        @include laptop {
-            grid-column: auto / span 8;
-            @include flex(flex-end, flex-start, column);
-            padding-bottom: 3rem;
-
-            h4 { width: 100%; }
-        }
-
-        p { 
-            padding-bottom: $pb-paragraph;
-    
-            @include laptop{ 
-                padding-bottom: 0;
-                grid-column: auto / span 6;
-                @include flex(center, center);
-            }
+            padding-bottom: 0;
+            grid-column: auto / span 6;
+            @include flex(center, center);
         }
     }
 }

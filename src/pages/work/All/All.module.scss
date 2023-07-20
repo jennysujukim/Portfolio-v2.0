@@ -6,15 +6,8 @@
     @include laptop {  margin-top: calc(60px + 3rem); };
 }
 
-.heading { 
-    padding-bottom: $pb-heading--mobile;
-    @include laptop { padding-bottom: $pb-heading--laptop; };
-}
-
 .contentContainer {
-    @include laptop {
-        @include grid(auto 1fr, 3rem);
-    }
+    @include laptop { @include grid(auto 1fr, 3rem); }
 }
 
 .slider {
@@ -28,21 +21,21 @@
         height: calc(100vh - ((60px + 1rem) * 2));
         @include flex(space-evenly, center, column)
     }
+}
 
-    .sliderIndex {
-        cursor: pointer;
-        @include flex(center, center);
-        writing-mode: vertical-rl;
-        transform: rotate(180deg);
-        text-align: center;
-        line-height: 1;
-        font-size: $fs-smallText--laptop;
-        text-transform: uppercase;
-        color: $grey;
-        font-weight: bold;
+.sliderIndex {
+    cursor: pointer;
+    @include flex(center, center);
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    text-align: center;
+    line-height: 1;
+    font-size: $fs-smallText--laptop;
+    text-transform: uppercase;
+    color: $grey;
+    font-weight: bold;
 
-        &:hover {
-            color: $black;
-        }
+    &:hover {
+        color: $black;
     }
 }

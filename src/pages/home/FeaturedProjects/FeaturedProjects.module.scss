@@ -1,25 +1,24 @@
 @use '../../../sass/abstracts/' as *;
 
-// ---- Heading ---- //
 .heading { 
     padding-bottom: $pb-heading--mobile;
     @include tablet { @include grid(repeat(2, 1fr), 1rem); }
     @include laptop { padding-bottom: $pb-heading--laptop; };
+}
 
-    .subTxt {
-        text-align: center;
-        text-transform: uppercase;
-        padding-top: $pt-headingSubText--mobile;
+.subTxt {
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: $pt-headingSubText--mobile;
 
-        @include tablet {
-            text-align: end;
-            @include flex(flex-end, flex-end);
-            padding: 0 0 0.5rem 0;
-        }
+    @include tablet {
+        text-align: end;
+        @include flex(flex-end, flex-end);
+        padding: 0 0 0.5rem 0;
+    }
 
-        @include laptop {
-            @include flex(flex-end, flex-start);
-            padding: 0.5rem 0 0 0;
-        }
+    @include laptop {
+        @include flex(flex-end, flex-start);
+        padding: 0.5rem 0 0 0;
     }
 }

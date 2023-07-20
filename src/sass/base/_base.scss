@@ -9,7 +9,7 @@ body {
     color: $black;
 }
 
-img { width: 100%; };
+img {  width: 100%; };
 
 svg { background: transparent }
 
@@ -32,6 +32,13 @@ input {
 
 }
 
+// SCROLL BAR //
+::-webkit-scrollbar { width: 0.7rem; }
+::-webkit-scrollbar-track { background: $lightbeige; }
+::-webkit-scrollbar-thumb { background: $black; }
+
+
+
 
 // ---- CUSTOM ---- //
 
@@ -53,8 +60,15 @@ input {
             padding: 0 2rem;
         };
     }
-
 }
+
+
+// PAGE HEADING H3 CONTAINER //
+.pageHeadingContainer {
+    padding-bottom: $pb-heading--mobile;
+    @include laptop { padding-bottom: $pb-heading--laptop; };
+}
+
 
 // ROUND HIGHLIGHT //
 .highlight,
@@ -109,31 +123,12 @@ input {
     height: 100%;
 }
 
-.text--highlight {
-    font-family: $PTSerif;
+// PROJECT PAGE CHANGE FLEX/GRID ORDER TO LATER //
+.order-2 {
+    @include desktop { order: 2; }
 }
 
-
-// SCROLL BAR //
-::-webkit-scrollbar { width: 0.7rem; }
-::-webkit-scrollbar-track { background: $lightbeige; }
-::-webkit-scrollbar-thumb { background: $black; }
-
-
-
-
-.transitionAnim {
-    width: 100vw;
-    height: 100vh;
-    background: black;
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-
-
-
-
+// PROJECT PAGE SLIDER //
 .slide {
     position: fixed;
     @include flex(center, center);
@@ -145,6 +140,16 @@ input {
     transform-origin: top;
 }
 
+// PAGE TRANSITION ANIMATION //
+
+.transitionAnim {
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
 
 .transition-submark {
     width: 30px;
@@ -156,3 +161,5 @@ input {
     0% { transform: rotate(0); }
     100% { transform: rotate(360deg); }
 }
+
+

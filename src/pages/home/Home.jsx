@@ -13,6 +13,7 @@ import AboutMe from './AboutMe'
 
 export default function Home() {
 
+  // GSAP banner text animation
   const comp = useRef()
 
   useEffect(() => {
@@ -24,13 +25,18 @@ export default function Home() {
     })
   }, [])
 
+  // Wrap content for FM page transition
   const WrappedContent = PageTransition(() => (
-    <main className={styles.main} ref={comp}>
+    <main
+      className={styles.main}
+      ref={comp}
+    >
       <Hero />
       <FeaturedProjects />
       <AboutMe />
     </main>
   ))
+
   return (
     <WrappedContent />
   )

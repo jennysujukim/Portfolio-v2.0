@@ -12,6 +12,7 @@ gsap.registerPlugin(ScrollTrigger)
 
 export default function Hero() {
 
+  // GSAP container animation
   const comp = useRef()
   const container = useRef()
   const txtsRef = useRef([])
@@ -30,9 +31,9 @@ export default function Hero() {
       delay: 3.7
     })
 
-    gsap.fromTo(txtsRef.current,
-      { y: '100%' },
-      {
+    gsap.fromTo(txtsRef.current, { 
+      y: '100%' 
+    },{
         y: '0%',
         stagger: 0.3,
         delay: 2.3
@@ -42,27 +43,38 @@ export default function Hero() {
   return (
     <>
     <section className={styles.container}>
-      <div className={styles.circleContainer} ref={comp}>
-          <div className={styles.circle} ref={container}></div>
+      <div 
+        className={styles.circleContainer} 
+        ref={comp}
+      >
+        <div 
+          className={styles.circle}
+          ref={container}
+        ></div>
       </div>
       <ThreeHero />
-
       <h1 className={styles.title}>Jenny Seojeong Kim</h1>
       <div className={styles.txtContainer}>
         <span className={styles.txtTop}>
           Hi! I'm <span className={`highlight--white ${styles.circle}`}>Jen</span>
         </span>
-        <div>
+        <div className={styles.txtMain}>
           <p ref={el => {txtsRef.current[0] = el;}}>Creative</p>
         </div>
-        <div>
+        <div className={styles.txtMain}>
           <p ref={el => {txtsRef.current[1] = el;}}>Frontend Developer</p>
         </div>
-        <div>
+        <div className={styles.txtMain}>
           <p ref={el => {txtsRef.current[2] = el;}}>& Designer</p>
         </div>
-        <div>
-          <p className={styles.subTxt} ref={el => {txtsRef.current[3] = el;}}>Crafting <span>digital</span> experiences with <span>thoughtful</span> design</p>
+        <div className={styles.txtSub}>
+          <p ref={el => {txtsRef.current[3] = el;}}>
+            Crafting&nbsp;
+            <span>digital</span> 
+            &nbsp;experiences with&nbsp;
+            <span>thoughtful</span> 
+            &nbsp;design&nbsp;
+          </p>
         </div>
       </div>
     </section>

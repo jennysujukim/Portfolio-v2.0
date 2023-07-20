@@ -1,0 +1,76 @@
+@use '../../sass/abstracts/' as *;
+
+.container {
+    margin-top: $mt-firstSection-mobile;
+    @include laptop { 
+        margin-top: calc(60px + 3rem);
+        @include grid(auto 1fr, 2rem);
+    };
+}
+
+.content {
+    position: relative;
+    overflow: hidden; 
+
+    @include tablet {
+        border: $greyLine;
+        border-radius: $br-container--mobile;
+    }
+}
+
+.section {
+    padding: 0;
+    @include tablet { padding: 0 2rem; }
+    
+    p { line-height: 1.7; }
+}
+
+.overviewTxtContainer {
+    padding-bottom: 3rem;
+    @include laptop { @include grid(repeat(12, 1fr), 2rem); }
+
+    p {
+        padding-bottom: $pb-paragraph;
+        @include laptop {  padding-bottom: 0; }
+    }
+}
+
+.contentContainer {
+    padding-top: 2rem;
+    @include desktop { @include grid(repeat(12, 1fr), 2rem); }
+}
+
+.subContentContainer {
+    padding: 2rem 0;
+    @include desktop { @include grid(repeat(12, 1fr), 2rem); }
+}
+
+
+.imgContainer {
+    overflow: hidden;
+    @include flex(center, center);
+    border-radius: $br-img;
+}
+
+.txtContainer {
+    @include desktop {
+        @include flex(flex-end, flex-start, column);
+    }
+
+    h4 { padding-bottom: $pb-paragraph; }
+    p { padding-bottom: $pb-paragraph; }
+}
+
+.vidContainer {
+    width: 100%;
+    overflow: hidden;
+
+    video {
+        width: 100%;
+        border-radius: $br-img;
+    }
+}
+
+.codeContainer {
+    pre { border-radius: $br-img; }
+}

@@ -1,32 +1,22 @@
 @use '../../../sass/abstracts/' as *;
-
-.heading {
-    padding-bottom: $pb-heading--mobile;
-    @include laptop { padding-bottom: $pb-heading--laptop; };
-}
  
-.skillsContainer {
+.skillsWrapper { @include tablet { @include grid (repeat(3, 1fr), 2rem);} }
+
+.skillsContainer { 
     @include tablet {
-        @include grid (repeat(3, 1fr), 2rem);
+        border-right: $greyLine; 
+        padding-right: 2rem;
     }
-    div { 
-        @include tablet {
-            border-right: $greyLine; 
-            padding-right: 2rem;
-        }
 
-        &:last-child {
-            border-right: none;
-        }
+    &:last-child { border-right: none; }
 
-        h4 {
-             padding-bottom: 0.5rem;
-             line-height: 1;
-            @include tablet { 
-                text-align: center;
-                padding-bottom: 1rem;
-            };
-        }
+    h4 {
+         padding-bottom: 0.5rem;
+         line-height: 1;
+        @include tablet { 
+            text-align: center;
+            padding-bottom: 1rem;
+        };
     }
 }
 
@@ -50,5 +40,4 @@
             margin-right: 0.3rem;
         }
     }
-
 }

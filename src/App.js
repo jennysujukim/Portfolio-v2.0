@@ -24,7 +24,6 @@ const LazyWork = lazy(() => import('./pages/work'))
 const LazyAbout = lazy(() => import('./pages/about'))
 
 
-
 function App() {
 
   const location = useLocation()
@@ -38,7 +37,8 @@ function App() {
         onExitComplete={() => window.scrollTo(0, 0)}>
         <Routes 
           location={location}
-          key={location.pathname} >
+          key={location.pathname}
+        >
           <Route 
             path="/" 
             element={ <Home /> }
@@ -57,7 +57,8 @@ function App() {
               <Suspense fallback={<PageLoader />}>
                 <LazyWork />
               </Suspense>
-            }>
+            }
+          >
             <Route index element={<All/>}/>
             <Route 
               path="all" 
