@@ -6,6 +6,7 @@ import Stories from './Stories'
 
 export default function About() {
 
+  // Wrap content for FM page transition
   const WrappedContent = SlideTransition(() => (
     <main>
       <Profile />
@@ -14,7 +15,7 @@ export default function About() {
     </main> 
   ))
 
-  return (
+  return ( 
     <WrappedContent />
   )
 }

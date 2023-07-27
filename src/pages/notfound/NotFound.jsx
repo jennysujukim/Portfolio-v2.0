@@ -7,9 +7,9 @@ export default function NotFound() {
     animate={{ opacity: 1 }}
     exit={{ opacity: 0 }}
     transition={{ delay: 0.5 }} >
-      <div>
+      <main>
         404 Not Found
-      </div>
+      </main>
     </motion.div>
   )
 }

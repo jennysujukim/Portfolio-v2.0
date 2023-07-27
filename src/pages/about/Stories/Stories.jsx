@@ -1,12 +1,19 @@
-import { useRef, useEffect } from 'react'
+import { 
+  useRef, 
+  useEffect 
+} from 'react'
 import { gsap } from 'gsap/all'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 
 // styles
 import styles from './Stories.module.scss'
 
-// components
-import { ArchiveAus, ArchiveFashion, ArchiveHobby } from '../../../assets/data/AnimData'
+// graphic images
+import { 
+  ArchiveAus, 
+  ArchiveFashion, 
+  ArchiveHobby 
+} from '../../../assets/data/AnimData'
 
 gsap.registerPlugin(ScrollTrigger)
 

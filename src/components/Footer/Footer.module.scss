@@ -94,3 +94,9 @@
     &:hover::after { top: 200%; }
     &:hover::before { top: 0; }
 }
+
+@media print {
+    footer * {
+        display: none;
+    }
+}

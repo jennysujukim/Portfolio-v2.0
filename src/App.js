@@ -13,7 +13,7 @@ import PageLoader from './components/PageLoader'
 // pages
 import Home from './pages/home'
 import NotFound from './pages/notfound'
-import Terminal from './pages/terminal'
+import Resume from './pages/resume'
 import All from './pages/work/All'
 import MyNotes from './pages/work/MyNotes'
 import DailyProtein from './pages/work/DailyProtein'
@@ -86,8 +86,8 @@ function App() {
             />
           </Route>
           <Route 
-            path="/terminal" 
-            element={ <Terminal /> }
+            path="/resume" 
+            element={ <Resume /> }
           />
           <Route 
             path="*" 

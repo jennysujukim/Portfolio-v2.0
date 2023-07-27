@@ -47,14 +47,6 @@ export default function Header() {
           <ul>
             <li>
               <Link 
-                to="/" 
-                onClick={() => handleLink('/')}
-              >
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link 
                 to="/about" 
                 onClick={() => handleLink('/about')}
               >
@@ -67,6 +59,14 @@ export default function Header() {
                 onClick={() => handleLink('/work/all')}
               >
                 Projects
+              </Link>
+            </li>
+            <li>
+              <Link 
+                to="/resume" 
+                onClick={() => handleLink('/resume')}
+              >
+                Resume
               </Link>
             </li>
           </ul>
@@ -96,6 +96,14 @@ export default function Header() {
                   onClick={() => handleLink('/work/all')}
                 >
                   Projects
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  to="/resume" 
+                  onClick={() => handleLink('/resume')}
+                >
+                  Resume
                 </Link>
               </li>
             </ul>

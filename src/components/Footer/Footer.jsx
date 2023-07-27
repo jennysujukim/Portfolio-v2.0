@@ -14,7 +14,7 @@ export default function Footer() {
 
   const contactList = [
     { title: "Email", url: "mailto:hello@seojeongkim.com" },
-    { title: "Resume", url: "https://seojeongkim.com" }
+    { title: "Resume", url: "https://seojeongkim.com/resume" }
   ]
 
   // Scroll to top event hanlder

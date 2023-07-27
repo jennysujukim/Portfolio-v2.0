@@ -1,0 +1,153 @@
+@use '../../sass/abstracts/' as *;
+
+.container {
+    margin-top: $mt-firstSection-mobile;
+    @include laptop { margin-top: calc(60px + 3rem); };
+} 
+
+.titleContainer {
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-bottom: 2rem;
+
+    @include laptop { 
+        @include flex(space-between, flex-end);
+    }
+
+    h1 {
+        line-height: 1.2;
+        font-size: $fs-heroTitle--mobile;
+        text-align: center;
+        padding-bottom: 0.5rem;
+
+        @include laptop { 
+            text-align: left;
+            font-size: 4rem; 
+        };
+        @include desktop { font-size: 5rem; };
+    }
+}
+
+.ctaContainer {
+    @include flex(center, center);
+    margin: 0.25rem 0.5rem;
+    overflow: hidden;
+    font-family: $PTSerif;
+    font-size: $fs-home-heroSubTitle--mobile;
+    @include desktop { font-size: $fs-home-heroSubTitle--desktop; }
+
+    &:hover .cta { @include flex(center, center); }
+}
+
+.cta {
+    margin-left: 0.3rem;
+    display: none;
+}
+
+.resumeContainer {
+    padding-top: 2rem;
+    border-bottom: 2px solid $black;
+
+    p { 
+        font-size: 0.9rem;
+    }
+
+    .title {
+        font-weight: bold;
+        font-size: 1rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+    
+    .role {
+        padding-top: 0.5rem;
+        font-size: 1rem;
+        text-transform: uppercase;
+    }
+
+    .sectionTitle {
+        font-weight: bold;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+    }
+
+    .skillTitle {
+        font-weight: bold;
+        font-size: 1rem;
+        padding-bottom: 0.5rem;
+    }
+}
+
+.nameContainer {
+    @include flex(space-between, center);
+    font-weight: bold;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid $black;
+}
+
+.name {
+    @include flex(flex-start, flex-end);
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    span {
+        font-size: 1.3rem;
+        padding-left: 0.5rem;
+        color: $grey;
+    }
+}
+
+.contactContainer {
+    @include flex(space-between, flex-end);
+
+    .details {
+        padding-left: 1.2rem;
+    }
+}
+
+
+.dataWrapper {
+    padding-top: 1.5rem;
+}
+
+.dataContainer {
+    @include flex(space-between, center);
+    margin-bottom: 0.7rem;
+}
+
+.sideDetails {
+    text-align: right;
+}
+
+.contentContainer {
+    padding: 1rem 0;
+    @include grid(unset, unset, auto 1fr, 2rem);
+}
+
+@media print {
+    .container {
+        margin-top: 0;
+        @include laptop { margin-top: 0; };
+    }
+
+    .container * {
+        display: none;
+    }
+}
+
+.keywordContainer {
+    @include flex(flex-start, center);
+    flex-wrap: wrap;
+}
+
+.keyword {
+    border: $blackLine;
+    border-radius: $br-smallChip;
+    padding: $p-smallChip--mobile;
+    margin-right: 0.5rem;
+    margin-bottom: 0.3rem;
+}

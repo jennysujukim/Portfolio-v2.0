@@ -3,7 +3,7 @@
 .container {
     margin-top: $mt-firstSection-mobile;
     @include laptop { margin-top: calc(60px + 3rem); };
-}
+} 
 
 
 // TITLE & SOCIAL CTA //

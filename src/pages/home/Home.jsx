@@ -1,4 +1,7 @@
-import { useEffect, useRef } from 'react'
+import { 
+  useEffect, 
+  useRef 
+} from 'react'
 import { gsap } from 'gsap/all'
 import SlideTransition from '../../hooks/useSlideTransition'
 
