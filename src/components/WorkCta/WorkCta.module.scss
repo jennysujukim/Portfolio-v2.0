@@ -1,0 +1,39 @@
+@use '../../sass/abstracts/' as *;
+
+.container {
+    position: relative;
+    overflow: hidden;
+
+    &:hover .text { transform: translateY(-100%); }
+    &:hover .textClone { top: 0; }
+}
+
+.text,
+.textClone { 
+    transition: all 300ms ease-in-out;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    @include flex(flex-end, center);
+
+    @include desktop {
+        font-size: 1.7rem;
+    }
+
+    svg {
+        width: 30px;
+        height: 30px;
+        padding-left: 0.25rem;
+        
+        @include desktop{ 
+            width: 35px;
+            height: 35px;
+        }
+    }
+}
+
+.textClone {
+    position: absolute;
+    top: 100%;
+    @include flex(flex-end, center);
+} 

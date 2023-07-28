@@ -12,6 +12,7 @@ import SubHeading from '../../../components/SubHeading'
 import WorkOverview from '../../../components/WorkOverview'
 import WorkNavigation from '../../../components/WorkNavigation'
 import CodeSnippet from '../../../components/CodeSnippet'
+import CtaButton from '../../../components/CtaButton'
 import OverviewVid from '../../../assets/images/work/re-fine/overview.mp4'
 import frontendImg from '../../../assets/images/work/re-fine/frontend.jpg'
 
@@ -141,11 +142,18 @@ export default function ReFine() {
                     <SubHeading text="Takeaways"/>
                     <div className={styles.contentContainer}>
                         <p className="grid-col-12">
-                            Thanks to Express.js, building a project that includes both server and client with Node.js was an excellent practice for me. As a frontend developer, it provides me with a clear understanding of how server handles requests and how frontend displays the response on the client-side.
+                            Thanks to Express.js, building a project that includes both server and client with Node.js was an excellent practice for me. As a frontend developer, it provides me with a clear understanding of how server handles requests and how frontend displays the response on the client-side. Integrating OpenAI into the project initially seemed challenging, but the detailed documentation made it feasible to implement AI functionality. Although fine-tuning is required to achieve seamless and accurate answers in the responses, it was a fun project that catered to my personal needs.
                         </p>
-                        <p className="grid-col-12">
-                            Integrating OpenAI into the project initially seemed challenging, but the detailed documentation made it feasible to implement AI functionality. Although fine-tuning is required to achieve seamless and accurate answers in the responses, it was a fun project that catered to my personal needs.
-                        </p>
+                        <div className={`grid-col-12 ${styles.ctaContainer}`}>
+                            <CtaButton 
+                            text="Live Site"
+                            link="https://re-fine.seojeongkim.com"
+                            />
+                            <CtaButton 
+                            text="View Code"
+                            link="https://github.com/jennysujukim/refine-2023"
+                            />
+                        </div>
                     </div>
                 </section>
             </div>

@@ -59,7 +59,10 @@ function App() {
               </Suspense>
             }
           >
-            <Route index element={<All/>}/>
+            <Route 
+              index 
+              element={<All/>} 
+            />
             <Route 
               path="all" 
               element={<All />}

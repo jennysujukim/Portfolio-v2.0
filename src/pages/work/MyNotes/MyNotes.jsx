@@ -14,6 +14,7 @@ import WorkNavigation from '../../../components/WorkNavigation'
 import overviewImg from '../../../assets/images/work/my-notes/overview.jpg'
 import dataImg from '../../../assets/images/work/my-notes/database.jpg'
 import CodeSnippet from '../../../components/CodeSnippet'
+import CtaButton from '../../../components/CtaButton'
 
 export default function MyNotes() {
 
@@ -125,6 +126,16 @@ export default function MyNotes() {
               <p className="grid-col-12">
                 This project was an academic project created for the 'Web Scripting 2' course. It provided excellent practice for understanding PHP's Object-Oriented Programming (OOP) strategy, as well as my first experience with database communication. Implementing CRUD operations intrigued my interest in studying different types of databases beyond relational databases, such as NoSQL and Cloud databases. Additionally, by adding additional search functionality, I was able to practice JavaScript methods.
               </p>
+              <div className={`grid-col-12 ${styles.ctaContainer}`}>
+                <CtaButton 
+                text="Live Site"
+                link="https://my-notes.seojeongkim.com/"
+                />
+                <CtaButton 
+                text="View Code"
+                link="https://github.com/jennysujukim/my-notes-2023"
+                />
+              </div>
             </div>
           </section>
         </div>

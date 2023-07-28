@@ -74,3 +74,14 @@
 .codeContainer {
     pre { border-radius: $br-img; }
 }
+
+.ctaContainer {
+
+    padding-top: 4rem;
+    @include flex(center, center);
+
+    @include tablet {
+        @include flex(flex-end, center);
+    }
+
+}

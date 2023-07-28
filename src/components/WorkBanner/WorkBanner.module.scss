@@ -9,12 +9,12 @@
     @include flex(flex-end, center, column);
     margin-bottom: 2rem;
 
-    @include laptop { @include grid(repeat(12, 1fr), 2rem); }
+    @include desktop { @include grid(repeat(12, 1fr), 2rem); }
 }
 
 .txtContainer {
     text-align: center;
-    @include laptop {
+    @include desktop {
          text-align: left; 
          grid-column: auto / span 8;
     }
@@ -22,15 +22,16 @@
  
 .keywords { 
     @include flex(center, center);
-    @include laptop { justify-content: flex-start; }
+    @include desktop { justify-content: flex-start; }
 }
 
 
 .btnContainer {
     @include flex(space-between, center);
     padding-top: 2rem;
+    gap: 1rem;
 
-    @include laptop {
+    @include desktop {
         grid-column: 9 / span 4;
         padding: 0;
         height: 100%;

@@ -15,6 +15,7 @@ import SubHeading from '../../../components/SubHeading'
 import WorkOverview from '../../../components/WorkOverview'
 import CodeSnippet from '../../../components/CodeSnippet'
 import WorkNavigation from '../../../components/WorkNavigation'
+import CtaButton from '../../../components/CtaButton'
 
 
 export default function TypaType() {
@@ -140,11 +141,18 @@ export default function TypaType() {
                     <SubHeading text="Takeaways"/>
                     <div className={styles.contentContainer}>
                         <p className="grid-col-12">
-                            With vanilla JS, the website leverages core JavaScript practices and capabilities without the need for additional libraries. This allows for greater control and understanding of the underlying code, as well as the ability to optimize performance and tailor the functionality to specific requirements.
+                            With vanilla JS, the website leverages core JavaScript practices and capabilities without the need for additional libraries. This allows for greater control and understanding of the underlying code, as well as the ability to optimize performance and tailor the functionality to specific requirements. Overall, building the website without frameworks or plugins offers the advantages of simplicity, flexibility, control, and performance optimization. It allows for a more streamlined development process and enables the utilization of essential JavaScript practices to achieve the desired functionality.  
                         </p>
-                        <p className="grid-col-12">
-                            Overall, building the website without frameworks or plugins offers the advantages of simplicity, flexibility, control, and performance optimization. It allows for a more streamlined development process and enables the utilization of essential JavaScript practices to achieve the desired functionality.  
-                        </p>
+                        <div className={`grid-col-12 ${styles.ctaContainer}`}>
+                            <CtaButton 
+                            text="Live Site"
+                            link="https://typa-type.seojeongkim.com"
+                            />
+                            <CtaButton 
+                            text="View Code"
+                            link="https://github.com/jennysujukim/typa-type-2023"
+                            />
+                        </div>
                     </div>
                 </section>
             </div>

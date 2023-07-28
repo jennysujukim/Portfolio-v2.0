@@ -18,6 +18,7 @@ import overviewImg from '../../../assets/images/work/daily-protein/overview.jpg'
 import componentVid from '../../../assets/images/work/daily-protein/components-form.mp4'
 import componentImg from '../../../assets/images/work/daily-protein/components.jpg'
 import authVid from '../../../assets/images/work/daily-protein/auth.mp4'
+import CtaButton from '../../../components/CtaButton/CtaButton'
 
 export default function DailyProtein() {
 
@@ -207,11 +208,18 @@ export default function DailyProtein() {
             <SubHeading text="Takeaways"/>
             <div className={styles.contentContainer}>
               <p className="grid-col-12">
-                Firebase has proven to be an efficient development platform for handling data communication without the need for a separate server. Through the integration of various functions with Firebase, I had the opportunity to practice and utilize different React hooks, such as Context and Reducer. Handling errors and providing appropriate affordance aligned with user behaviour took more time and details than I initially expected.
+                Firebase has proven to be an efficient development platform for handling data communication without the need for a separate server. Through the integration of various functions with Firebase, I had the opportunity to practice and utilize different React hooks, such as Context and Reducer. Handling errors and providing appropriate affordance aligned with user behaviour took more time and details than I initially expected. Additionally, I encountered some code duplication when communicating with the database, which prompted me to find ways to make the code more DRY. Overall, it has been a rewarding project that has allowed me to deepen my understanding and proficiency in React development.
               </p>
-              <p className="grid-col-12">
-                Additionally, I encountered some code duplication when communicating with the database, which prompted me to find ways to make the code more DRY. Overall, it has been a rewarding project that has allowed me to deepen my understanding and proficiency in React development.
-              </p>
+              <div className={`grid-col-12 ${styles.ctaContainer}`}>
+                <CtaButton 
+                  text="Live Site"
+                  link="https://daily-protein.seojeongkim.com/"
+                />
+                <CtaButton 
+                  text="View Code"
+                  link="https://github.com/jennysujukim/Daily-Protein-v1.0"
+                />
+              </div>
             </div>
           </section>
         </div>

@@ -41,7 +41,7 @@ export const FetchProjectData = () => {
         link: "/work/daily-protein",
         keywords: ["React.js", "Firebase", "Sass"],
         live_site: "https://daily-protein.seojeongkim.com/",
-        source_code: "https://github.com/jennysujukim/daily-protein"
+        source_code: "https://github.com/jennysujukim/Daily-Protein-v1.0"
         },
         {
         id: "002",
@@ -86,7 +86,7 @@ export const FetchProjectData = () => {
         link: "/work/portfolio-build",
         keywords: ["PHP", "JavaScript", "React.js", "SASS"],
         live_site: "https://portfolio-v1.seojeongkim.com/",
-        source_code: "https://github.com/jennysujukim/portfolio-v1"
+        source_code: "https://github.com/jennysujukim/Portfolio-v1.0"
         },
         {
         id: "005",
@@ -105,7 +105,7 @@ export const FetchProjectData = () => {
         },
         // {
         // id: "006",
-        // title: "Jade Bookmark Manager",
+        // title: "TidalFest Event Website",
         // description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         // image_url: placeholder,
         // image_url_projects: dailyProteinThumb2x1,

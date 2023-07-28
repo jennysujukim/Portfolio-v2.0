@@ -14,7 +14,7 @@ import WorkNavigation from '../../../components/WorkNavigation'
 import overviewImg from '../../../assets/images/work/portfolio-build/overview.jpg'
 import initialImg from '../../../assets/images/work/portfolio-build/initial-version.jpg'
 import CodeSnippet from '../../../components/CodeSnippet'
-
+import CtaButton from '../../../components/CtaButton'
 
 export default function PortfolioBuild() {
 
@@ -187,6 +187,16 @@ export default function PortfolioBuild() {
               <p className="grid-col-12">
                 For the next iteration, I am considering applying Next.js, a framework for building server-rendered React applications. It allows the pre-rendering of components on the server before sending them to the client. Additionally, it automatically performs code splitting, leading to faster initial page loads and optimized performance. Overall, the process of building my portfolio has provided me with valuable practice in applying the tech stacks that I am interested in.
               </p>
+            </div>
+            <div className={`grid-col-12 ${styles.ctaContainer}`}>
+              <CtaButton 
+              text="Ver1. Live Site"
+              link="https://portfolio-v1.seojeongkim.com/"
+              />
+              <CtaButton 
+              text="View Code"
+              link="https://github.com/jennysujukim/Portfolio-v1.0"
+              />
             </div>
           </section>
         </div>

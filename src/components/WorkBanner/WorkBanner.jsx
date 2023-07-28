@@ -5,7 +5,7 @@ import { ProjectContext } from '../../context/ProjectContext'
 import styles from './WorkBanner.module.scss'
 
 // components
-import ExternalLink from '../ExternalLink'
+import WorkCta from '../WorkCta'
 
 export default function WorkBanner() {
  
@@ -28,15 +28,13 @@ export default function WorkBanner() {
                         <p>{projectData.description}</p>
                     </div>
                     <div className={styles.btnContainer}>
-                        <ExternalLink 
-                            project
-                            text="Live site"
+                        <WorkCta 
                             link={projectData.live_site}
+                            title="Live Site"
                         />
-                        <ExternalLink 
-                            project
-                            text="View code"
+                        <WorkCta 
                             link={projectData.source_code}
+                            title="View Code"
                         />
                     </div>
                 </div>

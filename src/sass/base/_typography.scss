@@ -28,6 +28,7 @@ h2, .h2, h3, .h3 {
 h4, .h4 {
     text-transform: uppercase;
     font-size: $fs-h4--mobile;
+    font-weight: bold;
 
     @include laptop { font-size: $fs-h4--laptop };
     @include desktop { font-size: $fs-h4--desktop };
