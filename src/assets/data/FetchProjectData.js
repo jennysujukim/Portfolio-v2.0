@@ -1,5 +1,5 @@
 import dailyProteinBanner from '../images/work/daily-protein/banner.jpg'
-import dailyProteinBannerPlaceholder from '../images/work/daily-protein/banner.jpg'
+import dailyProteinBannerPlaceholder from '../images/work/daily-protein/banner-placeholder.jpg'
 import dailyProteinThumb from '../images/work/daily-protein/overview.jpg'
 import dailyProteinThumbPlaceholder from '../images/work/daily-protein/overview-placeholder.jpg'
 import dailyProteinThumb2x1 from '../images/work/daily-protein/thumb-projects-2x1.jpg'
@@ -39,9 +39,9 @@ export const FetchProjectData = () => {
         banner_url: dailyProteinBanner,
         banner_url_placeholder: dailyProteinBannerPlaceholder,
         link: "/work/daily-protein",
-        keywords: ["React.js", "Firebase", "Sass"],
+        keywords: ["MERN", "TypeScript", "Redux", "Firebase Auth", "MUI" ],
         live_site: "https://daily-protein.seojeongkim.com/",
-        source_code: "https://github.com/jennysujukim/Daily-Protein-v1.0"
+        source_code: "https://github.com/jennysujukim/DailyProtein2.0_MERN"
         },
         {
         id: "002",
@@ -69,7 +69,7 @@ export const FetchProjectData = () => {
         banner_url: TypaTypeBanner,
         banner_url_placeholder: TypaTypeBannerPlaceholder,
         link: "/work/typa-type",
-        keywords: ["HTML", "Tailwind CSS", "JavaScript"],
+        keywords: ["HTML", "CSS", "JavaScript"],
         live_site: "https://typa-type.seojeongkim.com",
         source_code: "https://github.com/jennysujukim/typa-type-2023"
         },
@@ -105,7 +105,7 @@ export const FetchProjectData = () => {
         },
         // {
         // id: "006",
-        // title: "TidalFest Event Website",
+        // title: "Saegim Tattoo Website",
         // description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         // image_url: placeholder,
         // image_url_projects: dailyProteinThumb2x1,

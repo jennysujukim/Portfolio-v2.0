@@ -1,96 +1,132 @@
 // DAILY PROTEIN CODE SNIPPETS //
 
-export const codeFetchApi = 
-` // use to track signal and request to be aborted if necessary
-  const controller = new AbortController()
+export const codeStateManagement = 
+`// set initial state
+const initialState: AuthInitialStateModel = {
+  user: null,
+  authIsReady: false,
+};
 
-  const fetchData = async () => {
-    setIsPending(true)
+// create slice
+const authSlice = createSlice({
+  name: "auth",
+  initialState,
+  reducers: {
+    login: (state, action: PayloadAction<UserModel>) => {
+      state.user = action.payload;
+    },
+    logout: (state) => {
+      state.user = null;
+    },
+    authIsReady: (state, action: PayloadAction<UserModel>) => {
+      state.user = action.payload;
+      state.authIsReady = true;
+    },
+  },
+});
+
+export const { 
+    login, 
+    logout, 
+    authIsReady 
+} = authSlice.actions;
+export const authReducer = authSlice.reducer;
+`
+
+export const codeBackend = 
+`// -- inside 'controllers/tracker-controllers.js' -- //
+// handle CREATE request
+async function createTracker (req, res, next) {
+    // deconstruct req.body
+    const { uid, name, protein } = req.body;
+
+    // declare new query with MongoDB Tracker schema
+    const createdTracker = new Tracker({ uid, name, protein })
+
     try {
-      // fetch data
-      const response = 
-      await fetch(url, { signal: controller.signal })
-
-      // throw error if the response is failed
-      if(!response.ok){
-          throw new Error(response.statusText)
-      }
-      // receive parsed json data
-      const data = await response.json()
-
-      setIsPending(false)
-      setData(data)
-      setError(null)
-
-    } catch (error) {
-      if(error.name === "AbortError"){
-        setError("the fetch was aborted.")
-      } else {
-        setIsPending(false)
-        setError("Could not fetch the data.")
-      }
+        // save query to MongoDB
+        await createdTracker.save();
+    } catch(err) {
+        const error = new HttpError('Creating tracker failed, please try again', 500);
+        return next(error);
     }
-  }
-`
 
-export const codeFirebase = 
-`// Custom Hook to READ data from Firestore
-useEffect(() => {
+    if(!createdTracker) {
+        const error = new HttpError('Could not create tracker', 404);
+        return next(error);
+    }
 
-  // refer to 'profiles' collection in Firestore
-  let ref = collection(db, 'profiles')
-
-  // check data where 'uid' field matches current user's uid
-  const q = query(ref, where("uid", "==", user.uid))
-
-  // Read real-time data
-  const unsub = onSnapshot(q, (snapshot) => {
-      // retrieve data if snapshot is not empty
-      if(!snapshot.empty){
-          snapshot.forEach((doc) => {
-              setProfile({...doc.data(), id: doc.id})
-              setError(null)
-          })
-      } else {
-          setError('Profile does not exist.')
-      }
-  }, (error) => {
-      setError('Could not fetch the profiles data.')
-  })
-
-  return () => unsub()
-
-}, [user.uid])
-
-return { profile, error }
-`
-
-export const codeAuth = 
-`export const AuthContext = createContext()
-
-// return a new state based on the action type
-export const authReducer = (state, action) => {
-  switch(action.type){
-    case 'LOGIN':
-      return { ...state, user: action.payload }
-    case 'LOGOUT':
-      return { ...state, user: null }
-    case 'AUTH_IS_READY':
-      return { user: action.payload, authIsReady: true }
-    default:
-      return state
-  }
+    res.status(201).json({ tracker: createdTracker });
 }
 
-// listen state changes and dispatch function
-export const AuthContextProvider = ({ children }) => {
-  // useReducer(reducer function , initial value)
-  const [ state, dispatch ] = useReducer(authReducer, {
-    user: null,
-    authIsReady: false
-  })
-}
+exports.createTracker = createTracker;
+
+// -- inside 'routes/tracker-routes.js' -- //
+const express = require('express');
+const trackerControllers = require('../controllers/tracker-controllers');
+const router = express.Router();
+
+// for create tracker
+router.post('/', trackerControllers.createTracker);
+// ... add more routes
+
+module.exports = router;
 `
+
+export const codeDatabase = 
+` // -- inside 'server.js' -- //
+// run server when mongoDB is connected
+mongoose
+    .connect(\`\${process.env.mongodbUrl}\`)
+    .then(() => {
+        app.listen(PORT, () => {
+            console.log(\`Server is running on port \${PORT}\`) ;
+         })
+    })
+    .catch((error) => {
+        console.log(error);
+    });
+
+// -- inside 'models/tracker.js' -- //
+// create Tracker Schema
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
+
+const trackerSchema = new Schema({
+    uid: { type: String, required: true },
+    name: { type: String, required: true },
+    protein: { type: Number, required: true }
+})
+
+module.exports = mongoose.model('Tracker', trackerSchema)
+`
+
+export const codeFrontend = 
+`function FoodList({ lists }: FoodListProps ) {
+
+  // in order to store user's uid in traker's database tgt when handleClick
+  const { user } = useAuthContext()
+
+  // Create tracker's food list to database (server) when user clicks add button
+  const handleClick = ( { foodName, foodProtein } : AddFoodProps ) => {
+
+      axios.post(\`\${process.env.REACT_APP_SERVER_PORT}/api/tracker\`, {
+          uid: user?.uid,
+          name: foodName,
+          protein: foodProtein
+      })
+      .catch((error) => {
+          console.error("Error making tracker request:", error)
+      })
+  }
+
+return ( /* ... */ )
+}
+
+export default FoodList
+
+`
+
 
 // REFINE CODE SNIPPETS //
 
