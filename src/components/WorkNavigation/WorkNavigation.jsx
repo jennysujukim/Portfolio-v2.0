@@ -12,7 +12,7 @@ export default function WorkNavigation() {
     const { nextProjectData } = useProjectContext()
 
   return (
-    <>
+    <> 
         { nextProjectData &&
             <section className={`wrapper ${styles.container}`}>
                 <Link 

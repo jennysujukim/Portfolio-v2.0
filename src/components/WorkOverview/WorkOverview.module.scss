@@ -1,31 +1,23 @@
 @use '../../sass/abstracts/' as *;
 
 .overview {
-
     padding: 2rem 0;
     @include laptop { padding: 3rem 0; };
+}
 
-    li {
-        @include flex(space-between, center);
+.list {
+    padding-bottom: 0.7rem;
+
+    @include tablet {
         padding: 0.25rem 0;
-
-        @include tablet {
-            @include grid(25% 75%, 1rem);
-        }
+        @include grid(30% 70%, 1rem);
+    }
 
 
-        span {
-            text-transform: uppercase;
-            font-weight: bold;
-            padding-right: 0.5rem;
-            @include laptop { font-size: 1.2rem; };
-        }
-
-        p {
-            text-align: right;
-            @include tablet {
-                text-align: left;
-            }
-        }
+    span {
+        text-transform: uppercase;
+        font-weight: bold;
+        padding-right: 0.5rem;
+        @include laptop { font-size: 1.2rem; };
     }
 }

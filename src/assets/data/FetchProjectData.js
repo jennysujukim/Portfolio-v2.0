@@ -25,6 +25,12 @@ import MyNotesBannerPlaceholder from '../images/work/my-notes/banner-placeholder
 import MyNotesThumb2x1 from '../images/work/my-notes/thumb-projects-2x1.jpg'
 import MyNotesThumb2x1Placeholder from '../images/work/my-notes/thumb-projects-2x1-placeholder.jpg'
 
+import TidalFestBanner from '../images/work/tidalfest/banner.jpg'
+import TidalFestBannerPlaceholder from '../images/work/tidalfest/banner-placeholder.jpg'
+import TidalFestThumb2x1 from '../images/work/tidalfest/thumb-projects-2x1.jpg'
+import TidalFestThumb2x1Placeholder from '../images/work/tidalfest/thumb-projects-2x1-placeholder.jpg'
+
+
 export const FetchProjectData = () => {
     
     return [
@@ -75,18 +81,18 @@ export const FetchProjectData = () => {
         },
         {
         id: "004",
-        title: "Portfolio Build",
-        description: "Roadmap of learning and developing portfolio with ReactJS.",
-        image_url: PortfolioBanner,
-        image_url_placeholder: PortfolioBannerPlaceholder,
-        image_url_projects: PortfolioThumb2x1,
-        image_url_projects_placeholder: PortfolioThumb2x1Placeholder,
-        banner_url: PortfolioBanner,
-        banner_url_placeholder: PortfolioBannerPlaceholder,
-        link: "/work/portfolio-build",
-        keywords: ["PHP", "JavaScript", "React.js", "SASS"],
-        live_site: "https://portfolio-v1.seojeongkim.com/",
-        source_code: "https://github.com/jennysujukim/Portfolio-v1.0"
+        title: "TidalFest Website",
+        description: "Group project to build a SPA website for the fictional music festival.",
+        image_url: TidalFestBanner,
+        image_url_placeholder: TidalFestBannerPlaceholder,
+        image_url_projects: TidalFestThumb2x1,
+        image_url_projects_placeholder: TidalFestThumb2x1Placeholder,
+        banner_url: TidalFestBanner,
+        banner_url_placeholder: TidalFestBannerPlaceholder,
+        link: "/work/tidalfest",
+        keywords: ["Group Project", "React.js", "PayPal API", "Firebase Auth"],
+        live_site: "https://tidalfest.seojeongkim.com/",
+        source_code: "https://github.com/JerrelLustre/TidalFest"
         },
         {
         id: "005",
@@ -102,6 +108,21 @@ export const FetchProjectData = () => {
         keywords: ["PHP", "MySQL", "Bootstrap"],
         live_site: "https://my-notes.seojeongkim.com/",
         source_code: "https://github.com/jennysujukim/my-notes-2023"
+        },
+        {
+        id: "006",
+        title: "Portfolio Build",
+        description: "Roadmap of learning and developing portfolio with ReactJS.",
+        image_url: PortfolioBanner,
+        image_url_placeholder: PortfolioBannerPlaceholder,
+        image_url_projects: PortfolioThumb2x1,
+        image_url_projects_placeholder: PortfolioThumb2x1Placeholder,
+        banner_url: PortfolioBanner,
+        banner_url_placeholder: PortfolioBannerPlaceholder,
+        link: "/work/portfolio-build",
+        keywords: ["PHP", "JavaScript", "React.js", "SASS"],
+        live_site: "https://portfolio-v1.seojeongkim.com/",
+        source_code: "https://github.com/jennysujukim/Portfolio-v1.0"
         },
         // {
         // id: "006",

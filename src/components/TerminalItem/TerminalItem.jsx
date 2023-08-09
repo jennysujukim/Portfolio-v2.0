@@ -20,16 +20,20 @@ export default function TerminalItem() {
         try {
 
         let result = ''
+        const cleanedCommand = command.replace(/\s+/g, ' ').trim()
 
-        switch (command) {
+        switch (cleanedCommand) {
             case 'pwd':
                 result = 'https://seojeongkim.com/'
                 break
             case 'ls':
-                result = 'home/  about/  projects/'
+                result = 'home/  about/  projects/  bts/'
                 break
             case 'cd about':
                 navigate("/about")
+                break
+            case 'home':
+                result = 'Error: Type "cd home" to navigate to home page.'
                 break
             case 'cd home':
                 if(pathname === '/'){
@@ -38,15 +42,24 @@ export default function TerminalItem() {
                     navigate("/")
                 }
                 break
+            case 'projects':
+                result = 'Error: Type "cd projects" to navigate to projects page.'
+                break
             case 'cd projects':
                 navigate("/work/all")
+                break
+            case 'bts':
+                result = 'Error: Type "cd bts" to navigate to bts page.'
+                break
+            case 'cd bts':
+                navigate("/work/portfolio-build")
                 break
             case 'clear':
                 setPrevCommands([])
                 setCommand('')
                 break
             default:
-                result = 'cannot find the command'
+                result = 'Error: cannot find the command'
         }
 
         if (command !== 'clear'){
@@ -65,7 +78,7 @@ export default function TerminalItem() {
         <div className={styles.title}>
             Terminal
         </div>
-        <div>Welcome to JenKim's terminal! Command below to navigate:</div>
+        <div>Try the terminal ! Command below to navigate:</div>
         <div className={styles.intro}>
             <div>AVAILABLE COMMAND:</div>
             <div>pwd</div>

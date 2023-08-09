@@ -20,6 +20,7 @@ import DailyProtein from './pages/work/DailyProtein'
 import TypaType from './pages/work/TypaType'
 import ReFine from './pages/work/ReFine'
 import PortfolioBuild from './pages/work/PortfolioBuild'
+import TidalFest from './pages/work/TidalFest';
 const LazyWork = lazy(() => import('./pages/work'))
 const LazyAbout = lazy(() => import('./pages/about'))
 
@@ -86,6 +87,10 @@ function App() {
             <Route 
               path="portfolio-build" 
               element={<PortfolioBuild />} 
+            />
+            <Route 
+              path="tidalfest" 
+              element={<TidalFest />} 
             />
           </Route>
           <Route 

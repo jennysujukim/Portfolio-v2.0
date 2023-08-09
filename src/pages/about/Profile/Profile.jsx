@@ -11,7 +11,7 @@ export default function Profile() {
     { title: "LinkedIn", url: "https://www.linkedin.com/in/jenny-seojeong-kim/" },
     { title: "Github", url: "https://github.com/jennysujukim" },
     { title: "Email", url: "mailto:hello@seojeongkim.com" },
-    { title: "Resume", url: "https://seojeongkim.com" }
+    { title: "Resume", url: "https://seojeongkim.com/resume" }
   ]
 
   return ( 

@@ -18,7 +18,7 @@ export const ProjectContextProvider = ({ children }) => {
         return e.id === projectId
     })
 
-    const nextProjectData = allData[projectDataIndex + 1] || null;
+    const nextProjectData = allData[projectDataIndex + 1] || allData[0];
 
     return (
         <ProjectContext.Provider value={ { projectData, setProjectId, nextProjectData } } >

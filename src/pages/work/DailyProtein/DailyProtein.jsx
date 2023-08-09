@@ -43,7 +43,7 @@ export default function DailyProtein() {
             <WorkOverview
               timeline="MAY - JUN 2023"
               role="DESIGN & DEVELOP"
-              tech="MERN &bull; TYPESCRIPT &bull; REDUX &bull; FIREBASE AUTH &bull; MUI &bull; TAILWIND CSS"
+              tech="MERN &middot; TYPESCRIPT &middot; REDUX &middot; FIREBASE AUTH &middot; MUI &middot; TAILWIND CSS"
             />
             <div className={styles.overviewTxtContainer}>
               <p className="grid-col-6">

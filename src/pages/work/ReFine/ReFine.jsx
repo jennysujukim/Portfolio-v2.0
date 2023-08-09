@@ -42,7 +42,7 @@ export default function ReFine() {
                     <WorkOverview
                         timeline="JUL 2023"
                         role="Design & Develop"
-                        tech="JavaScript  Node.js  Express.js  OpenAI"
+                        tech="JavaScript &middot; Node.js &middot; Express.js &middot; OpenAI"
                     />
                     <div className={styles.overviewTxtContainer}>
                         <p className="grid-col-6">

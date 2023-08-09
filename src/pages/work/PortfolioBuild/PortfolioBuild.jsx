@@ -22,7 +22,7 @@ export default function PortfolioBuild() {
   const { setProjectId } = useContext(ProjectContext)
 
   useEffect(() => {
-    setProjectId("004")
+    setProjectId("006")
   }, [setProjectId])
 
   // Set slider's labels
