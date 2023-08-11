@@ -24,7 +24,7 @@ export default function TypaType() {
     const { setProjectId } = useContext(ProjectContext)
 
     useEffect(() => {
-        setProjectId("003")
+        setProjectId("004")
     }, [setProjectId])
 
     // Set slider's labels

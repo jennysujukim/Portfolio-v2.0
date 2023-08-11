@@ -66,21 +66,6 @@ export const FetchProjectData = () => {
         },
         {
         id: "003",
-        title: "Typa Type",
-        description: "Discover a curated collection of unique typography.",
-        image_url: TypaTypeBanner,
-        image_url_placeholder: TypaTypeBannerPlaceholder,
-        image_url_projects: TypaTypeThumb2x1,
-        image_url_projects_placeholder: TypaTypeThumb2x1Placeholder,
-        banner_url: TypaTypeBanner,
-        banner_url_placeholder: TypaTypeBannerPlaceholder,
-        link: "/work/typa-type",
-        keywords: ["HTML", "CSS", "JavaScript"],
-        live_site: "https://typa-type.seojeongkim.com",
-        source_code: "https://github.com/jennysujukim/typa-type-2023"
-        },
-        {
-        id: "004",
         title: "TidalFest Website",
         description: "Group project to build a SPA website for the fictional music festival.",
         image_url: TidalFestBanner,
@@ -94,6 +79,22 @@ export const FetchProjectData = () => {
         live_site: "https://tidalfest.seojeongkim.com",
         source_code: "https://github.com/JerrelLustre/TidalFest"
         },
+        {
+        id: "004",
+        title: "Typa Type",
+        description: "Discover a curated collection of unique typography.",
+        image_url: TypaTypeBanner,
+        image_url_placeholder: TypaTypeBannerPlaceholder,
+        image_url_projects: TypaTypeThumb2x1,
+        image_url_projects_placeholder: TypaTypeThumb2x1Placeholder,
+        banner_url: TypaTypeBanner,
+        banner_url_placeholder: TypaTypeBannerPlaceholder,
+        link: "/work/typa-type",
+        keywords: ["HTML", "CSS", "JavaScript"],
+        live_site: "https://typa-type.seojeongkim.com",
+        source_code: "https://github.com/jennysujukim/typa-type-2023"
+        },
+
         {
         id: "005",
         title: "My Notes",

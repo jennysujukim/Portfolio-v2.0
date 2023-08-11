@@ -445,3 +445,74 @@ $(document).ready(function() {
     }
 });
 `
+
+// TIDALFEST CODE SNIPPETS //
+
+export const codePayPal = 
+`// OrderContext.js
+export const OrderContextProvider = ({ children }) => {
+
+  // ...code to handle order states globally...
+
+  // Save total order amount to localStorage
+  useEffect(() => {
+    setOrder(String(total))
+    const saveOrder = localStorage.setItem("order", order)
+    return saveOrder
+  }, [total, setOrder, order])
+
+  // ...return OrderContext.Provider...
+}
+
+// PayPalButton components
+export default function PaypalButton() {
+
+  const createOrder = (data, actions) => {
+    // Get total order amount from localStorage
+    const savedOrder = localStorage.getItem("order")
+
+    return actions.order.create({
+      purchase_units: [
+        { amount: { value: \`\${savedOrder}\` }}
+      ]
+    })
+  }
+
+  // ... onApprove function and return component ...
+}
+`
+
+export const codeAuthContext = 
+` // AuthContext.js
+// state is the current state, 
+// action is what we want to do to the state
+const authReducer = (state, action) => {
+  switch(action.type) {
+    case 'LOGIN':
+      return { ...state, user: action.payload }
+    case 'LOGOUT':
+      return { ...state, user: null }
+    case 'AUTH_IS_READY':
+      return { user: action.payload, authIsReady: true }
+    default:
+      return state
+  }
+}
+
+export const AuthContextProvider = ({ children }) => {
+  // takes authReducer function above and an initial state
+  const [ state, dispatch ] = useReducer(authReducer, {
+    user: null,
+    authIsReady: false
+  })
+
+  // ... useEffect code to handle authChange ...
+
+  return (
+    <AuthContext.Provider value={{ ...state, dispatch }}>
+      {children}
+    </AuthContext.Provider>
+  )
+}
+
+`

@@ -62,10 +62,10 @@ export default function Hero() {
           <p ref={el => {txtsRef.current[0] = el;}}>Creative</p>
         </div>
         <div className={styles.txtMain}>
-          <p ref={el => {txtsRef.current[1] = el;}}>Frontend Developer</p>
+          <p ref={el => {txtsRef.current[1] = el;}}>Frontend</p>
         </div>
         <div className={styles.txtMain}>
-          <p ref={el => {txtsRef.current[2] = el;}}>& Designer</p>
+          <p ref={el => {txtsRef.current[2] = el;}}>Developer</p>
         </div>
         <div className={styles.txtSub}>
           <p ref={el => {txtsRef.current[3] = el;}}>
