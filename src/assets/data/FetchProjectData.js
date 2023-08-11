@@ -91,7 +91,7 @@ export const FetchProjectData = () => {
         banner_url_placeholder: TidalFestBannerPlaceholder,
         link: "/work/tidalfest",
         keywords: ["Group Project", "React.js", "PayPal API", "Firebase Auth"],
-        live_site: "https://tidalfest.seojeongkim.com/",
+        live_site: "https://tidalfest.seojeongkim.com",
         source_code: "https://github.com/JerrelLustre/TidalFest"
         },
         {

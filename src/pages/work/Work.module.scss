@@ -83,6 +83,7 @@
 .ctaContainerLeft {
 
     padding-top: 4rem;
+    padding-bottom: $pb-paragraph;
     @include flex(center, center);
 
     @include tablet {
@@ -91,6 +92,7 @@
 
     &Left {
         padding-top: 2rem;
+        padding-bottom: $pb-paragraph;
         @include tablet {
             @include flex(flex-start, center);
         }
